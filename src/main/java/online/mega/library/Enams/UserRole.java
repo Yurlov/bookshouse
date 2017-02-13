@@ -1,7 +1,7 @@
 package online.mega.library.Enams;
 
 public enum UserRole {
-    ADMIN, USER, ANONYMUS;
+    ADMIN, USER;
 
     @Override
     public String toString() {

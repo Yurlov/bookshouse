@@ -20,7 +20,6 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookRepository bookRepository;
 
-
     private static final int PAGE_SIZE = 12;
 
     @Transactional
@@ -68,8 +67,6 @@ public class BookServiceImpl implements BookService {
     public void deleteBook(Book book) {
         bookRepository.delete(book);
     }
-
-
 
     @Transactional
     @Override

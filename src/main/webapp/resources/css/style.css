@@ -10,6 +10,56 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800,900,700,600,500,300,200,100);
 @import url(sansationbold.css) screen;
 
+#page{
+
+    width:1300px;
+    height: 20%;
+    margin-top: 50px;
+
+}
+
+#searchForm{
+
+    background-color: #ffd916;
+    padding:20px 20px 20px 20px;
+    margin:50px  0;
+    position:relative;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+
+
+#input{
+    border: #eeac39;
+    float:left;
+    font-size:20px;
+    color: #000011;
+    height:43px;
+    line-height:36px;
+    margin-right:30px;
+    outline:medium none;
+    padding:0 0 0 10px;
+
+    width:1000px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+#button{
+    height: 45px;
+    width: 170px;
+    font-size: 17px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+#button:hover{
+    background: #000000;
+    color: yellow;
+}
 
 .border {
     list-style: none;

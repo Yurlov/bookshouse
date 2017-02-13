@@ -19,6 +19,11 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private UserRole role;
+    @Column
+    private String email;
+
+    public User() {
+    }
 
     public User(String login, String password, UserRole role) {
         this.login = login;
@@ -82,8 +87,5 @@ public class User {
         this.email = email;
     }
 
-    private String email;
 
-    public User() {
-    }
 }

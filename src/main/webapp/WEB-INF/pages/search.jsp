@@ -5,60 +5,7 @@
 <html lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-
-    #page{
-
-        width:1300px;
-        height: 20%;
-        margin-top: 50px;
-
-    }
-
-    #searchForm{
-
-        background-color: #ffd916;
-        padding:20px 20px 20px 20px;
-        margin:50px  0;
-        position:relative;
-        -moz-border-radius:5px;
-        -webkit-border-radius:5px;
-        border-radius:5px;
-    }
-
-
-
-    #input{
-        border: #eeac39;
-        float:left;
-        font-size:20px;
-        color: #000011;
-        height:43px;
-        line-height:36px;
-        margin-right:30px;
-        outline:medium none;
-        padding:0 0 0 10px;
-
-        width:1000px;
-        -moz-border-radius:5px;
-        -webkit-border-radius:5px;
-        border-radius:5px;
-    }
-
- #button{
-    height: 45px;
-     width: 170px;
-     font-size: 17px;
-     text-align: center;
-     background: white;
-     color: black;
-}
-        #button:hover{
-            background: #000000;
-            color: yellow;
-        }
-
-</style>
+    <link rel="stylesheet" href="/resources/css/style.css">
 
 </head>
 

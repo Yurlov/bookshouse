@@ -1,5 +1,5 @@
 <%@ page import="java.util.Locale" %>
-<%@ page import="online.mega.library.interceptors.InterceptorController" %>
+<%@ page import="online.mega.library.Controllers.InterceptorController" %>
 <%@ page import="org.springframework.cglib.core.Local" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -176,7 +176,8 @@
                                         </ul>
                                     </c:forEach>
 
-                                </c:when>   <c:otherwise>
+                                </c:when>
+                                <c:otherwise>
                                 <c:forEach items="${genres}" var="g">
                                     <ul class="border">
                                         <a  href="/searchByGenre/<c:out value="${g.name_ru}"/>/pages/1" ><li>

@@ -17,20 +17,6 @@ public class Book {
     @Column
     private String isbn;
 
-    public Book(String name, String content, Integer pageCount, String isbn, Genre genre, Author author, Integer publishYear, Publisher publisher, String image, String descr, Integer rating) {
-        this.name = name;
-        this.content = content;
-        this.pageCount = pageCount;
-        this.isbn = isbn;
-        this.genre = genre;
-        this.author = author;
-        this.publishYear = publishYear;
-        this.publisher = publisher;
-        this.image = image;
-        this.descr = descr;
-        this.rating = rating;
-    }
-
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "genre_id")
     private Genre genre;
@@ -48,6 +34,22 @@ public class Book {
     private Long voteCount;
 
     public Book() {
+    }
+    public Book(String name, String content, Integer pageCount,
+                String isbn, Genre genre, Author author,
+                Integer publishYear, Publisher publisher,
+                String image, String descr, Integer rating) {
+        this.name = name;
+        this.content = content;
+        this.pageCount = pageCount;
+        this.isbn = isbn;
+        this.genre = genre;
+        this.author = author;
+        this.publishYear = publishYear;
+        this.publisher = publisher;
+        this.image = image;
+        this.descr = descr;
+        this.rating = rating;
     }
 
     public Book(Long id, String name, String content,

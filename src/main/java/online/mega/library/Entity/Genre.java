@@ -12,7 +12,6 @@ public class Genre {
     private String name_ru;
     @Column(nullable = false)
     private String name_en;
-
     public Genre(String name_ru, String name_en) {
         this.name_ru = name_ru;
         this.name_en = name_en;

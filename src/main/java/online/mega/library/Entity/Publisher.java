@@ -8,12 +8,11 @@ public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
+    private String name;
 
     public Publisher() {
     }
-
-    @Column
-    private String name;
 
     public Publisher(String name) {
     this.name=name;

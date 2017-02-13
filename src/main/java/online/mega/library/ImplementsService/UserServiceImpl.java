@@ -15,6 +15,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
+    @Transactional
     public void deleteUser(Long id) {
         userRepository.delete(id);
     }
@@ -44,6 +45,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
