@@ -1,6 +1,6 @@
 package online.mega.library.Repositoties;
 
-import online.mega.library.Entity.Author;
+import online.mega.library.Entities.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

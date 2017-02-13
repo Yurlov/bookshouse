@@ -1,6 +1,6 @@
 package online.mega.library.Controllers;
 
-import online.mega.library.Entity.Book;
+import online.mega.library.Entities.Book;
 import online.mega.library.Services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

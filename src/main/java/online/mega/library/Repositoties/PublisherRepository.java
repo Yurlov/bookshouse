@@ -1,6 +1,6 @@
 package online.mega.library.Repositoties;
 
-import online.mega.library.Entity.Publisher;
+import online.mega.library.Entities.Publisher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

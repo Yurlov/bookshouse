@@ -1,6 +1,6 @@
 package online.mega.library.ImplementsService;
 
-import online.mega.library.Entity.Genre;
+import online.mega.library.Entities.Genre;
 import online.mega.library.Services.GenreService;
 import online.mega.library.Repositoties.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;

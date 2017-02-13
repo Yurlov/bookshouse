@@ -1,6 +1,6 @@
 package online.mega.library.ImplementsService;
 
-import online.mega.library.Entity.Publisher;
+import online.mega.library.Entities.Publisher;
 import online.mega.library.Services.PublisherService;
 import online.mega.library.Repositoties.PublisherRepository;
 import org.springframework.beans.factory.annotation.Autowired;

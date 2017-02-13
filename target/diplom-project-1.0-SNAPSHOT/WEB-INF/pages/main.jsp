@@ -1,7 +1,11 @@
+<%@ page import="java.util.Locale" %>
+<%@ page import="online.mega.library.Controllers.InterceptorController" %>
+<%@ page import="org.springframework.cglib.core.Local" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 <!doctype html>
 <html lang="ru">
     <head>
@@ -13,7 +17,7 @@
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
         <!-- SITE TITLE -->
-        <title>Book's House</title>
+        <title><spring:message code="title"/></title>
 
         <!-- FAVICON -->
         <link rel="icon" href="/resources/images/favicon.png">
@@ -72,30 +76,30 @@
                                 <div class="item active">
                                     <img class="img-responsive" src="/resources/images/my/11.jpg" width="1280" height="853" alt="">
                                     <div class="carousel-caption">
-                                        <h1>WELCOME <span>TO</span> THE <span>BOOK'S HOUSE</span> </h1>
-                                        <h2>WE WERE <span>WAITING</span> YOU</h2>
+                                        <h1><spring:message code="welcome"/> <span><spring:message code="to"/></span> <spring:message code="the"/> <span><spring:message code="title"/></span> </h1>
+                                        <h2><spring:message code="we"/> <span><spring:message code="wait"/> </span> <spring:message code="you"/> </h2>
 
-                                        <a href="#search">FIND BOOK</a>
+                                        <a href="#search"><spring:message code="fdbook"/></a>
                                         <a href="#search" class="go-to-about animated infinite bounce"></a>
                                     </div>
                                 </div><!-- slider item 1 -->
                                 <div class="item">
                                     <img class="img-responsive" src="/resources/images/my/6.jpg" width="1280" height="853" alt="">
                                     <div class="carousel-caption">
-                                        <h1>WELCOME <span>TO</span> THE <span>BOOK'S HOUSE</span> </h1>
-                                        <h2>WE WERE <span>WAITING</span> YOU</h2>
+                                        <h1><spring:message code="welcome"/> <span><spring:message code="to"/></span> <spring:message code="the"/> <span><spring:message code="title"/></span> </h1>
+                                        <h2><spring:message code="we"/> <span><spring:message code="wait"/> </span> <spring:message code="you"/> </h2>
 
-                                        <a href="#search">FIND BOOK</a>
+                                        <a href="#search"><spring:message code="fdbook"/></a>
                                         <a href="#search" class="go-to-about animated infinite bounce"></a>
                                     </div>
                                 </div><!-- slider item 2 -->
                                 <div class="item">
                                     <img class="img-responsive" src="/resources/images/my/7.jpg" width="1280" height="853" alt="">
                                     <div class="carousel-caption">
-                                        <h1>WELCOME <span>TO</span> THE <span>BOOK'S HOUSE</span> </h1>
-                                        <h2>WE WERE <span>WAITING</span> YOU</h2>
+                                        <h1><spring:message code="welcome"/> <span><spring:message code="to"/></span> <spring:message code="the"/> <span><spring:message code="title"/></span> </h1>
+                                        <h2><spring:message code="we"/> <span><spring:message code="wait"/> </span> <spring:message code="you"/> </h2>
 
-                                        <a href="#search">FIND BOOK</a>
+                                        <a href="#search"><spring:message code="fdbook"/></a>
                                         <a href="#search" class="go-to-about animated infinite bounce"></a>
                                     </div>
                                 </div><!-- slider item 3 -->
@@ -130,20 +134,21 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <security:authorize access="!isAuthenticated()"> <li><a href="/login">LOGIN</a> </li></security:authorize>
-                                    <security:authorize access="hasRole('ADMIN')"><li><c:out value="${user}"/></li></security:authorize>
-                                    <security:authorize access="!isAuthenticated()"> <li><a href="/register">SIGN UP</a> </li></security:authorize>
-                            </ul>
-                                <ul class="nav navbar-nav navbar-right" id="top-menu">
+                                    <security:authorize access="!isAuthenticated()"> <li><a href="/login"><spring:message code="loginM"/></a> </li></security:authorize>
+                                    <security:authorize access="!isAuthenticated()"> <li><a href="/register"><spring:message code="signin"/></a> </li></security:authorize>
+                                    <security:authorize access="hasRole('ADMIN')"><li><a href="/admin">Room</a> </li></security:authorize>
+                                    <security:authorize access="isAuthenticated()"> <li><a href="/logout"><spring:message code="logOut"/> </a> </li></security:authorize>
+                                    <li><a href="/<%=request.getContextPath()%>?lang=ru"><img width="20px" height="20px" src="/resources/images/my/ru.png" alt="Russian"/></a></li>
+                                    <li><a href="/<%=request.getContextPath()%>?lang=en"><img width="20px" height="20px" src="/resources/images/my/en.png" alt="English"/></a></li>
 
-                                    <li class="active"><a href="#home">HOME</a></li>
-                                    <li ><a href="#search">Books</a></li>
-                                    <li ><a href="#service">SERVICE</a></li>
-                                    <li ><a href="#portfolio">PORTFOLIO</a></li>
-                                    <li ><a href="#feature">FEATURES</a></li>
-                                    <li ><a href="#top-books">TOP</a></li>
-                                    <li ><a href="#contact">CONTACT</a></li>
                                 </ul>
+                                <ul class="nav navbar-nav navbar-right" id="top-menu">
+                                    <li class="active"><a href="#home"><spring:message code="home"/></a></li>
+                                    <li ><a href="#search"><spring:message code="book"/></a></li>
+                                    <li ><a href="#top-books"><spring:message code="top"/></a></li>
+                                    <li ><a href="#authors"><spring:message code="authors"/></a></li>
+                                    <li ><a href="#contact"><spring:message code="contact"/></a></li>
+                                    </ul>
 
                             </div><!--end of /.navbar-collapse -->
                         </div><!--end of /.container-fluid -->
@@ -154,28 +159,47 @@
 
             <!-- START ABOUT SECTION -->
             <section class="about-section" id="search" >
+                <div class="round">
                 <jsp:include page="search.jsp"/>
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-xs-2 col-sm-1 col-md-1">
-                            <c:forEach items="${genres}" var="g">
-                               <h4> <a href="/searchByGenre/<c:out value="${g.name}"/>/pages/1" ><c:out value="${g.name}"/></a></h4>
+                        <div style="float: left; padding-bottom: 30px" class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                            <c:choose>
+                                <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
+                                    <c:forEach items="${genres}" var="g">
+                                        <ul class="border">
+                                            <a  href="/searchByGenre/<c:out value="${g.name_en}"/>/pages/1" ><li>
+                                                <c:out value="${g.name_en}"/>
+                                            </li>
+                                            </a>
+                                        </ul>
+                                    </c:forEach>
+
+                                </c:when>
+                                <c:otherwise>
+                                <c:forEach items="${genres}" var="g">
+                                    <ul class="border">
+                                        <a  href="/searchByGenre/<c:out value="${g.name_ru}"/>/pages/1" ><li>
+                                            <c:out value="${g.name_ru}"/>
+                                        </li>
+                                        </a>
+                                    </ul>
                                 </c:forEach>
+                            </c:otherwise>
+                            </c:choose>
                         </div>
 
-
-                        <div class="qoute-caption" style="margin-left: 180px;">
-                            <div id="quote" class="owl-carousel owl-theme">
-                                <div class="item quote-item">
+                        <div class="container">
+                            <div class="row">
+                                <div style="margin-top: 20px;" >
                                     <c:forEach items="${books.content}" var="b">
-                                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6" style="margin: 10px 10px 10px 10px" >
-                                                <img width="150" height="200" src="/image/${b.id}" alt="${b.name}"/>
-                                                <h3> <h2><c:out value="${b.name}"/></h2></h3>
+                                        <div class="lin col-md-4 col-xs-5 col-sm-3 col-lg-2 ">
+                                            <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
+                                            <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>
                                         </div>
                                     </c:forEach>
                                 </div>
-                            </div>
                             </div>
                         </div>
 
@@ -184,8 +208,8 @@
                     <c:url var="prevUrl" value="/pages/${currentIndex - 1}" />
                     <c:url var="nextUrl" value="/pages/${currentIndex + 1}" />
 
-                    <div class="pagination" >
-                        <ul class="pagination pagination-lg" style="margin-left: 460px">
+                    <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12" >
+                        <ul class="pagination pagination-lg" >
                             <c:choose>
                                 <c:when test="${currentIndex == 1}">
                                     <li class="disabled"><a href="#">&lt;&lt;</a></li>
@@ -220,572 +244,76 @@
                         </ul>
                     </div>
                     </div>
+                </div>
+                </div>
             </section>
 
-            <!-- START MEET SECTION -->
-            <section class="meet-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 ceo-profile-pic">
-                            <a href="#">
-                                <img class="img-responsive" src="/resources/images/ceo.png" width="410" height="516" alt="">
-                            </a><!-- profile pic -->
-                        </div><!-- end of /.column 4 -->
-                        <div class="col-lg-8">
-                            <div class="section-title meet-title">
-                                <h1>MeetOurC<span>E</span>O</h1><!-- section title -->
-                            </div>
-                            <div class="cso-driescription">
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                                <a href="#">GET IN TOUCH</a>
-                            </div>
-                        </div><!-- end of /. column 8 -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container -->
-            </section><!-- end of /.meet section -->
 
-            <!-- START SERVICE SECTION -->
-            <section class="service-section" id="service" >
-                <div class="container">
-                    <div class="row">
-                        <div  class="col-lg-8">
-                            <div class="section-title service-title">
-                                <h1>Our Servic<span >e</span>s</h1><!-- section title -->
-                                <p>Simply dummy text of <span>the printing</span> and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod <span>maxime placeat facere</span> possimus cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p><!-- section caption -->
-                            </div><!-- end of section title -->
-                        </div><!-- end of /.column -->
-                    </div><!-- end of /.row -->
-
-                    <div class="row">
-                        <div class="col-lg-4 col-lg-offset section-sub-title">
-                            <!--<h1>OUR EXPERTISE</h1>--><!-- section sub title -->
-                        </div><!-- end of /.column  -->
-                    </div><!-- end of /.row -->
-
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item wow fadeInDown animated" data-wow-delay="0.1s">
-                                <a href="#" class="icon"><i class="fa fa-desktop"></i></a>
-                                <h2>UI/UX DESIGN</h2><!-- service item titile -->
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio.</p><!-- service caption -->
-                            </div><!-- end of service item 1 -->
-                        </div><!-- end of service column 4 -->
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item wow fadeInDown animated" data-wow-delay="0.2s">
-                                <a href="#" class="icon"><i class="fa fa-code"></i> </a>
-                                <h2>WEB DEVELOPMENT</h2><!-- service item titile -->
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio.</p><!-- service caption -->
-                            </div><!-- end of service item 1 -->
-                        </div><!-- end of service column 4 -->
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item wow fadeInDown animated" data-wow-delay="0.3s">
-                                <a href="#" class="icon"><i class="fa fa-mobile"></i></a>
-                                <h2>MOBILE APPS</h2><!-- service item titile -->
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio.</p><!-- service caption -->
-                            </div><!-- end of service item 1 -->
-                        </div><!-- end of service column 4 -->
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item wow fadeInDown animated" data-wow-delay="0.4s">
-                                <a href="#" class="icon"><i class="fa fa-bolt"></i> </a>
-                                <h2>BRANDING</h2><!-- service item titile -->
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio.</p><!-- service caption -->
-                            </div><!-- end of service item 1 -->
-                        </div><!-- end of service column 4 -->
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item wow fadeInDown animated" data-wow-delay="0.5s">
-                                <a href="#" class="icon"><i class="fa fa-camera"></i></a>
-                                <h2>PHOTOGRAPHY</h2><!-- service item titile -->
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio.</p><!-- service caption -->
-                            </div><!-- end of service item 1 -->
-                        </div><!-- end of service column 4 -->
-
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item wow fadeInDown animated" data-wow-delay="0.6s">
-                                <a href="#" class="icon"><i class="fa fa-sticky-note-o"></i></a>
-                                <h2>CONTENT WRITING</h2><!-- service item titile -->
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio.</p><!-- service caption -->
-                            </div><!-- end of service item 1 -->
-                        </div><!-- end of service column 4 -->
-                    </div>
-                </div><!-- end of /.container -->
-            </section><!-- end of /.service section -->
-
-            <!-- START QOUTE SECTION -->
-            <section class="quote-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5 quote-title">
-                            <i class="fa fa-quote-left"></i>
-                            <h1>Quo<span>t</span>e</h1>
-                            <i class="fa fa-quote-right"></i>
-                        </div><!-- end of column & quote title -->
-
-                        <div class="col-md-6 qoute-caption">
-                            <div  class="owl-carousel owl-theme">
-                                <div class="item quote-item">
-                                    <p>Work hard. And have patience. Because no matter who you are, you're going to get hurt in your career and you have to be patient to get through the injuries.</p>
-                                </div>
-                            </div>
-                            <div class="customNavigation quote-navigation alignright">
-                                <a class="btn quote-prev"><i class="fa fa-angle-left"></i></a>
-                                <a class="btn quote-next"><i class="fa fa-angle-right"></i></a>
-                            </div><!-- end of /.quote navigation -->
-                        </div><!-- end of column -->
-                    </div><!-- end of /. row -->
-                </div><!-- end of /.container -->
-            </section><!-- end of /.quote section -->
-
-            <!-- START PORTFOLIO SECTION -->
-            <section class="work-section" id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title work-title">
-                            <h1>Our Wo<span>r</span>x.!</h1>
-                            <div class="col-lg-9 col-lg-offset-2 section-caption">
-                                <p>Simply dummy text of <span>the printing</span> and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod <span>maxime placeat facere</span> possimus cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p><!-- section caption -->
-                            </div><!-- end of section caption -->
-                        </div><!-- end of section title -->
-                    </div><!-- end of /.row -->
-                    <div class="row">
-                        <ul class="button-group sort-button-group">
-                            <li class="button active" data-category="all">ALL WORX</li>
-                            <li class="button" data-category="drawing">HAND DRAWING</li>
-                            <li class="button" data-category="branding">BRANDING</li>
-                            <li class="button" data-category="website">WEBSITES</li>
-                            <li class="button" data-category="advertising">ADVERTISING</li>
-                            <li class="button" data-category="social">SOCIAL</li>
-                            <li class="button" data-category="product">PRODUCT</li>
-                        </ul><!-- end of /.button group -->
-                    </div><!-- end of /.row -->
-                    <div class="work row gallery">
-                        <div class="work-item drawing col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/1.jpg" width="238" height="" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio</p>
-                                        <p>
-                                            <a href="/resources/images/work/1.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 1 -->
-                        <div class="work-item branding col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/2.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio</p>
-                                        <p>
-                                            <a href="/resources/images/work/2.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 2 -->
-                        <div class="work-item website col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/3.jpg" width="236" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/3.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 3 -->
-                        <div class="work-item advertising col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/4.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/4.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 4 -->
-                        <div class="work-item social col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/5.jpg" width="238" height="480" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio</p>
-                                        <p>
-                                            <a href="/resources/images/work/5.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 5 -->
-                        <div class="work-item  product col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/6.jpg" width="237" height="480" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio  </p>
-                                        <p>
-                                            <a href="/resources/images/work/6.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 6 -->
-                        <div class="work-item drawing col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/7.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/7.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 7 -->
-                        <div class="work-item product website col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/8.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/8.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 8 -->
-                        <div class="work-item drawing branding col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/9.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/9.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 9 -->
-                        <div class="work-item branding website col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/10.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/10.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 10 -->
-                        <div class="work-item branding website col-md-3">
-                            <a href="#">
-                                 <img src="/resources/images/work/11.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/11.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 11 -->
-                        <div class="work-item branding website col-md-3">
-                            <a href="#">
-                                <img src="/resources/images/work/12.jpg" width="237" height="237" alt="">
-                            </a>
-                            <div class="work-content">
-                                <div class="work-caption">
-                                    <div class="work-caption-details">
-                                        <h2>RE BRA ND ING</h2>
-                                        <p>Nam libero tempore, cum soluta nobis est eligendi optio </p>
-                                        <p>
-                                            <a href="/resources/images/work/12.jpg" data-gal="prettyPhoto[gallery2]"><i class="fa fa-search"></i></a>
-                                            <a href="#"><i class="fa fa-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end of /. work item 12 -->
-                    </div><!-- end of work/row  -->
-
-                </div><!-- end of /.container -->
-            </section><!-- end of /.work section -->
-
-            <!-- START CLIENT SECTION -->
-            <section class="client-section" id="feature">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 section-title">   
-                            <h1>Clie<span>n</span>t</h1>
-                            <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                        </div>
-
-                        <div id="client" class="owl-carousel owl-theme col-lg-11 col-lg-offset-1">
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/1.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 1 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/2.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 2 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/3.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 3 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/4.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 4 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/5.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 5 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/1.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 6 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/2.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 7 -->
-                            <div class="item client-item">
-                                <a href="#">
-                                    <img src="/resources/images/client/3.png" width="140" height="46" alt=""><!-- client logo -->
-                                </a>
-                            </div><!-- end of /.client item 8 -->
-                        </div><!-- end of /.clientiten box  -->
-                        <div class="customNavigation client-navigation">
-                            <a class="btn client-prev"><i class="fa fa-angle-left"></i></a>
-                            <a class="btn client-next"><i class="fa fa-angle-right"></i></a>
-                        </div><!-- end of /.client navigation -->
-
-                    </div><!-- end of /.row -->
-                </div><!-- end of /. container -->
-            </section><!-- end of /.client section -->
 
             <!-- START TESTIMONIAL SECTION -->
-            <section class="testimonial-section">
+            <section class="testimonial-section" id="top-books">
                 <div class="container">
                     <div class="row">
+
                         <div class="col-lg-3 col-lg-offset-1">
                             <div id="testimonial" class="testimanial-area">
                                 <div class="item">
-                                    <img src="/resources/images/testimonial/1.jpg" width="427" height="427" alt="">
+                                    <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>LINDA WONG</h3><!--  title -->
-                                        <p>CEO OF STAR INDUSTRY</p><!-- description -->
+                                        <h3>ГАРРИ ПОТТЕР</h3><!--  title -->
+                                        <p>J.K ROWLING</p><!-- description -->
                                     </div><!--end of /.testimonial details -->
                                 </div><!-- end of /.testimonial item 1 -->
 
                                 <div class="item">
-                                    <img src="/resources/images/testimonial/2.jpg" width="427" height="427" alt="">
+                                    <img src="/resources/images/my/dom.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>LINDA WONG</h3><!--  title -->
-                                        <p>CEO OF STAR INDUSTRY</p><!-- description -->
+                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3><!--  title -->
+                                        <p>РЕНСОМ РИГГЗ</p><!-- description -->
                                     </div><!--end of /.testimonial details -->
                                 </div><!-- end of /.testimonial item 2 -->
 
                                 <div class="item">
-                                    <img src="/resources/images/testimonial/3.jpg" width="427" height="427" alt="">
+                                    <img src="/resources/images/my/do.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>LINDA WONG</h3><!--  title -->
-                                        <p>CEO OF STAR INDUSTRY</p><!-- description -->
+                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3><!--  title -->
+                                        <p>ДЖОДЖО МОЙЕС</p><!-- description -->
                                     </div><!--end of /.testimonial details -->
                                 </div><!-- end of /.testimonial item 3 -->
 
                                 <div class="item">
-                                    <img src="/resources/images/testimonial/4.jpg" width="427" height="427" alt="">
+                                    <img src="/resources/images/my/50.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>LINDA WONG</h3><!--  title -->
-                                        <p>CEO OF STAR INDUSTRY</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 4 -->
+                                        <h3>ПЯТДЕСЯТ ОТТЕНКОВ СЕРОГО</h3>
+                                        <p>ЭЛ ДЖАЙМС</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="/resources/images/my/girl.jpg" alt="">
+                                    <div class="testimonial-details">
+                                        <h3>ДЕВУШКА В ПОЕЗДЕ</h3>
+                                        <p>ПОЛА ХОКИНС</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div><!-- end of /.column 3 -->
+                        </div>
+
                         <div class="col-lg-6 col-lg-offset-1">
                             <div class="section-title">
-                                <h1>Testimoni<span>a</span>l</h1>
+                                <h1><spring:message code="bestsellers"/><span><spring:message code="s"/> </span></h1>
                                 <div class="section-caption">
-                                    <p>Simply dummy text of <span>the printing</span> and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod <span>maxime placeat facere</span> possimus</p><!-- section caption -->
-                                </div><!-- end of section caption -->
-                            </div><!-- end of section title -->
+                                    <p><spring:message code="sectitle"/> </p> <p> <spring:message code="sectitle2"/> </p>
+                                </div>
+                            </div>
                             <div class="customNavigation testimonial-navigation">
                                 <a class="btn testimonial-prev"><i class="fa fa-angle-left"></i> </a>
                                 <a class="btn testimonial-next"><i class="fa fa-angle-right"></i> </a>
-                            </div><!-- end of /. navigation -->
-                        </div><!-- end of /.column -->
-                    </div><!-- end of /. row -->
-                </div><!-- end of /. container -->
-            </section><!-- end of /.testimonial section -->
-
-
-            <!-- START TEAM SECTION -->
-            <section class="team-section" id="top-books">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 ">
-                            <div class="section-title">
-                                <h1>Top<span> Book'</span>s</h1><!-- title -->
-                                <p>Simply dummy text of <span>the printing</span> and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod <span>maxime placeat facere</span> possimus cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p><!-- section caption -->
-                            </div><!-- end of /.section title -->
-                        </div><!-- end of /.cloumn 6 -->
-                    </div><!-- end of /. row -->
-
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.2s">
-                                <img class="img-responsive" src="/resources/images/team/1.jpg" width="435" height="560" alt="">
-                                <div class="team-area">
-                                    <div class="team-details">
-                                         <h2>MELLANIE CLARK</h2><!-- team member name -->
-                                        <h3>GRAPHIC DESIGNER</h3><!-- team member designation -->
-                                        <p>Nam libero tempore, cum soluta obis est eligendi optio cumque nihil impedit quo minus id quod maxime </p><!-- team member description -->
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-envelope"></i> </a></li>
-                                        </ul><!-- end of /. team social media  -->
-                                    </div><!-- end of team details -->
-                                </div><!-- end of /.team area -->
-                            </div><!-- end of /.team profile -->
-                        </div><!-- end of /.colimn -->
-                        <div class="col-md-3">
-                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.3s">
-                                <img class="img-responsive" src="/resources/images/team/2.jpg" width="730" height="560" alt="">
-                                <div class="team-area">
-                                    <div class="team-details">
-                                        <h2>PAMAN GEMBUL</h2><!-- team member name -->
-                                        <h3>GRAPHIC DESIGNER</h3><!-- team member designation -->
-                                        <p>Nam libero tempore, cum soluta obis est eligendi optio cumque nihil impedit quo minus id quod maxime </p><!-- team member description -->
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-envelope"></i> </a></li>
-                                        </ul><!-- end of /. team social media  -->
-                                    </div><!-- end of team details -->
-                                </div><!-- end of /.team area -->
-                            </div><!-- end of /.team profile -->
-                        </div><!-- end of /.column 6 -->
-
-                        <div class="col-md-3">
-                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.4s">
-                                <img class="img-responsive" src="/resources/images/team/3.jpg" width="730" height="560" alt="">
-                                <div class="team-area">
-                                    <div class="team-details">
-                                        <h2>DESSY BEBEK BENGIL</h2><!-- team member name -->
-                                        <h3>Web Developer</h3><!-- team member designation -->
-                                        <p>Nam libero tempore, cum soluta obis est eligendi optio cumque nihil impedit quo minus id quod maxime </p><!-- team member description -->
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-envelope"></i> </a></li>
-                                        </ul><!-- end of /. team social media  -->
-                                    </div><!-- end of team details -->
-                                </div><!-- end of /.team area -->
-                            </div><!-- end of /.team profile -->
-                        </div><!-- end of /.column 6 -->
-
-                        <div class="col-md-3">
-                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.5s">
-                                <img class="img-responsive" src="/resources/images/team/4.jpg" width="730" height="560" alt="">
-                                <div class="team-area">
-                                    <div class="team-details">
-                                        <h2>Tom Jacson</h2><!-- team member name -->
-                                        <h3>Web Developer</h3><!-- team member designation -->
-                                        <p>Nam libero tempore, cum soluta obis est eligendi optio cumque nihil impedit quo minus id quod maxime </p><!-- team member description -->
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                            <li><a href="#"><i class="fa fa-envelope"></i> </a></li>
-                                        </ul><!-- end of /. team social media  -->
-                                    </div><!-- end of team details -->
-                                </div><!-- end of /.team area -->
-                            </div><!-- end of /.team profile -->
-                        </div><!-- end of /.column 6 -->
-                    </div><!-- end of /. row  -->
-
-                </div><!-- end of /.container -->
-            </section><!-- end of /.team section  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- START SKILL SECTION -->
             <section class="skill-section">
@@ -793,103 +321,133 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title meet-title skill-title">
-                                <h1>Sk<span>i</span>ll</h1>
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placea.</p>
+                                <h1 style="word-spacing: 30px"><span><spring:message code="fav"/></span><spring:message code="й"/><span><spring:message code="fav2"/> <spring:message code="ganres"/></span><spring:message code="в"/> </h1>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div  class="row">
                         <div class="col-lg-5 col-lg-offset-1">
                             <div class="skillst1">
-                				<div class="skillbar wow fadeInDown animated" data-percent="88%" data-wow-delay="0.2s">
-                                    <div class="title">Photoshop</div>
-                					<div class="count-bar">
-                						<div class="count"></div>
-                					</div>
-                				</div>
-                				<div class="skillbar wow fadeInDown animated" data-percent="80%" data-wow-delay="0.4s">
-                					<div class="title">Indesign</div>
-                					<div class="count-bar">
-                						<div class="count"></div>
-                					</div>
-                				</div>
-                				<div class="skillbar wow fadeInDown animated" data-percent="92%" data-wow-delay="0.6s">
-                					<div class="title">Illustrator</div>
-                					<div class="count-bar">
-                						<div class="count"></div>
-                					</div>
-                				</div>
-                			</div>
-                        </div><!-- end of /.column -->
-                         <div class="col-lg-5">
+                                <div class="skillbar wow fadeInDown animated" data-percent="86%" data-wow-delay="0.2s">
+                                    <div class="title"><spring:message code="fantastica"/> </div>
+                                    <div class="count-bar">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar wow fadeInDown animated" data-percent="80%" data-wow-delay="0.4s">
+                                    <div class="title"><spring:message code="classic"/> </div>
+                                    <div class="count-bar">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar wow fadeInDown animated" data-percent="96%" data-wow-delay="0.6s">
+                                    <div class="title"><spring:message code="roman"/> </div>
+                                    <div class="count-bar">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
                             <div class="skillst1">
-                				<div class="skillbar wow fadeInDown animated" data-percent="88%" data-wow-delay="0.8s">
-                					<div class="title">Flash MX</div>
-                					<div class="count-bar">
-                						<div class="count"></div>
-                					</div>
-                				</div>
-                				<div class="skillbar wow fadeInDown animated" data-percent="80%" data-wow-delay="0.10s">
-                					<div class="title">Lightroom</div>
-                					<div class="count-bar">
-                						<div class="count"></div>
-                					</div>
-                				</div>
-                				<div class="skillbar wow fadeInDown animated" data-percent="92%" data-wow-delay="0.12s">
-                					<div class="title">After Effect</div>
-                					<div class="count-bar">
-                						<div class="count"></div>
-                					</div>
-                				</div>
-                			</div>
-                        </div><!-- end of /. coulmn -->
-                    </div><!-- end of /. row -->
-                </div><!-- end of /.container -->
-            </section><!-- end of/. skill section -->
+                                <div class="skillbar wow fadeInDown animated" data-percent="88%" data-wow-delay="0.8s">
+                                    <div class="title"><spring:message code="adventure"/> </div>
+                                    <div class="count-bar">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar wow fadeInDown animated" data-percent="71%" data-wow-delay="0.10s">
+                                    <div class="title"><spring:message code="detective"/> </div>
+                                    <div class="count-bar">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar wow fadeInDown animated" data-percent="92%" data-wow-delay="0.12s">
+                                    <div class="title"><spring:message code="poetry"/></div>
+                                    <div class="count-bar">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <!-- START PROJET SECTION -->
-            <section class="project-counter-section">
+
+            <!-- START TEAM SECTION -->
+            <section class="team-section" id="authors">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-md-8 ">
                             <div class="section-title">
-                                <h1>Funfa<span>c</span>t</h1>
+                                <h1 style="margin-bottom: 20px"><spring:message code="author"/><span><spring:message code="'"/> </span></h1>
+                                <p><spring:message code="authortitle"/></p>
                             </div>
-                        </div><!-- end of/.column -->
-                        <div class="col-lg-6 col-lg-offset-3">
-                            <p>Simply dummy text of <span>the printing</span> and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placea.</p>
-                        </div><!-- end of /.column -->
-                    </div><!-- end of/.row -->
-                    <div class="row">
-                        <div class="col-sm-2 col-sm-offset-1">
-                            <div class="counter-area wow fadeInDown animated" data-wow-delay="0.2s">
-                                <span class="counter">365</span>
-                            </div>
-                            <h3>Coffee Cups</h3>
                         </div>
-                        <div class="col-sm-2 col-sm-offset-1">
-                            <div class="counter-area wow fadeInDown animated" data-wow-delay="0.4s">
-                                <span class="counter">214</span>
-                            </div>
-                            <h3>Clients Testimonial</h3>
-                        </div>
-                        <div class="col-sm-2 col-sm-offset-1">
-                            <div class="counter-area wow fadeInDown animated" data-wow-delay="0.6s">
-                                <span class="counter">623</span>
-                            </div>
-                            <h3>Cookies</h3>
-                        </div>
-                        <div class="col-sm-2 col-sm-offset-1">
-                            <div class="counter-area wow fadeInDown animated" data-wow-delay="0.8s">
-                                <span class="counter">852</span>
-                            </div>
-                            <h3>Music Played</h3>
-                        </div>
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container -->
-            </section><!-- end of /. projeck counter section -->
+                    </div>
 
-            <!-- START FOLLOW SECTION -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.2s">
+                                <img class="img-responsive" src="/resources/images/my/vince.jpg" width="435" height="560" alt="">
+                                <div class="team-area">
+                                    <div class="team-details">
+                                        <h2><spring:message code="reyBred"/></h2>
+                                        <h3><spring:message code="birthdayBred"/></h3>
+                                    <p><spring:message code="raybred"/></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.3s">
+                                <img class="img-responsive" src="/resources/images/my/vince2.jpg" width="730" height="560" alt="">
+                                <div class="team-area">
+                                    <div class="team-details">
+                                        <h2><spring:message code="oscar"/></h2>
+                                        <h3><spring:message code="birthdayOscar"/></h3>
+                                        <p><spring:message code="quoteoscar"/> </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.4s">
+                                <img class="img-responsive" src="/resources/images/my/vince3.jpg" width="730" height="560" alt="">
+                                <div class="team-area">
+                                    <div class="team-details">
+                                        <h2><spring:message code="dik"/></h2>
+                                        <h3><spring:message code="birthdaydik"/></h3>
+                                        <p><spring:message code="dikkins"/></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="team-profile wow fadeInLeft animated" data-wow-delay="0.5s">
+                                <img class="img-responsive" src="/resources/images/my/vince4.jpg" width="730" height="560" alt="">
+                                <div class="team-area">
+                                    <div class="team-details">
+                                        <h2><spring:message code="agata"/></h2>
+                                        <h3><spring:message code="birthdayAgata"/></h3>
+                                        <p><spring:message code="quoteAgata"/></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
             <section class="follow-us-section" id="contact">
                 <div class="container">
                     <div class="row">
@@ -913,10 +471,10 @@
                                     <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
                                 </ul>
                             </div>
-                        </div><!-- end of /. column -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container -->
-            </section><!-- end of /.follow section -->
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- START CONTACT SECTION -->
             <section class="contact-section">
@@ -924,11 +482,10 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title meet-title skill-title contact-title">
-                                <h1>Contact<span>U</span>s</h1>
-                                <p>Simply dummy text of the printing and typesetting industry. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placea.</p>
-                            </div><!-- end of /. section tile -->
-                        </div><!-- end of /.column -->
-                    </div><!-- end of /.row -->
+                                <h1><spring:message code="contactus"/> <span><spring:message code="us"/> </span></h1>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-3 col-lg-offset-1">
                             <div class="footer-infomation">
@@ -952,28 +509,28 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="contact-area">
-                                <form action="/feedback" method="post">
+                                <form action="/emailsend" method="post">
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="NAME">
+                                        <input type="text" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
                                     </div>
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL">
+                                        <input type="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
                                     </div>
 
                                     <div class="form-group col-lg-12 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <textarea name="message" id="message" cols="30" rows="5" placeholder="MESSAGE"></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="5" placeholder="<spring:message code="messagesend"/>"></textarea>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <button type="submit" class="btn contact-submit">SEND</button>
+                                            <button type="submit" class="btn contact-submit"><spring:message code="send"/> </button>
                                         </div>
                                     </div>
-                                </form><!-- end of form -->
-                            </div><!-- end of /.contact area-->
-                        </div><!-- end of /.column -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /. container -->
-            </section><!-- end of /.contact section -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- START FOOTER SECTION -->
             <footer class="footer-section">
@@ -981,12 +538,12 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <p>2017.All Right Reserved. Design by <span>Viktor Yurlov</span></p>
-                        </div><!-- end of/. column -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container -->
-            </footer><!-- end of /.footer section -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
-        </div><!-- end of /. wrapper -->
+        </div>
         <div id='easy-top'></div>
 
         <!-- JQUERY LIBRARY -->
@@ -1009,7 +566,6 @@
         <script src="/resources/js/jquery.prettyPhoto.js"></script>
         <!-- EASING -->
         <script src='/resources/js/easing.js'></script>
-
         <script src="/resources/js/wow.min.js"></script>
         <!-- CUSTOM JS -->
         <script src="/resources/js/custom.js"></script>

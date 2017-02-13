@@ -1,9 +1,9 @@
 package online.mega.library.ImplementsService;
 
 
-import online.mega.library.Entity.Author;
-import online.mega.library.Entity.Book;
-import online.mega.library.Entity.Genre;
+import online.mega.library.Entities.Author;
+import online.mega.library.Entities.Book;
+import online.mega.library.Entities.Genre;
 import online.mega.library.Services.BookService;
 import online.mega.library.Repositoties.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;

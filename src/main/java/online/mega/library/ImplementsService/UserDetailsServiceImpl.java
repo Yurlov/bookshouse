@@ -1,7 +1,7 @@
 package online.mega.library.ImplementsService;
 
 
-import online.mega.library.Entity.User;
+import online.mega.library.Entities.User;
 import online.mega.library.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,6 +1,6 @@
 package online.mega.library.Repositoties;
 
-import online.mega.library.Entity.Genre;
+import online.mega.library.Entities.Genre;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

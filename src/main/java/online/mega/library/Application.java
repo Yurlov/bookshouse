@@ -2,7 +2,7 @@ package online.mega.library;
 
 
 
-import online.mega.library.Entity.User;
+import online.mega.library.Entities.User;
 import online.mega.library.Services.UserService;
 import online.mega.library.Enams.UserRole;
 import org.springframework.boot.CommandLineRunner;

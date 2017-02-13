@@ -1,6 +1,6 @@
 package online.mega.library.Services;
 
-import online.mega.library.Entity.User;
+import online.mega.library.Entities.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 
@@ -46,102 +46,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"> Admin</a>
+                <a class="navbar-brand" href="/main">Book's House</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
+
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a href="#">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <c:out value="${login}"/> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
+
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
+                        <a href="/main"><i class="fa fa-fw fa-home"></i>Book's House</a>
+                    </li>
                         <li class="divider"></li>
                         <li>
                             <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
@@ -153,10 +69,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="/adminka"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="/forms"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                        <a href="/admin"><i class="fa fa-fw fa-table"></i> Tables</a>
                     </li>
                 </ul>
             </div>
@@ -185,15 +98,29 @@
                                 <thead>
                                 <tr>
                                     <th colspan="7">
-                                        <form action="/addUser">
+                                        <form action="/addUser" method="post">
                                             <div class="form-group">
-                                                <button class="btn btn-lg btn-warning" >Add</button>
+                                                <button style="float: right;;" class="btn btn-lg btn-warning" >Add</button>
                                                 <input class="form-control-static" placeholder="Enter login" type="text" name="login">
                                                 <input class="form-control-static" placeholder="Enter name" type="text" name="name">
-                                                <input class="form-control-static" placeholder="Enter email" type="text" name="email">
+                                                <input class="form-control-static" placeholder="Enter email" type="email" name="email">
                                                 <input class="form-control-static" placeholder="Enter password" type="text" name="password">
                                                 <input class="form-control-static" placeholder="Enter role" type="text" name="role">
+                                            </div>
+                                        </form>
+                                    </th>
 
+                                </tr>
+                                <tr>
+                                    <th colspan="7">
+                                        <form action="/updateUser" method="post">
+                                            <div class="form-group">
+                                                <button style="float: right;" class="btn btn-lg btn-warning" >Update</button>
+                                                <input class="form-control-static" placeholder="Enter login" type="text" name="login">
+                                                <input class="form-control-static" placeholder="Enter name" type="text" name="name">
+                                                <input class="form-control-static" placeholder="Enter email" type="email" name="email">
+                                                <input class="form-control-static" placeholder="Enter password" type="text" name="password">
+                                                <input class="form-control-static" placeholder="Enter role" type="text" name="role">
                                             </div>
                                         </form>
                                     </th>
@@ -209,11 +136,12 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <form action="/deleteUser" method="post">
                                 <c:forEach items="${users}" var="u">
                                 <tr>
                                     <td><div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value=""/>
+                                            <input type="checkbox" name="id" value="${u.id}"/><input class="btn btn-success" style="float: right" type="submit" value="Delete">
                                         </label>
                                     </div>
                                     </td>
@@ -226,6 +154,8 @@
 
                                 </tr>
                                 </c:forEach>
+
+                                </form>
                                 </tbody>
                             </table>
                         </div>
@@ -245,8 +175,10 @@
                                     <th colspan="3">
                                         <form action="/addGenre">
                                      <div class="form-group">
-                                        <input class="form-control" placeholder="Enter Genre" type="text" name="genre">
-                                         <button class="btn btn-primary" >Add</button>
+                                        <input class="form-control" placeholder="Жанр: " type="text" name="name_ru">
+                                        <input class="form-control" placeholder="Genre: " type="text" name="name_en">
+                                         <button style="float: right" class="btn btn-primary" >Add</button>
+
                                     </div>
                                     </form>
                                     </th>
@@ -254,23 +186,31 @@
                                     <tr>
                                         <th>Chose:</th>
                                         <th>Id</th>
-                                        <th>Name</th>
-
+                                        <th>Name_ru</th>
+                                        <th>Name_en</th>
                                     </tr>
                                 </thead>
-                                <tbody style="text-align: center">
+                                <tbody >
                                 <c:forEach items="${genres}" var="g">
+                                <form action="/deleteGenre" method="post">
                                     <tr>
-                                        <td><div class="checkbox">
+                                        <td>
+                                            <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" value=""/>
+                                                <input type="checkbox" name="genre" value="${g.id}"/><input class="btn btn-success" style="float: left" type="submit" value="Delete">
                                             </label>
-                                        </div></td>
+                                        </div>
+
+                                        </td>
                                         <td><c:out value="${g.id}"/> </td>
-                                        <td><c:out value="${g.name}"/></td>
+                                        <td><c:out value="${g.name_ru}"/></td>
+                                        <td><c:out value="${g.name_en}"/> </td>
                                     </tr>
                                 </c:forEach>
+
+                                </form>
                                 </tbody>
+
                             </table>
                         </div>
                     </div>
@@ -284,8 +224,7 @@
                                         <form action="/addAuthor">
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="Enter name" type="text" name="auth">
-                                                <input class="form-control" placeholder="Enter birthday" type="text" name="birthday">
-                                                <button class="btn btn-primary" >Add</button>
+                                                <button style="float: right" class="btn btn-primary" >Add</button>
                                             </div>
                                         </form>
                                     </th>
@@ -294,25 +233,26 @@
                                         <th>Chose:</th>
                                         <th>Id</th>
                                         <th>Name</th>
-                                        <th>Birthday</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <form action="/deleteAuthor" method="post">
                                 <c:forEach items="${auth}" var="a">
                                     <tr>
                                         <td >
                                             <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" value=""/>
+                                                <input type="checkbox" name="id" value="a.id"/> <input class="btn btn-success" style="float: left" type="submit" value="Delete">
                                             </label>
                                         </div>
                                         </td>
                                         <td><c:out value="${a.id}"/> </td>
                                         <td><c:out value="${a.fio}"/></td>
-                                        <td><c:out value="${a.birthday}"/></td>
 
                                     </tr>
                                 </c:forEach>
+
+                                </form>
                                 </tbody>
                             </table>
                         </div>
@@ -329,7 +269,7 @@
                                         <form action="/addPublisher">
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="Enter name" type="text" name="name">
-                                                <button class="btn btn-primary" >Add</button>
+                                                <button style="float: right" class="btn btn-primary" >Add</button>
                                             </div>
                                         </form>
                                     </th>
@@ -341,12 +281,13 @@
 
                                 </tr>
                                 </thead>
-                                <tbody style="text-align: center">
+                                <tbody >
+                                <form action="/deletePublisher" method="post">
                                 <c:forEach items="${publishers}" var="p">
                                     <tr>
                                         <td> <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" value=""/>
+                                                <input type="checkbox" name="id" value="${p.id}"/><input class="btn btn-success" style="float: left" type="submit" value="Delete">
                                             </label>
                                         </div>
                                         </td>
@@ -354,6 +295,8 @@
                                         <td><c:out value="${p.name}"/></td>
                                     </tr>
                                 </c:forEach>
+
+                                </form>
                                 </tbody>
                             </table>
                         </div>
@@ -361,7 +304,7 @@
                 </div>
                 <hr/>
                 <div class="row">
-                    <div class="col-lg-12" style="height: 500px; overflow: auto">
+                    <div class="col-lg-12" style="height: 500px; width: 100%; overflow: auto">
                         <h2>Books</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
@@ -380,23 +323,27 @@
                                         <th>Publisher</th>
                                         <th>Rating</th>
                                         <th>Vote</th>
+                                        <th>Content</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <form action="/deleteBook" method="post">
                                 <c:forEach items="${books}" var="b">
                                     <tr class="active">
+
                                         <td>
                                             <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" value=""/>
+                                                <input type="checkbox" name="id" value="${b.id}"/><input class="btn btn-success"  type="submit" value="Delete">
                                             </label>
                                         </div>
                                         </td>
+
                                         <td><c:out value="${b.id}"/></td>
                                         <td><c:out value="${b.name}"/></td>
                                         <td><c:out value="${b.isbn}"/></td>
-                                        <td><c:out value="${b.genre.name}"/></td>
+                                        <td><c:out value="${b.genre.name_ru}"/></td>
                                         <td><c:out value="${b.image}"/></td>
                                         <td><c:out value="${b.descr}"/></td>
                                         <td><c:out value="${b.pageCount}"/></td>
@@ -409,27 +356,64 @@
 
                                     </tr>
                                 </c:forEach>
+
+                                </form>
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
 
                 </div>
-                <!-- /.row -->
+                <form class="form-group-lg" enctype="multipart/form-data" method="post" action="/addBook" >
+                    <h1>New Book</h1>
+                    <h4>Name <input type="text" name="bookName"/> </h4>
+                    <h4>ISBN <input type="text" name="isbn"></h4>
+                    <h4>Genre <select  name="genre">
+                        <option>Choose:</option>
+                        <c:forEach items="${genres}" var="g">
+                        <option value="${g.name_ru}">${g.name_ru}</option>
+                        </c:forEach>
+                    </select>
+                    </h4>
+                    <h4>Image:  <input type="file" name="image" multiple accept="image/*,image/jpeg"></h4>
+                    <h4>Description <input type="text" name="descript"></h4>
+                    <h4>Page Count <input type="text" name="pageCount"></h4>
+                    <h4>Publisher Year <input type="text" name="year"></h4>
+                    <h4>Author:
+                        <select name="author">
+                            <option>Choose:</option>
+                        <c:forEach items="${auth}" var="a">
+                        <option value="${a.id}">${a.fio}</option>
+                        </c:forEach>
+                    </select>
+                    </h4>
+                    <h4>Publisher
+                    <select name="publisher">
+                        <option>Choose:</option>
+                        <c:forEach items="${publishers}" var="p">
+                            <option  value="${p.id}">${p.name}</option>
+                        </c:forEach>
+                    </select>
+                    </h4>
+                    <h4>Rating <input type="text" name="rating"></h4>
+                    <h4>Content:  <input type="file" name="content" multiple></h4>
+                <input class="btn btn-lg btn-success" type="submit" value="Добавить">
+
+                </form>
 
             </div>
-            <!-- /.container-fluid -->
+
 
         </div>
-        <!-- /#page-wrapper -->
+
 
     </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery -->
+
+
     <script src="/resources/js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
     <script src="/resources/js/bootstrap.min.js"></script>
 
 </body>

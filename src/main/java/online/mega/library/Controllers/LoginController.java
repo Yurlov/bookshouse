@@ -1,7 +1,7 @@
 package online.mega.library.Controllers;
 
 import online.mega.library.Enams.UserRole;
-import online.mega.library.Entity.User;
+import online.mega.library.Entities.User;
 import online.mega.library.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;

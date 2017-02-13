@@ -2,9 +2,9 @@ package online.mega.library.Services;
 
 
 
-import online.mega.library.Entity.Author;
-import online.mega.library.Entity.Book;
-import online.mega.library.Entity.Genre;
+import online.mega.library.Entities.Author;
+import online.mega.library.Entities.Book;
+import online.mega.library.Entities.Genre;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
