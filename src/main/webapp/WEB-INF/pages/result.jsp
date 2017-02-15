@@ -34,6 +34,8 @@
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="/resources/js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
+
+
     </head>
     <body >
 
@@ -147,10 +149,10 @@
                                     <li ><a href="#contact"><spring:message code="contact"/></a></li>
                                 </ul>
 
-                            </div><!--end of /.navbar-collapse -->
-                        </div><!--end of /.container-fluid -->
-                    </nav><!-- end of /. navbar -->
-                </header><!-- end of /. header section -->
+                            </div>
+                        </div>
+                    </nav>
+                </header>
             </section>
 
             <section class="about-section" id="search" >
@@ -188,10 +190,8 @@
                         <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound">Книг не найдено!</p>
                     </c:when>
                     <c:when test="${viewBook != null}">
-
                         <div class=" col-sm-7 col-lg-8 col-md-8" >
                             <img  width="305" height="400" style="margin-left: 40px; float: left;  border-radius: 10px"  src="/image/${viewBook.id}" alt="${viewBook.name}"/>
-
                             <div class="viewBook col-lg-4 col-md-4 col-xs-1 ">
                                 <p id="view"> <spring:message code="nameview"/> <a href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
                                 <p id="view" > <spring:message code="authorview"/> <a href="/searchByNameOrAuthor/${viewBook.author.fio}/pages/1"> ${viewBook.author.fio}</a></p>
@@ -210,6 +210,7 @@
 
                             </div>
                         </div>
+
                         <div style="margin-left: 40px; float: left; margin-top: 5px" class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
                             <security:authorize access="!isAuthenticated()">
                                 <p><spring:message code="acsessview"/> <a href="/login"><spring:message code="enter"/></a> / <a href="/register"><spring:message code="registr"/></a></p>
@@ -439,17 +440,18 @@
                         </div>
 
                         <div class="col-lg-6 col-lg-offset-1">
-                            <div class="section-title">
-                                <h1><spring:message code="bestsellers"/><span><spring:message code="s"/> </span></h1>
-                                <div class="section-caption">
-                                    <p><spring:message code="sectitle"/> </p> <p> <spring:message code="sectitle2"/> </p>
-                                </div>
-                            </div>
-                            <div class="customNavigation testimonial-navigation">
-                                <a class="btn testimonial-prev"><i class="fa fa-angle-left"></i> </a>
-                                <a class="btn testimonial-next"><i class="fa fa-angle-right"></i> </a>
+                        <div class="section-title">
+                            <h1><spring:message code="bestsellers"/><span><spring:message code="s"/> </span></h1>
+                            <div class="section-caption">
+                                <p><spring:message code="sectitle"/> </p> <p> <spring:message code="sectitle2"/> </p>
                             </div>
                         </div>
+                        <div class="customNavigation testimonial-navigation">
+                            <a class="btn testimonial-prev"><i class="fa fa-angle-left"></i> </a>
+                            <a class="btn testimonial-next"><i class="fa fa-angle-right"></i> </a>
+                        </div>
+
+                    </div>
                     </div>
                 </div>
             </section>

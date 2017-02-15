@@ -21,6 +21,7 @@ public class MainController {
     @Autowired
     private GenreService genreService;
 
+
         @RequestMapping("/main")
         public String main(Model model){
             Page<Book> page = bookService.getBookLog(1);
@@ -40,7 +41,6 @@ public class MainController {
         public String start(Model model){
             return "redirect:/main";
         }
-
 
         @RequestMapping("/register")
         public String register() {

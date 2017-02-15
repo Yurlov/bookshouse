@@ -65,15 +65,14 @@
                     </ul>
                 </li>
             </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="/admin"><i class="fa fa-fw fa-table"></i> Tables</a>
+                        <a href="/admin"><i class="fa fa-fw fa-table"></i>Tables</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </nav>
 
         <div id="page-wrapper">
