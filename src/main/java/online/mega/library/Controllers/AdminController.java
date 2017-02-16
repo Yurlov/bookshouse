@@ -99,8 +99,8 @@ public class AdminController {
     )  {
 
 
-        String contentPath = "src/main/resources/META-INF/resources/bookFiles/"+bookName.toLowerCase()+".pdf";
-        String imagePath = "src/main/resources/META-INF/resources/bookImages/"+bookName.toLowerCase()+".jpg";
+        String contentPath = "src/main/resources/bookFiles/"+bookName.toLowerCase()+".pdf";
+        String imagePath = "src/main/resources/bookImages/"+bookName.toLowerCase()+".jpg";
         MyUtils.writeFiles(content,contentPath);
         MyUtils.writeFiles(image,imagePath);
 

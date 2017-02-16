@@ -175,7 +175,6 @@
                                             </a>
                                         </ul>
                                     </c:forEach>
-
                                 </c:when>
                                 <c:otherwise>
                                 <c:forEach items="${genres}" var="g">
