@@ -26,6 +26,20 @@ public class LoginController {
         return "login";
     }
 
+    @RequestMapping(value = "/updateUser", method = RequestMethod.POST)
+    public String update(@RequestParam(required = false) String email, @RequestParam(required = false) String login, @RequestParam(required = false) String name, @RequestParam(required = false) String password, @RequestParam(required = false) UserRole role) {
+
+        User dbUser = userService.getUserByLogin(login);
+        dbUser.setPassword(encoder.encodePassword(password, null));
+        dbUser.setName(name);
+        dbUser.setEmail(email);
+        dbUser.setRole(role);
+
+        userService.updateUser(dbUser);
+
+        return "redirect:/admin";
+    }
+
     @RequestMapping(value = "/newuser", method = RequestMethod.POST)
     public String update(@RequestParam String login,
                          @RequestParam(required = false) String name,

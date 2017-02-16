@@ -3,6 +3,7 @@ package online.mega.library.Controllers;
 import online.mega.library.Enams.UserRole;
 import online.mega.library.Entities.*;
 import online.mega.library.Services.*;
+import online.mega.library.Utils.MyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,11 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 
 @Controller
 public class AdminController {
@@ -38,28 +34,8 @@ public class AdminController {
     @Autowired
     private ShaPasswordEncoder encoder;
 
-    @RequestMapping(value = "/updateUser", method = RequestMethod.POST)
-    public String update(@RequestParam(required = false) String email, @RequestParam(required = false) String login, @RequestParam(required = false) String name, @RequestParam(required = false) String password, @RequestParam(required = false) UserRole role) {
 
-        User dbUser = userService.getUserByLogin(login);
-        dbUser.setPassword(encoder.encodePassword(password, null));
-        dbUser.setName(name);
-        dbUser.setEmail(email);
-        dbUser.setRole(role);
 
-        userService.updateUser(dbUser);
-
-        return "redirect:/admin";
-    }
-
-    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-    public String addUser(@RequestParam(required = false) String email, @RequestParam(required = false) String name,@RequestParam String login,@RequestParam String password, @RequestParam UserRole role) {
-
-        User dbUser = new User(name,login,encoder.encodePassword(password, null),role,email);
-        userService.addUser(dbUser);
-
-        return "redirect:/admin";
-    }
 
     @RequestMapping("/admin")
     public String admin(Model model){
@@ -72,6 +48,16 @@ public class AdminController {
         model.addAttribute("books", bookService.getBooks());
         return "admin";
     }
+
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+    public String addUser(@RequestParam(required = false) String email, @RequestParam(required = false) String name,@RequestParam String login,@RequestParam String password, @RequestParam UserRole role) {
+
+        User dbUser = new User(name,login,encoder.encodePassword(password, null),role,email);
+        userService.addUser(dbUser);
+
+        return "redirect:/admin";
+    }
+
     @RequestMapping(value = "/addGenre", method = RequestMethod.GET)
     public String addGenre(@RequestParam String name_ru,@RequestParam String name_en, Model model){
 
@@ -113,26 +99,10 @@ public class AdminController {
     )  {
 
 
-
-        try(OutputStream fos = new FileOutputStream(new File("src/main/resources/META-INF/resources/bookFiles/"+bookName.toLowerCase()+".pdf"))) {
-            fos.write(content.getBytes());
-            fos.flush();
-            fos.close();
-        } catch(IOException ex){
-            System.out.println(ex.getMessage());
-        }
-
-        try(OutputStream fos = new FileOutputStream(new File("src/main/resources/META-INF/resources/bookImages/"+bookName.toLowerCase()+".jpg"))) {
-            fos.write(image.getBytes());
-            fos.flush();
-            fos.close();
-        } catch(IOException ex){
-            System.out.println(ex.getMessage());
-        }
-
-
         String contentPath = "src/main/resources/META-INF/resources/bookFiles/"+bookName.toLowerCase()+".pdf";
         String imagePath = "src/main/resources/META-INF/resources/bookImages/"+bookName.toLowerCase()+".jpg";
+        MyUtils.writeFiles(content,contentPath);
+        MyUtils.writeFiles(image,imagePath);
 
         Book newBook = new Book(bookName,contentPath,pageCount,
                 isbn,genreService.getGenreByName(genre),
@@ -153,7 +123,11 @@ public class AdminController {
     }
     @RequestMapping("/deleteBook")
     public String deleteBook(@RequestParam("id") Long id){
-        bookService.deleteBook(bookService.getBookById(id));
+        Book book = bookService.getBookById(id);
+        String pathToPdf = book.getContent();
+        String pathToImage = book.getImage();
+        MyUtils.deleteFiles(pathToPdf,pathToImage);
+        bookService.deleteBook(book);
         return "redirect:/admin";
     }
     @RequestMapping("/deletePublisher")
@@ -171,4 +145,8 @@ public class AdminController {
         userService.deleteUser(id);
         return "redirect:/admin";
     }
+
+
+
+
 }

@@ -38,7 +38,7 @@ public class MainController {
         }
 
         @RequestMapping("/")
-        public String start(Model model){
+        public String start(){
             return "redirect:/main";
         }
 

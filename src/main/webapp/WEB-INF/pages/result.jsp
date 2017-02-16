@@ -113,15 +113,15 @@
                                 <span class="glyphicon " aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div><!-- end of /.carousel -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container-fluid -->
+                        </div>
+                    </div>
+                </div>
 
                 <!-- START HEADER SECTION -->
                 <header class="header-section">
                     <nav class="navbar navbar-default">
                         <div class="container">
-                            <!-- Brand and toggle get grouped for better mobile display -->
+
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                     <span class="sr-only">Toggle navigation</span>
@@ -157,11 +157,20 @@
 
             <section class="about-section" id="search" >
                 <div class="round">
-                <jsp:include page="search.jsp"/>
+                    <form style="display:inline;" action="/searchByName" method="get">
+                        <div class="form-group" >
+                            <div class="input-group" id="searchForm">
+                                <input class="form-control" id="input" name="book" placeholder="<spring:message code="search"/> " type="text" />
+                                <button type="submit" id="button" class=" col-xs-4 btn control-btn"><spring:message code="search2"/></button>
+                            </div>
+                        </div>
+                    </form>
+
                 <div class="container">
                     <div class="row">
 
-                        <div style="float: left; padding-bottom: 30px" class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+
+                        <div  class="gen col-xs-12 col-sm-5 col-md-4 col-lg-3">
                             <c:choose>
                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
                                     <c:forEach items="${genres}" var="g">
@@ -216,8 +225,8 @@
                                 <p><spring:message code="acsessview"/> <a href="/login"><spring:message code="enter"/></a> / <a href="/register"><spring:message code="registr"/></a></p>
                             </security:authorize>
                             <security:authorize access="isAuthenticated()">
-                            <a href="/download/${viewBook.id}/true"><button style="width: 150px" class="btn btn-danger btn-lg" > <spring:message code="download"/> </button></a>
-                            <a href="/download/${viewBook.id}/false"><button style="width: 150px" class="btn btn-success btn-lg" > <spring:message code="readBook"/> </button></a>
+                            <a href="/download/${viewBook.id}/true"><button  class="btnview btn btn-danger btn-lg" > <spring:message code="download"/> </button></a>
+                            <a href="/download/${viewBook.id}/false"><button  class="btnview btn btn-success btn-lg" > <spring:message code="readBook"/> </button></a>
                             </security:authorize>
                             <h3><spring:message code="discrview"/> </h3> <p class="viewBook">${viewBook.descr}</p>
                         </div>
@@ -227,7 +236,7 @@
 
                             <div class="container">
                                 <div class="row">
-                                    <div style="margin-top: 20px;" >
+                                    <div class="listbook">
                                         <c:forEach items="${books.content}" var="b">
                                             <div class="lin col-md-4 col-xs-5 col-sm-3 col-lg-2 ">
                                                 <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
@@ -638,7 +647,7 @@
                                 <p><i class="fa fa-globe"></i> &nbsp;www.domain.com</p>
                                 <div class="social-follow">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
@@ -653,10 +662,10 @@
                             <div class="contact-area">
                                 <form action="/emailsend" method="post">
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="text" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
                                     </div>
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
                                     </div>
 
                                     <div class="form-group col-lg-12 wow fadeInDown animated" data-wow-delay="0.2s">

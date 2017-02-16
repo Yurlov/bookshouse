@@ -14,13 +14,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
-
+    @Autowired
+    private ShaPasswordEncoder encoder;
 
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .userDetailsService(userDetailsService)
-                .passwordEncoder(getShaPasswordEncoder());
+                .passwordEncoder(encoder);
     }
 
     @Override
@@ -28,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/","/main","/resultpage").permitAll()
+                .antMatchers("/","/main","/result").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/register").permitAll()
                 .and()
@@ -49,7 +50,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true);
     }
 
-    private ShaPasswordEncoder getShaPasswordEncoder(){
-        return new ShaPasswordEncoder();
-    }
+
 }

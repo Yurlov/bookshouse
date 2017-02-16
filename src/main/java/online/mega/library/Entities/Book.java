@@ -17,14 +17,14 @@ public class Book {
     @Column
     private String isbn;
 
-    @OneToOne(cascade=CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "genre_id")
     private Genre genre;
-    @OneToOne(cascade=CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "author_id")
     private Author author;
     private Integer publishYear;
-    @OneToOne(cascade=CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
     @Column

@@ -11,7 +11,7 @@
 
 <body>
 <div class="container">
-<div class="row col-lg-12">
+<div class="row col-lg-12 col-xs-12">
 <div id="page" >
     <form  id="searchForm" action="/searchByName" method="get">
                 <div class="form-group" style="display:inline;">

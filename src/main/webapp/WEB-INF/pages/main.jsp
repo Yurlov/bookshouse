@@ -1,6 +1,4 @@
 <%@ page import="java.util.Locale" %>
-<%@ page import="online.mega.library.Controllers.InterceptorController" %>
-<%@ page import="org.springframework.cglib.core.Local" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -25,10 +23,6 @@
 		<link rel="icon" href="/resources/images/favicon.png" sizes="72x72">
 		<link rel="icon" href="/resources/images/favicon.png" sizes="114x114">
 		<link rel="icon" href="/resources/images/favicon.png" sizes="144x144">
-        <%--<script>--%>
-            <%--window.onload = function () {--%>
-                <%--location += "#search"}--%>
-        <%--</script>--%>
 
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">
@@ -114,9 +108,9 @@
                                 <span class="glyphicon " aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div><!-- end of /.carousel -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container-fluid -->
+                        </div>
+                    </div>
+                </div>
 
                 <!-- START HEADER SECTION -->
                 <header class="header-section">
@@ -157,14 +151,20 @@
             </section>
 
 
-            <!-- START ABOUT SECTION -->
+            <!-- START SEARCH SECTION -->
             <section class="about-section" id="search" >
                 <div class="round">
-                <jsp:include page="search.jsp"/>
+                    <form style="display:inline;" action="/searchByName" method="get">
+                        <div class="form-group" >
+                            <div class="input-group" id="searchForm">
+                                <input class="form-control" id="input" name="book" placeholder="<spring:message code="search"/> " type="text" />
+                                <button type="submit" id="button" class=" col-xs-4 btn control-btn"><spring:message code="search2"/></button>
+                            </div>
+                        </div>
+                    </form>
                 <div class="container">
                     <div class="row">
-
-                        <div style="float: left; padding-bottom: 30px" class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                        <div class="gen col-xs-12 col-sm-5 col-md-4 col-lg-3">
                             <c:choose>
                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
                                     <c:forEach items="${genres}" var="g">
@@ -192,7 +192,7 @@
 
                         <div class="container">
                             <div class="row">
-                                <div style="margin-top: 20px;" >
+                                <div class="listbook">
                                     <c:forEach items="${books.content}" var="b">
                                         <div class="lin col-md-4 col-xs-5 col-sm-3 col-lg-2 ">
                                             <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
@@ -248,9 +248,7 @@
                 </div>
             </section>
 
-
-
-            <!-- START TESTIMONIAL SECTION -->
+            <!-- START TOPBOOK SECTION -->
             <section class="testimonial-section" id="top-books">
                 <div class="container">
                     <div class="row">
@@ -260,26 +258,26 @@
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ГАРРИ ПОТТЕР</h3><!--  title -->
-                                        <p>J.K ROWLING</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 1 -->
+                                        <h3>ГАРРИ ПОТТЕР</h3>
+                                        <p>J.K ROWLING</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/dom.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3><!--  title -->
-                                        <p>РЕНСОМ РИГГЗ</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 2 -->
+                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3>
+                                        <p>РЕНСОМ РИГГЗ</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/do.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3><!--  title -->
-                                        <p>ДЖОДЖО МОЙЕС</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 3 -->
+                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3>
+                                        <p>ДЖОДЖО МОЙЕС</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/50.jpg"  alt="">
@@ -511,10 +509,10 @@
                             <div class="contact-area">
                                 <form action="/emailsend" method="post">
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="text" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
                                     </div>
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
                                     </div>
 
                                     <div class="form-group col-lg-12 wow fadeInDown animated" data-wow-delay="0.2s">
