@@ -1,30 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf007493-8746-4b3a-96e4-b8fa37f10699" name="Default" comment="five commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Utils/MyUtils.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/bookFiles/history of mnemonik.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/bookImages/history of mnemonik.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/images/my/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/images/my/bg_header.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/images/my/gt_favicon.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/mega/library/Config/SecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/online/mega/library/Config/SecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/mega/library/Controllers/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/online/mega/library/Controllers/LoginController.class" />
+    <list default="true" id="bf007493-8746-4b3a-96e4-b8fa37f10699" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/EmailController.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/EmailController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Book.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Book.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/search.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,16 +78,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/EmailController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,32 +98,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testsec.user" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.user">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -220,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Application.java" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/EmailController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Utils/IOUtils.java" />
@@ -234,6 +217,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/sb-admin.css" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
       </list>
     </option>
   </component>
@@ -1108,7 +1092,7 @@
       <workItem from="1486910729726" duration="37142000" />
       <workItem from="1487012644029" duration="16109000" />
       <workItem from="1487191799155" duration="11682000" />
-      <workItem from="1487268291890" duration="10077000" />
+      <workItem from="1487268291890" duration="11211000" />
     </task>
     <task id="LOCAL-00001" summary="full">
       <created>1487012807908</created>
@@ -1173,11 +1157,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487193806922</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="five commit">
+      <created>1487283672887</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1487283672887</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238429000" />
+    <option name="totallyTimeSpent" value="239563000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1298,14 +1289,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Services/PublisherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1335,7 +1318,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="63" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1356,7 +1339,7 @@
         <state relative-caret-position="544">
           <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1545,19 +1528,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.book">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1575,14 +1545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1643,10 +1605,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
           <folding />
         </state>
       </provider>
