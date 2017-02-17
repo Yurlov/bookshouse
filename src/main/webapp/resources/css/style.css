@@ -1855,7 +1855,7 @@ html, body, .wrapper{
         font-size: 14px;
     }
     #searchForm{
-        width: 100%;
+        width: 95%;
         height: 10%;
         background-color: #ffd916;
         -moz-border-radius:5px;
@@ -1871,7 +1871,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 280px;
+        width: 60%;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1880,7 +1880,7 @@ html, body, .wrapper{
 
     #button{
         height: 43px;
-        width: 120px;
+        width: 28%;
         margin-left: 20px;
         font-size: 16px;
         text-align: center;
