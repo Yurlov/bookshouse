@@ -6,7 +6,7 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Online Library">
@@ -175,7 +175,7 @@
                                         <form action="/addGenre">
                                      <div class="form-group">
                                         <input class="form-control" placeholder="Жанр: " type="text" name="name_ru">
-                                        <input class="form-control" placeholder="Genre: " type="text" name="name_en">
+                                         <input class="form-control" placeholder="Genre: " type="text" name="name_en">
                                          <button style="float: right" class="btn btn-primary" >Add</button>
 
                                     </div>

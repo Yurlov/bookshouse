@@ -8,7 +8,7 @@
 <html lang="ru">
     <head>
         <!-- META -->
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="author" content="Viktor Yurlov" />
         <meta name="description" content="Online Library">
         <meta name="viewport" content="width=device-width, initial-scale=1">
