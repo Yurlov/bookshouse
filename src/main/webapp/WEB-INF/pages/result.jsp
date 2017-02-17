@@ -7,7 +7,7 @@
 <html lang="ru">
     <head>
         <!-- META -->
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="author" content="Viktor Yurlov" />
         <meta name="description" content="Online Library">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="/resources/css/style.css">
 
         <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="/resources/js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
 
@@ -40,7 +40,7 @@
     <body >
 
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- PRELOADER-->
         <div id="preloader">
@@ -647,7 +647,7 @@
                                 <p><i class="fa fa-globe"></i> &nbsp;www.domain.com</p>
                                 <div class="social-follow">
                                     <ul>
-                                        <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
