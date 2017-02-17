@@ -5,7 +5,7 @@
 @import url(prettyPhoto.css) screen;
 @import url(animate.min.css) screen;
 
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,600italic,700,800,400italic);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800,900,700,600,500,300,200,100);
 @import url(sansationbold.css) screen;
@@ -1840,7 +1840,7 @@ html, body, .wrapper{
 
 }
 
-@media (max-width: 400px){
+@media (max-width: 300px){
     .work-item{
         width: 300px;
         padding: 5px
@@ -1855,7 +1855,7 @@ html, body, .wrapper{
         font-size: 14px;
     }
     #searchForm{
-        width: 95%;
+        width: 94%;
         height: 10%;
         background-color: #ffd916;
         -moz-border-radius:5px;
@@ -1871,7 +1871,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 60%;
+        width: 58%;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1880,7 +1880,7 @@ html, body, .wrapper{
 
     #button{
         height: 43px;
-        width: 28%;
+        width: 30%;
         margin-left: 20px;
         font-size: 16px;
         text-align: center;
