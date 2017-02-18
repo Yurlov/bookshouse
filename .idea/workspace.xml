@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf007493-8746-4b3a-96e4-b8fa37f10699" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/online/mega/library/Application$1.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/mega/library/Application.class" afterPath="$PROJECT_DIR$/target/classes/online/mega/library/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/mega/library/Config/AppConfig.class" afterPath="$PROJECT_DIR$/target/classes/online/mega/library/Config/AppConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/bookshouse.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/bookshouse.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookshouse.iml" afterPath="$PROJECT_DIR$/bookshouse.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/mega/library/Application.java" afterPath="$PROJECT_DIR$/src/main/java/online/mega/library/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +43,35 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="testsec@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="book" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
@@ -49,25 +83,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java">
+      <file leaf-file-name="Author.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Author.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#642#1009#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
+                <marker date="1487422738100" expanded="true" signature="629:1036" ph="{...}" />
+                <marker date="1487422738100" expanded="true" signature="648:765" ph="(strings) → {" />
+                <marker date="1487422738100" expanded="true" signature="1010:1027" ph="}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,28 +132,8 @@
       <file leaf-file-name="config.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-660">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,34 +149,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp">
+      <file leaf-file-name="Publisher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Publisher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3655">
-              <caret line="215" column="61" lean-forward="true" selection-start-line="215" selection-start-column="61" selection-end-line="215" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="70" lean-forward="false" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
+      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+            <state relative-caret-position="187">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -184,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Entity/Vote.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/interceptors/SiteInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/FileController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/InterceptorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Entity/Genre.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/messages.properties" />
@@ -211,15 +234,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/unauthorized.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Genre.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/mega/library/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -538,36 +562,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bookshouse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bookshouse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -585,29 +579,29 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/MegaLibrary" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/LibraryFlow" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="SearchEverywhereHistoryKey" value="rating&#9;FILE&#9;file://C:/Users/Viktor/bookshouse/src/main/webapp/resources/jquery.rating-2.0.js&#10;viewBook&#9;null&#9;null&#10;collapse&#9;null&#9;null&#10;VIEW&#9;null&#9;null&#10;viewboo&#9;null&#9;null" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Viktor\bookshouse\src\main\resources\META-INF\resources\bookFiles" />
-      <recent name="C:\Users\Viktor\bookshouse\src\main\resources\META-INF\resources\bookImages" />
-      <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\resources" />
-      <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\resources\js" />
-      <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\WEB-INF\pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Viktor\bookshouse\src\main\resources\bookPdf" />
       <recent name="C:\Users\Viktor\bookshouse\src\main\resources" />
       <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\resources" />
       <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\resources\images" />
       <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\WEB-INF\pages\js" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\resources" />
+      <recent name="C:\Users\Viktor\bookshouse\src\main\resources\META-INF\resources\bookFiles" />
+      <recent name="C:\Users\Viktor\bookshouse\src\main\resources\META-INF\resources\bookImages" />
+      <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\resources\js" />
+      <recent name="C:\Users\Viktor\bookshouse\src\main\webapp\WEB-INF\pages" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
@@ -1066,7 +1060,7 @@
       <workItem from="1487191799155" duration="11682000" />
       <workItem from="1487268291890" duration="14968000" />
       <workItem from="1487340973045" duration="6441000" />
-      <workItem from="1487370520077" duration="7383000" />
+      <workItem from="1487370520077" duration="9585000" />
     </task>
     <task id="LOCAL-00001" summary="full">
       <created>1487012807908</created>
@@ -1222,11 +1216,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487378079334</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="eight commit">
+      <created>1487379066494</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1487379066494</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257144000" />
+    <option name="totallyTimeSpent" value="259346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1254,11 +1255,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.115800865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38961038" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1273,7 +1275,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1310,61 +1312,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/images/favicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/images/right-arrow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/images/left-arrow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.book">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Utils/MyUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/sansationbold.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1570,22 +1517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Vote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/InterceptorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1610,34 +1541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="76" column="67" lean-forward="false" selection-start-line="76" selection-start-column="67" selection-end-line="76" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-595">
           <caret line="46" column="62" lean-forward="false" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1647,8 +1554,8 @@
         <state relative-caret-position="3655">
           <caret line="215" column="61" lean-forward="true" selection-start-line="215" selection-start-column="61" selection-end-line="215" selection-end-column="61" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1661,36 +1568,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Controllers/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="862">
+          <caret line="76" column="67" lean-forward="false" selection-start-line="76" selection-start-column="67" selection-end-line="76" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#948#949#0" expanded="false" />
+            <element signature="e#973#974#0" expanded="false" />
+            <element signature="e#1007#1008#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
+            <element signature="e#1066#1067#0" expanded="false" />
+            <element signature="e#1093#1094#0" expanded="false" />
+            <element signature="e#1133#1134#0" expanded="false" />
+            <element signature="e#1165#1166#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1267#1268#0" expanded="false" />
+            <element signature="e#1301#1302#0" expanded="false" />
+            <element signature="e#1336#1337#0" expanded="false" />
+            <element signature="e#1367#1368#0" expanded="false" />
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1455#1456#0" expanded="false" />
+            <element signature="e#1488#1489#0" expanded="false" />
+            <element signature="e#1515#1516#0" expanded="false" />
+            <element signature="e#1557#1558#0" expanded="false" />
+            <element signature="e#1589#1590#0" expanded="false" />
+            <element signature="e#1621#1622#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1691#1692#0" expanded="false" />
+            <element signature="e#1725#1726#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d4548eda/e2944da0-917c-48ce-ad05-ce5bc0377da5/testsec.book">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/primefaces/log/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Vote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/5.2/primefaces-5.2.jar!/META-INF/primefaces-p.taglib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/meta.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="265" column="22" lean-forward="false" selection-start-line="265" selection-start-column="22" selection-end-line="265" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1487422738100" expanded="true" signature="629:1036" ph="{...}" />
+            <marker date="1487422738100" expanded="true" signature="648:765" ph="(strings) → {" />
+            <marker date="1487422738100" expanded="true" signature="1010:1027" ph="}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/AppConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Author.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1703,13 +1727,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Entities/Publisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/mega/library/Config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <element signature="e#642#1009#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1744,7 +1783,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring (bookshouse)|Spring</last-edited>
+          <last-edited>Web (bookshouse)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

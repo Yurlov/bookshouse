@@ -76,6 +76,11 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
           <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.4.01" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.3" />
+          <element id="library" level="project" name="PrimeFaces-5.2" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.13" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.13" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.2" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="bookshouse/web/Web" />
