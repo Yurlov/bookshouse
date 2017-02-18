@@ -151,9 +151,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     private Properties additionalProperties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", hbm2dllAuto);
-        properties.setProperty("hibernate.connection.CharacterEncoding", "UTF-8");
-        properties.setProperty("hibernate.connection.Charset", "UTF-8");
-        properties.setProperty("hibernate.connection.Useunicode", "true");
         return properties;
     }
 
