@@ -20,6 +20,7 @@ import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -31,6 +32,7 @@ import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 import javax.persistence.EntityManagerFactory;
+import javax.servlet.Filter;
 import javax.sql.DataSource;
 import java.util.Locale;
 import java.util.Properties;
@@ -87,6 +89,14 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return localeResolver;
     }
 
+    @Bean
+    public Filter characterEncodingFilter() {
+        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+        filter.setEncoding("UTF-8");
+        filter.setForceEncoding(true);
+        return filter;
+    }
+
     @Bean(name = "localChangeInterceptor")
     public LocaleChangeInterceptor getLocaleChangeInterceptor() {
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
@@ -97,17 +107,16 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Autowired
     private SiteInterceptor siteInterceptor;
     @Bean
-    public SiteInterceptor getSiteInterceptro(){
+    public SiteInterceptor getSiteInterceptor() {
 
         return siteInterceptor;
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getSiteInterceptro()).addPathPatterns("/interceptorCall/**");
+        registry.addInterceptor(getSiteInterceptor()).addPathPatterns("/interceptorCall/**");
         registry.addInterceptor(getLocaleChangeInterceptor()).addPathPatterns("/*");
     }
-
 
 
     @Bean
@@ -142,6 +151,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     private Properties additionalProperties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", hbm2dllAuto);
+        properties.setProperty("hibernate.connection.CharacterEncoding", "UTF-8");
+        properties.setProperty("hibernate.connection.Charset", "UTF-8");
+        properties.setProperty("hibernate.connection.Useunicode", "true");
         return properties;
     }
 

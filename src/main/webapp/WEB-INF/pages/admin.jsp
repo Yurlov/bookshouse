@@ -3,9 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -172,7 +170,7 @@
                                 <thead class="fixed" >
                                 <tr>
                                     <th colspan="3">
-                                        <form action="/addGenre">
+                                        <form action="/addGenre" method="post">
                                      <div class="form-group">
                                         <input class="form-control" placeholder="Жанр: " type="text" name="name_ru">
                                          <input class="form-control" placeholder="Genre: " type="text" name="name_en">
@@ -220,7 +218,7 @@
                                 <thead>
                                 <tr>
                                     <th colspan="4">
-                                        <form action="/addAuthor">
+                                        <form action="/addAuthor" method="post">
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="Enter name" type="text" name="auth">
                                                 <button style="float: right" class="btn btn-primary" >Add</button>
@@ -265,7 +263,7 @@
                                 <thead class="fixed" >
                                 <tr>
                                     <th colspan="3">
-                                        <form action="/addPublisher">
+                                        <form action="/addPublisher" method="post">
                                             <div class="form-group">
                                                 <input class="form-control" placeholder="Enter name" type="text" name="name">
                                                 <button style="float: right" class="btn btn-primary" >Add</button>

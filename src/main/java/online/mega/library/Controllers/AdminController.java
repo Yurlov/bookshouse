@@ -58,7 +58,7 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @RequestMapping(value = "/addGenre", method = RequestMethod.GET)
+    @RequestMapping(value = "/addGenre", method = RequestMethod.POST)
     public String addGenre(@RequestParam String name_ru,@RequestParam String name_en, Model model){
 
         Genre result = new Genre(name_ru,name_en);
@@ -67,7 +67,8 @@ public class AdminController {
         model.addAttribute("genres", genreService.getAllGenre());
         return "redirect:/admin";
     }
-    @RequestMapping("/addAuthor")
+
+    @RequestMapping(value = "/addAuthor", method = RequestMethod.POST)
     public String addAuthor(@RequestParam String auth, Model model){
 
         Author res = new Author(auth);
@@ -75,7 +76,8 @@ public class AdminController {
         model.addAttribute("authors", authorService.getAllAuthor());
         return "redirect:/admin";
     }
-    @RequestMapping("/addPublisher")
+
+    @RequestMapping(value = "/addPublisher", method = RequestMethod.POST)
     public String addPublisher(@RequestParam String name,Model model){
         Publisher res = new Publisher(name);
         publisherService.addPublisher(res);
@@ -116,12 +118,13 @@ public class AdminController {
     }
 
 
-    @RequestMapping("/deleteGenre")
+    @RequestMapping(value = "/deleteGenre", method = RequestMethod.POST)
     public String deleteGenre(@RequestParam("genre") Long id){
         genreService.deleteGenre(id);
         return "redirect:/admin";
     }
-    @RequestMapping("/deleteBook")
+
+    @RequestMapping(value = "/deleteBook", method = RequestMethod.POST)
     public String deleteBook(@RequestParam("id") Long id){
         Book book = bookService.getBookById(id);
         String pathToPdf = book.getContent();
@@ -130,17 +133,20 @@ public class AdminController {
         bookService.deleteBook(book);
         return "redirect:/admin";
     }
-    @RequestMapping("/deletePublisher")
+
+    @RequestMapping(value = "/deletePublisher", method = RequestMethod.POST)
     public String deletePublisher(@RequestParam("id") Long id){
         publisherService.deletePublisher(id);
         return "redirect:/admin";
     }
-    @RequestMapping("/deleteAuthor")
+
+    @RequestMapping(value = "/deleteAuthor", method = RequestMethod.POST)
     public String deleteAuthor(@RequestParam("id") Long id){
         authorService.deleteAuthor(id);
         return "redirect:/admin";
     }
-    @RequestMapping("/deleteUser")
+
+    @RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
     public String deleteUser(@RequestParam("id") Long id){
         userService.deleteUser(id);
         return "redirect:/admin";
