@@ -89,13 +89,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return localeResolver;
     }
 
-    @Bean
-    public Filter characterEncodingFilter() {
-        CharacterEncodingFilter filter = new CharacterEncodingFilter();
-        filter.setEncoding("UTF-8");
-        filter.setForceEncoding(true);
-        return filter;
-    }
 
     @Bean(name = "localChangeInterceptor")
     public LocaleChangeInterceptor getLocaleChangeInterceptor() {
