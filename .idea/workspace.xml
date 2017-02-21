@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf007493-8746-4b3a-96e4-b8fa37f10699" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,8 +55,8 @@
       <file leaf-file-name="result.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11299">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="712" column="47" lean-forward="true" selection-start-line="712" selection-start-column="47" selection-end-line="712" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -230,9 +230,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/styles/raiting.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/raiting.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/styles/jquery.rating.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/vendor/jquery-1.11.2.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
       </list>
     </option>
   </component>
@@ -1260,7 +1260,7 @@
       <workItem from="1487268291890" duration="14968000" />
       <workItem from="1487340973045" duration="6441000" />
       <workItem from="1487370520077" duration="16386000" />
-      <workItem from="1487672270323" duration="25344000" />
+      <workItem from="1487672270323" duration="25875000" />
     </task>
     <task id="LOCAL-00001" summary="full">
       <created>1487012807908</created>
@@ -1591,11 +1591,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487704533290</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="last commit">
+      <created>1487704912056</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1487704912056</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291491000" />
+    <option name="totallyTimeSpent" value="292022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2104,8 +2111,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11299">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="312">
+          <caret line="712" column="47" lean-forward="true" selection-start-line="712" selection-start-column="47" selection-end-line="712" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

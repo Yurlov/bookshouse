@@ -710,7 +710,7 @@
 
         </div>
         <div id='easy-top'></div>
-
+        <script>jq_1112 = jQuery.noConflict(true);</script>
         <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
 
         <script src="/resources/js/vendor/bootstrap.min.js"></script>
