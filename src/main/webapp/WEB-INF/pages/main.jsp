@@ -464,8 +464,6 @@
                                     <li><a href="#"><i class="fa fa-pinterest-square"></i> </a></li>
                                     <li><a href="#"><i class="fa fa-youtube"></i> </a></li>
                                     <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i> </a></li>
                                     <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
                                 </ul>
                             </div>
@@ -497,9 +495,8 @@
                                         <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-square"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i> </a></li>
                                         <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
                                     </ul>
                                 </div>
