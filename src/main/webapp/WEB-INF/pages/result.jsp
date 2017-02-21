@@ -27,6 +27,7 @@
                 location += "#search"}
         </script>
 
+        <script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"></script>
 
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">
@@ -409,7 +410,7 @@
                 </div>
             </section>
 
-            <!-- START TESTIMONIAL SECTION -->
+            <!-- START TOPBOOK SECTION -->
             <section class="testimonial-section" id="top-books">
                 <div class="container">
                     <div class="row">
@@ -419,26 +420,26 @@
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ГАРРИ ПОТТЕР</h3><!--  title -->
-                                        <p>J.K ROWLING</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 1 -->
+                                        <h3>ГАРРИ ПОТТЕР</h3>
+                                        <p>J.K ROWLING</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/dom.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3><!--  title -->
-                                        <p>РЕНСОМ РИГГЗ</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 2 -->
+                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3>
+                                        <p>РЕНСОМ РИГГЗ</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/do.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3><!--  title -->
-                                        <p>ДЖОДЖО МОЙЕС</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 3 -->
+                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3>
+                                        <p>ДЖОДЖО МОЙЕС</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/50.jpg"  alt="">
@@ -470,7 +471,6 @@
                                 <a class="btn testimonial-prev"><i class="fa fa-angle-left"></i> </a>
                                 <a class="btn testimonial-next"><i class="fa fa-angle-right"></i> </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
