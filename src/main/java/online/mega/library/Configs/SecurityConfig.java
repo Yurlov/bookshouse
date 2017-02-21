@@ -1,4 +1,4 @@
-package online.mega.library.Config;
+package online.mega.library.Configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

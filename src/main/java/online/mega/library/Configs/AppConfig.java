@@ -1,4 +1,4 @@
-package online.mega.library.Config;
+package online.mega.library.Configs;
 
 import online.mega.library.ImplementsService.UserDetailsServiceImpl;
 import online.mega.library.interceptors.SiteInterceptor;
