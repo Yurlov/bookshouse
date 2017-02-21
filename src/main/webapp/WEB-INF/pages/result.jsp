@@ -440,7 +440,7 @@
                         <div class="col-lg-3 col-lg-offset-1">
                             <div id="testimonial" class="testimanial-area">
                                 <div class="item">
-                                    <img src="/resources/images/my/harry.jpg" alt="">
+                                    <img src="/resources/images/my/harry.jpg" width="200" height="308" alt="">
                                     <div class="testimonial-details">
                                         <h3>ГАРРИ ПОТТЕР</h3>
                                         <p>J.K ROWLING</p>
@@ -448,7 +448,7 @@
                                 </div>
 
                                 <div class="item">
-                                    <img src="/resources/images/my/dom.jpg" alt="">
+                                    <img src="/resources/images/my/dom.jpg" width="200" height="308" alt="">
                                     <div class="testimonial-details">
                                         <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3>
                                         <p>РЕНСОМ РИГГЗ</p>
@@ -456,7 +456,7 @@
                                 </div>
 
                                 <div class="item">
-                                    <img src="/resources/images/my/do.jpg"  alt="">
+                                    <img src="/resources/images/my/do.jpg" width="200" height="308" alt="">
                                     <div class="testimonial-details">
                                         <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3>
                                         <p>ДЖОДЖО МОЙЕС</p>
@@ -464,7 +464,7 @@
                                 </div>
 
                                 <div class="item">
-                                    <img src="/resources/images/my/50.jpg"  alt="">
+                                    <img src="/resources/images/my/50.jpg" width="200" height="308" alt="">
                                     <div class="testimonial-details">
                                         <h3>ПЯТДЕСЯТ ОТТЕНКОВ СЕРОГО</h3>
                                         <p>ЭЛ ДЖАЙМС</p>
@@ -472,7 +472,7 @@
                                 </div>
 
                                 <div class="item">
-                                    <img src="/resources/images/my/girl.jpg" alt="">
+                                    <img src="/resources/images/my/girl.jpg" width="200" height="308" alt="">
                                     <div class="testimonial-details">
                                         <h3>ДЕВУШКА В ПОЕЗДЕ</h3>
                                         <p>ПОЛА ХОКИНС</p>
