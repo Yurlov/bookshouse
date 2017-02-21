@@ -458,13 +458,16 @@
                         <div class="col-lg-4 col-lg-offset-3">
                             <div class="social-follow">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest-square"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-youtube"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
+                                    <li><a href="https://vk.com/benedictumm"><i class="fa fa-vk"></i> </a></li>
+                                    <li><a href="https://www.facebook.com/viktor.yurlov.5"><i
+                                            class="fa fa-facebook"></i> </a></li>
+                                    <li><a href="https://twitter.com/Benediictum"><i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                    <li><a href="https://ru.pinterest.com/benedictum1"><i
+                                            class="fa fa-pinterest-square"></i> </a></li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80-%D1%8E%D1%80%D0%BB%D0%BE%D0%B2-607a51139/"><i
+                                                class="fa fa-linkedin"></i> </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -489,15 +492,19 @@
                                 <p><i class="fa fa-map-marker"></i> &nbsp;Kiev City<br> UA 04215 Ukraine</p>
                                 <p><i class="fa fa-envelope"></i> &nbsp;Benedictum1@mail.ru</p>
                                 <p><i class="fa fa-phone"></i> &nbsp;+38 063 973 15 71</p>
-                                <p><i class="fa fa-globe"></i> &nbsp;www.domain.com</p>
+                                <p><i class="fa fa-globe"></i> &nbsp;www.bookshouse.herokuapp.com</p>
                                 <div class="social-follow">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest-square"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
+                                        <li><a href="https://vk.com/benedictumm"><i class="fa fa-vk"></i> </a></li>
+                                        <li><a href="https://www.facebook.com/viktor.yurlov.5"><i
+                                                class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="https://twitter.com/Benediictum"><i class="fa fa-twitter"></i> </a>
+                                        </li>
+                                        <li><a href="https://ru.pinterest.com/benedictum1"><i
+                                                class="fa fa-pinterest-square"></i> </a></li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80-%D1%8E%D1%80%D0%BB%D0%BE%D0%B2-607a51139/"><i
+                                                    class="fa fa-linkedin"></i> </a></li>
                                     </ul>
                                 </div>
                             </div>
