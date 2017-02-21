@@ -31,6 +31,7 @@
             var $jq = jQuery.noConflict();
         </script>
         <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
+
         <script src="/resources/js/vendor/bootstrap.min.js"></script>
         <!-- OWL CAROUSEL -->
         <script src="/resources/js/owl.carousel.min.js"></script>
