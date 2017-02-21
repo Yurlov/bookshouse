@@ -165,8 +165,7 @@
                             </div>
                         </div>
                     </form>
-
-                <div class="container">
+                    <div class="container">
                     <div class="row">
 
 
@@ -405,8 +404,8 @@
                         </c:otherwise>
                 </c:choose>
                     </div>
+                    </div>
                 </div>
-
             </section>
 
             <!-- START TOPBOOK SECTION -->
