@@ -26,10 +26,14 @@
             window.onload = function () {
                 location += "#search"}
         </script>
+        <script type="text/javascript">
+            window.jQuery || document.write('<script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"><\/script>');
+        </script>
+
+        <script type="text/javascript" src="/resources/js/jquery.rating.min.js"></script>
 
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">
-
         <!--[if lt IE 9]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="/resources/js/vendor/html5shiv.js"><\/script>')</script>
@@ -199,7 +203,7 @@
                         <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound">Книг не найдено!</p>
                     </c:when>
                     <c:when test="${viewBook != null}">
-                        <div class=" col-sm-7 col-lg-8 col-md-8" >
+                        <div class=" col-sm-7 col-lg-9 col-md-8">
                             <img  width="305" height="400" style="margin-left: 40px; float: left;  border-radius: 10px"  src="/image/${viewBook.id}" alt="${viewBook.name}"/>
                             <div class="viewBook col-lg-4 col-md-4 col-xs-1 ">
                                 <p id="view"> <spring:message code="nameview"/> <a href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
@@ -215,20 +219,29 @@
                                 </c:otherwise>
                                 </c:choose>
                                 <p id="view"> <spring:message code="isbnview"/> ${viewBook.isbn}</p>
-                                <p id="view"> <spring:message code="pagesview"/> ${viewBook.pageCount}</p>
+                                <p style="margin-left: 15px"><spring:message
+                                        code="pagesview"/> ${viewBook.pageCount}</p>
 
                             </div>
+
                         </div>
 
-                        <div style="margin-left: 40px; float: left; margin-top: 5px" class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
+                        <div class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
+                            <div style="margin-left: 35px; margin-top: 10px; margin-bottom: 20px">
+                                <jsp:include page="raiting.jsp"/>
+                            </div>
+                            <div style="margin-left: 50px; float: left; margin-top: 5px">
                             <security:authorize access="!isAuthenticated()">
-                                <p><spring:message code="acsessview"/> <a href="/login"><spring:message code="enter"/></a> / <a href="/register"><spring:message code="registr"/></a></p>
+                                <p><spring:message code="acsessview"/> <a href="/login"><spring:message
+                                        code="enter"/></a> / <a href="/register"><spring:message code="registr"/></a>
+                                </p>
                             </security:authorize>
                             <security:authorize access="isAuthenticated()">
                             <a href="/download/${viewBook.id}/true"><button  class="btnview btn btn-danger btn-lg" > <spring:message code="download"/> </button></a>
                             <a href="/download/${viewBook.id}/false"><button  class="btnview btn btn-success btn-lg" > <spring:message code="readBook"/> </button></a>
                             </security:authorize>
                             <h3><spring:message code="discrview"/> </h3> <p class="viewBook">${viewBook.descr}</p>
+                            </div>
                         </div>
 
                     </c:when>
@@ -697,9 +710,7 @@
         </div>
         <div id='easy-top'></div>
 
-        <!-- JQUERY LIBRARY -->
-        <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
-        <!-- BOOTSTRAP -->
+
         <script src="/resources/js/vendor/bootstrap.min.js"></script>
         <!-- OWL CAROUSEL -->
         <script src="/resources/js/owl.carousel.min.js"></script>

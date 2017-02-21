@@ -86,6 +86,7 @@
     <column id="40" parent="23" name="voteCount">
       <Position>10</Position>
       <DataType>bigint(20)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
     <column id="41" parent="23" name="author_id">
       <Position>11</Position>

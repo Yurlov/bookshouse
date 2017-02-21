@@ -128,6 +128,7 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
+
                                     <security:authorize access="!isAuthenticated()"> <li><a href="/login"><spring:message code="loginM"/></a> </li></security:authorize>
                                     <security:authorize access="!isAuthenticated()"> <li><a href="/register"><spring:message code="signin"/></a> </li></security:authorize>
                                     <security:authorize access="hasRole('ADMIN')"><li><a href="/admin">Room</a> </li></security:authorize>
@@ -151,7 +152,7 @@
             </section>
 
 
-            <!-- START SEARCH SECTION -->
+            <!-- START SEARCH SECTION WITHOUT AJAX -->
             <section class="about-section" id="search" >
                 <div class="round">
                     <form style="display:inline;" action="/searchByName" method="get">

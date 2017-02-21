@@ -138,6 +138,22 @@
     padding: 0px;
 
 }
+
+#errImg {
+    margin-top: 50px;
+}
+
+#errorPage {
+    background: #919191;
+
+}
+
+#type {
+    color: #ffffff;
+    font-size: 17px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -1463,7 +1479,7 @@ html, body, .wrapper{
     #preloader{
         width: 100%;
         height: 100%;
-        animation: preloader_6 5s infinite linear;
+        animation: preloader_6 3s infinite linear;
         background: #000;
         display: block;
         text-align: center;
@@ -1753,7 +1769,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 70%;
+        width: 72%;
         padding-right: 20px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
@@ -1796,7 +1812,7 @@ html, body, .wrapper{
         height: 5px;
     }
     #searchForm{
-        width: 96%;
+        width: 370px;
         height: 10%;
         padding:20px 0px 20px 10px;
         margin:50px  10px;
@@ -1816,7 +1832,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 65%;
+        width: 230px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1825,7 +1841,7 @@ html, body, .wrapper{
 
     #button{
         height: 43px;
-        width: 30%;
+        width: 32%;
         font-size: 16px;
         text-align: center;
         background: white;
@@ -1855,7 +1871,7 @@ html, body, .wrapper{
         font-size: 14px;
     }
     #searchForm{
-        width: 94%;
+        width: 290px;
         height: 10%;
         background-color: #ffd916;
         -moz-border-radius:5px;
@@ -1871,7 +1887,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 58%;
+        width: 220px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1880,7 +1896,7 @@ html, body, .wrapper{
 
     #button{
         height: 43px;
-        width: 30%;
+        width: 40px;
         margin-left: 20px;
         font-size: 16px;
         text-align: center;
