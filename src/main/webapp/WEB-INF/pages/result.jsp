@@ -402,13 +402,12 @@
                             </div>
                         </c:otherwise>
                     </c:choose>
-                    </c:otherwise>
-                    </c:choose>
+                        </c:otherwise>
+                </c:choose>
+                    </div>
                 </div>
-                </div>
-                </div>
-            </section>
 
+            </section>
 
             <!-- START TOPBOOK SECTION -->
             <section class="testimonial-section" id="top-books">
@@ -475,6 +474,7 @@
                     </div>
                 </div>
             </section>
+
 
             <!-- START SKILL SECTION -->
             <section class="skill-section">
