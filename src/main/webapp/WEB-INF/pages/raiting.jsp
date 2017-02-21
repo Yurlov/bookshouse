@@ -7,7 +7,7 @@
 
     <link href="/resources/styles/raiting.css" rel="stylesheet" type="text/css"/>
     <link href="/resources/styles/jquery.rating.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"></script>
+
     <script type="text/javascript" src="/resources/js/jquery.rating.min.js"></script>
     <script type="text/javascript">
         $(function () {

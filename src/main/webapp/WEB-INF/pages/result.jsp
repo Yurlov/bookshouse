@@ -27,7 +27,30 @@
                 location += "#search"}
         </script>
 
+        <script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"></script>
+        <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
 
+        <script src="/resources/js/vendor/bootstrap.min.js"></script>
+        <!-- OWL CAROUSEL -->
+        <script src="/resources/js/owl.carousel.min.js"></script>
+        <!-- ISOTOPE -->
+        <script src="/resources/js/isotope.pkgd.min.js"></script>
+        <!-- APPEAR JS  -->
+        <script src="/resources/js/jquery.appear.js"></script>
+        <!-- WAYPOINTS -->
+        <script src="/resources/js/waypoints.min.js"></script>
+        <!-- COUNTER UP -->
+        <script src="/resources/js/jquery.counterup.min.js"></script>
+        <!-- NICESCROLL -->
+        <script src="/resources/js/jquery.nicescroll.min.js"></script>
+        <!-- PRETTY PHOTO -->
+        <script src="/resources/js/jquery.prettyPhoto.js"></script>
+        <!-- EASING -->
+        <script src='/resources/js/easing.js'></script>
+        <script src="/resources/js/wow.min.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="/resources/js/custom.js"></script>
+        <script>jq_1112 = jQuery.noConflict(true);</script>
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">
         <!--[if lt IE 9]>
@@ -710,29 +733,7 @@
 
         </div>
         <div id='easy-top'></div>
-        <script>jq_1112 = jQuery.noConflict(true);</script>
-        <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
 
-        <script src="/resources/js/vendor/bootstrap.min.js"></script>
-        <!-- OWL CAROUSEL -->
-        <script src="/resources/js/owl.carousel.min.js"></script>
-        <!-- ISOTOPE -->
-        <script src="/resources/js/isotope.pkgd.min.js"></script>
-        <!-- APPEAR JS  -->
-        <script src="/resources/js/jquery.appear.js"></script>
-        <!-- WAYPOINTS -->
-        <script src="/resources/js/waypoints.min.js"></script>
-        <!-- COUNTER UP -->
-        <script src="/resources/js/jquery.counterup.min.js"></script>
-        <!-- NICESCROLL -->
-        <script src="/resources/js/jquery.nicescroll.min.js"></script>
-        <!-- PRETTY PHOTO -->
-        <script src="/resources/js/jquery.prettyPhoto.js"></script>
-        <!-- EASING -->
-        <script src='/resources/js/easing.js'></script>
-        <script src="/resources/js/wow.min.js"></script>
-        <!-- CUSTOM JS -->
-        <script src="/resources/js/custom.js"></script>
 
     </body>
 
