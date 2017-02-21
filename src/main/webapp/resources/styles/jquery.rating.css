@@ -28,7 +28,7 @@ div.vote-result {
     font-size: 14px;
     margin-top: 12px;
     margin-left: 200px;
-
+    padding-left: 180px;
 }
 
 div.vote-success {
