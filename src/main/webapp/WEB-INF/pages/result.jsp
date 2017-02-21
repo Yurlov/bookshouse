@@ -165,8 +165,9 @@
                             </div>
                         </div>
                     </form>
+
                     <div class="container">
-                    <div class="row">
+                        <div class="row">
 
 
                         <div  class="gen col-xs-12 col-sm-5 col-md-4 col-lg-3">
@@ -193,11 +194,11 @@
                             </c:otherwise>
                             </c:choose>
                         </div>
-                <c:choose>
-                    <c:when test="${notFound==0}">
+                            <c:choose>
+                                <c:when test="${notFound==0}">
                         <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound">Книг не найдено!</p>
-                    </c:when>
-                    <c:when test="${viewBook != null}">
+                                </c:when>
+                                <c:when test="${viewBook != null}">
                         <div class=" col-sm-7 col-lg-9 col-md-8">
                             <img  width="305" height="400" style="margin-left: 40px; float: left;  border-radius: 10px"  src="/image/${viewBook.id}" alt="${viewBook.name}"/>
                             <div class="viewBook col-lg-4 col-md-4 col-xs-1 ">
@@ -239,8 +240,8 @@
                             </div>
                         </div>
 
-                    </c:when>
-                        <c:otherwise>
+                                </c:when>
+                                <c:otherwise>
 
                             <div class="container">
                                 <div class="row">
@@ -256,8 +257,8 @@
                             </div>
 
 
-                    <c:choose>
-                        <c:when test="${primeGen != null}">
+                                    <c:choose>
+                                        <c:when test="${primeGen != null}">
                             <c:url var="firstUrl" value="/searchByGenre/${primeGen}/pages/1" />
                             <c:url var="lastUrl" value="/searchByGenre/${primeGen}/pages/${books.totalPages}" />
                             <c:url var="prevUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex - 1}" />
@@ -400,15 +401,15 @@
                                 </ul>
                             </div>
                         </c:otherwise>
-                    </c:choose>
-                        </c:otherwise>
-                </c:choose>
-                    </div>
+                                    </c:choose>
+                                </c:otherwise>
+                            </c:choose>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- START TOPBOOK SECTION -->
+            <!-- START TESTIMONIAL SECTION -->
             <section class="testimonial-section" id="top-books">
                 <div class="container">
                     <div class="row">
@@ -418,26 +419,26 @@
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ГАРРИ ПОТТЕР</h3>
-                                        <p>J.K ROWLING</p>
-                                    </div>
-                                </div>
+                                        <h3>ГАРРИ ПОТТЕР</h3><!--  title -->
+                                        <p>J.K ROWLING</p><!-- description -->
+                                    </div><!--end of /.testimonial details -->
+                                </div><!-- end of /.testimonial item 1 -->
 
                                 <div class="item">
                                     <img src="/resources/images/my/dom.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3>
-                                        <p>РЕНСОМ РИГГЗ</p>
-                                    </div>
-                                </div>
+                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3><!--  title -->
+                                        <p>РЕНСОМ РИГГЗ</p><!-- description -->
+                                    </div><!--end of /.testimonial details -->
+                                </div><!-- end of /.testimonial item 2 -->
 
                                 <div class="item">
                                     <img src="/resources/images/my/do.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3>
-                                        <p>ДЖОДЖО МОЙЕС</p>
-                                    </div>
-                                </div>
+                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3><!--  title -->
+                                        <p>ДЖОДЖО МОЙЕС</p><!-- description -->
+                                    </div><!--end of /.testimonial details -->
+                                </div><!-- end of /.testimonial item 3 -->
 
                                 <div class="item">
                                     <img src="/resources/images/my/50.jpg"  alt="">
@@ -469,11 +470,11 @@
                                 <a class="btn testimonial-prev"><i class="fa fa-angle-left"></i> </a>
                                 <a class="btn testimonial-next"><i class="fa fa-angle-right"></i> </a>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </section>
-
 
             <!-- START SKILL SECTION -->
             <section class="skill-section">
