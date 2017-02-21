@@ -31,6 +31,20 @@
         </script>
 
         <script type="text/javascript" src="/resources/js/jquery.rating.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+
+                $('#rating_1').rating({
+                    fx: 'full',
+                    image: '/resources/images/stars.png',
+                    loader: '/resources/images/ajax-loader.gif',
+                    width: 32,
+                    url: '/resources/rating.php'
+                });
+
+
+            })
+        </script>
 
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">

@@ -1,5 +1,4 @@
 ﻿<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ru">
@@ -8,28 +7,7 @@
 
     <link href="/resources/styles/raiting.css" rel="stylesheet" type="text/css"/>
     <link href="/resources/styles/jquery.rating.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
-    <script type="text/javascript">
-        window.jQuery || document.write('<script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"><\/script>');
-    </script>
-
-    <script type="text/javascript" src="/resources/js/jquery.rating.min.js"></script>
-
-    <script type="text/javascript">
-        $(function () {
-
-            $('#rating_1').rating({
-                fx: 'full',
-                image: '/resources/images/stars.png',
-                loader: '/resources/images/ajax-loader.gif',
-                width: 32,
-                url: '/resources/rating.php'
-            });
-
-
-        })
-    </script>
 
 </head>
 

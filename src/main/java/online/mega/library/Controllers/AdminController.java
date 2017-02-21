@@ -92,6 +92,7 @@ public class AdminController {
                           @RequestParam String genre,
                           @RequestParam String descript,
                           @RequestParam Integer pageCount,
+                          @RequestParam Long voteCount,
                           @RequestParam Integer year,
                           @RequestParam Long author,
                           @RequestParam Long publisher,
@@ -110,7 +111,7 @@ public class AdminController {
                 isbn,genreService.getGenreByName(genre),
                 authorService.getAuthorById(author),
                 year,publisherService.getPublisherById(publisher),
-                imagePath,descript,rating);
+                imagePath, descript, rating, voteCount);
 
         bookService.addBook(newBook);
 

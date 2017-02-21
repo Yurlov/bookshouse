@@ -38,25 +38,7 @@ public class Book {
     public Book(String name, String content, Integer pageCount,
                 String isbn, Genre genre, Author author,
                 Integer publishYear, Publisher publisher,
-                String image, String descr, Integer rating) {
-        this.name = name;
-        this.content = content;
-        this.pageCount = pageCount;
-        this.isbn = isbn;
-        this.genre = genre;
-        this.author = author;
-        this.publishYear = publishYear;
-        this.publisher = publisher;
-        this.image = image;
-        this.descr = descr;
-        this.rating = rating;
-    }
-
-    public Book(Long id, String name, String content,
-                Integer pageCount, String isbn, Genre genre,
-                Author author, Integer publishYear, Publisher publisher,
                 String image, String descr, Integer rating, Long voteCount) {
-        this.id = id;
         this.name = name;
         this.content = content;
         this.pageCount = pageCount;
@@ -70,6 +52,7 @@ public class Book {
         this.rating = rating;
         this.voteCount = voteCount;
     }
+
 
     public Long getId() {
         return id;

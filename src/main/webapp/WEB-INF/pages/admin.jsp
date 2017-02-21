@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Online Library">
@@ -63,13 +65,6 @@
                 </li>
             </ul>
 
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="/admin"><i class="fa fa-fw fa-table"></i>Tables</a>
-                    </li>
-                </ul>
-            </div>
         </nav>
 
         <div id="page-wrapper">
@@ -394,6 +389,7 @@
                     </h4>
                     <h4>Rating <input type="text" name="rating"></h4>
                     <h4>Content:  <input type="file" name="content" multiple></h4>
+                    <h4>Vote <input type="text" name="voteCount"></h4>
                 <input class="btn btn-lg btn-success" type="submit" value="Добавить">
 
                 </form>
