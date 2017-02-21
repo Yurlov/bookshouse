@@ -26,10 +26,11 @@
             window.onload = function () {
                 location += "#search"}
         </script>
-
-
+        <script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript">
+            var $jq = jQuery.noConflict();
+        </script>
         <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
-
         <script src="/resources/js/vendor/bootstrap.min.js"></script>
         <!-- OWL CAROUSEL -->
         <script src="/resources/js/owl.carousel.min.js"></script>
@@ -57,8 +58,6 @@
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="/resources/js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
-        <script>jq_162 = jQuery.noConflict(true);</script>
-        <script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"></script>
     </head>
     <body >
 
@@ -734,9 +733,7 @@
         </div>
         <div id='easy-top'></div>
 
-        <script type="text/javascript" src="/resources/js/jquery-1.6.2.min.js"></script>
 
-        <script>jq_162 = jQuery.noConflict(true);</script>
     </body>
 
 </html>
