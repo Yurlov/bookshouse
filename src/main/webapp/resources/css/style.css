@@ -1748,11 +1748,10 @@ html, body, .wrapper{
         padding: 5px
     }
     #searchForm{
-        width: 98%;
+        width: 95%;
         height: 10%;
         padding:20px 0px 20px 10px;
         margin:50px  10px;
-        margin-right: 10px;
         background-color: #ffd916;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
@@ -1769,7 +1768,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 72%;
+        width: 70%;
         padding-right: 20px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
@@ -1812,7 +1811,7 @@ html, body, .wrapper{
         height: 5px;
     }
     #searchForm{
-        width: 370px;
+        width: 90%;
         height: 10%;
         padding:20px 0px 20px 10px;
         margin:50px  10px;
@@ -1832,7 +1831,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 230px;
+        width: 260px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1841,12 +1840,12 @@ html, body, .wrapper{
 
     #button{
         height: 43px;
-        width: 32%;
+        width: 35%;
         font-size: 16px;
         text-align: center;
         background: white;
         display: inline;
-        margin-left: 5px;
+        margin-left: 15px;
 
     }
     #button:hover{
@@ -1871,7 +1870,7 @@ html, body, .wrapper{
         font-size: 14px;
     }
     #searchForm{
-        width: 290px;
+        width: 280px;
         height: 10%;
         background-color: #ffd916;
         -moz-border-radius:5px;
