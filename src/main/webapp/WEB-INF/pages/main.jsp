@@ -165,7 +165,7 @@
                     </form>
                 <div class="container">
                     <div class="row">
-                        <div class="gen col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                        <div class="gen col-xs-12 col-sm-5 col-md-3 col-lg-3">
                             <c:choose>
                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
                                     <c:forEach items="${genres}" var="g">
@@ -194,7 +194,7 @@
                             <div class="row">
                                 <div class="listbook">
                                     <c:forEach items="${books.content}" var="b">
-                                        <div class="lin col-md-4 col-xs-5 col-sm-3 col-lg-2 ">
+                                        <div class="lin col-md-3 col-xs-6 col-sm-3 col-lg-2 ">
                                             <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
                                             <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>
                                         </div>
@@ -253,7 +253,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-3 col-lg-offset-1">
+                        <div class="col-lg-4 col-lg-offset-1">
                             <div id="testimonial" class="testimanial-area">
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">

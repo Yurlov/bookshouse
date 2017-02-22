@@ -103,7 +103,7 @@
 }
 .paginself{
 
-   left: 40%;
+    left: 30%;
     margin-bottom: 50px;
 }
 .lin h1 {
@@ -111,7 +111,7 @@
     text-align: center;
     font-size: 17px;
     margin-bottom: 50px;
-    margin-left: 25px;
+
 
 }
 .lin h1 a{
@@ -1004,10 +1004,11 @@ html, body, .wrapper{
 
     .testimanial-area {
         margin-top: 13px;
+
     }
 
     .testimanial-area .item{
-         overflow: hidden;
+        overflow: hidden;
         width: 100%;
         height: 370px;
         filter: brightness(160%);

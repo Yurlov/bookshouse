@@ -32,27 +32,6 @@
         </script>
         <script src="/resources/js/vendor/jquery-1.11.2.min.js"></script>
 
-        <script src="/resources/js/vendor/bootstrap.min.js"></script>
-        <!-- OWL CAROUSEL -->
-        <script src="/resources/js/owl.carousel.min.js"></script>
-        <!-- ISOTOPE -->
-        <script src="/resources/js/isotope.pkgd.min.js"></script>
-        <!-- APPEAR JS  -->
-        <script src="/resources/js/jquery.appear.js"></script>
-        <!-- WAYPOINTS -->
-        <script src="/resources/js/waypoints.min.js"></script>
-        <!-- COUNTER UP -->
-        <script src="/resources/js/jquery.counterup.min.js"></script>
-        <!-- NICESCROLL -->
-        <script src="/resources/js/jquery.nicescroll.min.js"></script>
-        <!-- PRETTY PHOTO -->
-        <script src="/resources/js/jquery.prettyPhoto.js"></script>
-        <!-- EASING -->
-        <script src='/resources/js/easing.js'></script>
-        <script src="/resources/js/wow.min.js"></script>
-        <!-- CUSTOM JS -->
-        <script src="/resources/js/custom.js"></script>
-
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">
         <!--[if lt IE 9]>
@@ -193,7 +172,7 @@
                         <div class="row">
 
 
-                        <div  class="gen col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                            <div class="gen col-xs-12 col-sm-5 col-md-3 col-lg-3">
                             <c:choose>
                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
                                     <c:forEach items="${genres}" var="g">
@@ -222,11 +201,12 @@
                         <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound">Книг не найдено!</p>
                                 </c:when>
                                 <c:when test="${viewBook != null}">
-                                    <div class=" col-sm-7 col-lg-9 col-md-8 col-xs-12">
-                                        <img class="col-xs-8 col-sm-5" width="305" height="400"
+
+                                    <div>
+                                        <img class="col-xs-6 col-sm-6 col-md-4 col-lg-4" width="305" height="400"
                                              style="margin-left: 40px; float: left;  border-radius: 10px"
                                              src="/image/${viewBook.id}" alt="${viewBook.name}"/>
-                                        <div class="viewBook col-lg-4 col-md-4 col-xs-4 col-sm-2 ">
+                                        <div class="viewBook col-lg-4 col-md-4 col-xs-4 col-sm-6 ">
                                             <p id="view"><spring:message code="nameview"/> <a
                                                     href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
                                             <p id="view"><spring:message code="authorview"/> <a
@@ -250,9 +230,7 @@
                                             <p id="view"><spring:message code="isbnview"/> ${viewBook.isbn}</p>
                                             <p style="margin-left: 15px"><spring:message
                                                     code="pagesview"/> ${viewBook.pageCount}</p>
-
                                         </div>
-
                                     </div>
 
                         <div class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
@@ -280,7 +258,7 @@
                                 <div class="row">
                                     <div class="listbook">
                                         <c:forEach items="${books.content}" var="b">
-                                            <div class="lin col-md-4 col-xs-5 col-sm-3 col-lg-2 ">
+                                            <div class="lin col-md-3 col-xs-6 col-sm-3 col-lg-2 ">
                                                 <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
                                                 <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>
                                             </div>
@@ -297,7 +275,7 @@
                             <c:url var="prevUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex - 1}" />
                             <c:url var="nextUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex + 1}" />
 
-                            <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12">
+                                            <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12">
                                 <ul class="pagination pagination-lg" >
                                     <c:choose>
                                         <c:when test="${books.totalPages==1}">
@@ -447,8 +425,8 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-3 col-lg-offset-1">
-                            <div id="testimonial" class="testimanial-area">
+                        <div class="col-lg-4 col-lg-offset-1">
+                            <div id="testimonial" class=" testimanial-area">
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
@@ -744,7 +722,26 @@
         </div>
         <div id='easy-top'></div>
 
-
+        <script src="/resources/js/vendor/bootstrap.min.js"></script>
+        <!-- OWL CAROUSEL -->
+        <script src="/resources/js/owl.carousel.min.js"></script>
+        <!-- ISOTOPE -->
+        <script src="/resources/js/isotope.pkgd.min.js"></script>
+        <!-- APPEAR JS  -->
+        <script src="/resources/js/jquery.appear.js"></script>
+        <!-- WAYPOINTS -->
+        <script src="/resources/js/waypoints.min.js"></script>
+        <!-- COUNTER UP -->
+        <script src="/resources/js/jquery.counterup.min.js"></script>
+        <!-- NICESCROLL -->
+        <script src="/resources/js/jquery.nicescroll.min.js"></script>
+        <!-- PRETTY PHOTO -->
+        <script src="/resources/js/jquery.prettyPhoto.js"></script>
+        <!-- EASING -->
+        <script src='/resources/js/easing.js'></script>
+        <script src="/resources/js/wow.min.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="/resources/js/custom.js"></script>
     </body>
 
 </html>
