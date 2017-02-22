@@ -222,28 +222,38 @@
                         <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound">Книг не найдено!</p>
                                 </c:when>
                                 <c:when test="${viewBook != null}">
-                        <div class=" col-sm-7 col-lg-9 col-md-8">
-                            <img  width="305" height="400" style="margin-left: 40px; float: left;  border-radius: 10px"  src="/image/${viewBook.id}" alt="${viewBook.name}"/>
-                            <div class="viewBook col-lg-4 col-md-4 col-xs-1 ">
-                                <p id="view"> <spring:message code="nameview"/> <a href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
-                                <p id="view" > <spring:message code="authorview"/> <a href="/searchByNameOrAuthor/${viewBook.author.fio}/pages/1"> ${viewBook.author.fio}</a></p>
-                                <p id="view"> <spring:message code="yearview"/> ${viewBook.publishYear}</p>
-                                <p id="view" > <spring:message code="publishview"/> ${viewBook.publisher.name}</p>
-                                <c:choose>
-                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
-                                <p id="view"> <spring:message code="genreview"/> <a href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_en}</a></p>
-                                 </c:when>
-                                <c:otherwise>
-                                    <p id="view"> <spring:message code="genreview"/> <a href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_ru}</a></p>
-                                </c:otherwise>
-                                </c:choose>
-                                <p id="view"> <spring:message code="isbnview"/> ${viewBook.isbn}</p>
-                                <p style="margin-left: 15px"><spring:message
-                                        code="pagesview"/> ${viewBook.pageCount}</p>
+                                    <div class=" col-sm-7 col-lg-9 col-md-8 col-xs-12">
+                                        <img class="col-xs-8 col-sm-5" width="305" height="400"
+                                             style="margin-left: 40px; float: left;  border-radius: 10px"
+                                             src="/image/${viewBook.id}" alt="${viewBook.name}"/>
+                                        <div class="viewBook col-lg-4 col-md-4 col-xs-4 col-sm-2 ">
+                                            <p id="view"><spring:message code="nameview"/> <a
+                                                    href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
+                                            <p id="view"><spring:message code="authorview"/> <a
+                                                    href="/searchByNameOrAuthor/${viewBook.author.fio}/pages/1"> ${viewBook.author.fio}</a>
+                                            </p>
+                                            <p id="view"><spring:message code="yearview"/> ${viewBook.publishYear}</p>
+                                            <p id="view"><spring:message
+                                                    code="publishview"/> ${viewBook.publisher.name}</p>
+                                            <c:choose>
+                                                <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
+                                                    <p id="view"><spring:message code="genreview"/> <a
+                                                            href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_en}</a>
+                                                    </p>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <p id="view"><spring:message code="genreview"/> <a
+                                                            href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_ru}</a>
+                                                    </p>
+                                                </c:otherwise>
+                                            </c:choose>
+                                            <p id="view"><spring:message code="isbnview"/> ${viewBook.isbn}</p>
+                                            <p style="margin-left: 15px"><spring:message
+                                                    code="pagesview"/> ${viewBook.pageCount}</p>
 
-                            </div>
+                                        </div>
 
-                        </div>
+                                    </div>
 
                         <div class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
                             <div style="margin-left: 35px; margin-top: 10px; margin-bottom: 20px">

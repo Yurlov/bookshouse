@@ -703,8 +703,8 @@ html, body, .wrapper{
     .viewBook p a:hover{
         color: #000011;
     }
-.about-section {
 
+.about-section {
     width: 100%;
 }
 
@@ -712,7 +712,6 @@ html, body, .wrapper{
         text-align: left;
         font-size: 15px;
         color: black;
-
     }
 
     .section-title > h1 {
