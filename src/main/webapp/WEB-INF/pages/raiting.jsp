@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<div class="raite">
+<div class="raite col-xs-12">
 
     <div id="rating_1">
         <input type="hidden" class="val" value="${viewBook.rating}"/>

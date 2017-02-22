@@ -203,10 +203,10 @@
                                 <c:when test="${viewBook != null}">
 
                                     <div>
-                                        <img class="col-xs-6 col-sm-6 col-md-4 col-lg-4" width="305" height="400"
+                                        <img class="col-xs-9 col-sm-6 col-md-4 col-lg-4" width="305" height="400"
                                              style="margin-left: 40px; float: left;  border-radius: 10px"
                                              src="/image/${viewBook.id}" alt="${viewBook.name}"/>
-                                        <div class="viewBook col-lg-4 col-md-4 col-xs-4 col-sm-6 ">
+                                        <div class="viewBook col-lg-4 col-md-4 col-xs-9 col-sm-6 ">
                                             <p id="view"><spring:message code="nameview"/> <a
                                                     href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
                                             <p id="view"><spring:message code="authorview"/> <a
@@ -233,7 +233,7 @@
                                         </div>
                                     </div>
 
-                        <div class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
+                                    <div class="col-lg-8 col-md-6 col-xs-9 col-sm-6">
                             <div style="margin-left: 35px; margin-top: 10px; margin-bottom: 20px">
                                 <jsp:include page="raiting.jsp"/>
                             </div>
@@ -275,7 +275,7 @@
                             <c:url var="prevUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex - 1}" />
                             <c:url var="nextUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex + 1}" />
 
-                                            <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12">
+                                            <div class="pagination paginself col-lg-9 col-xs-8 col-sm-12">
                                 <ul class="pagination pagination-lg" >
                                     <c:choose>
                                         <c:when test="${books.totalPages==1}">
