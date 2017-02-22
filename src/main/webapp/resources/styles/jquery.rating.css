@@ -27,12 +27,12 @@ div.vote-result {
     color: #000000;
     font-size: 14px;
     margin-top: 12px;
-    margin-left: 250px;
+
 }
 
 div.vote-success {
     clear: both;
-    color: #ccc;
+    color: #000000;
     font-size: 14px;
     margin: 10px 0 0 10px;
 }

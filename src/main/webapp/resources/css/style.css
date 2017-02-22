@@ -103,7 +103,7 @@
 }
 .paginself{
 
-    left: 20px;
+    left: 40%;
     margin-bottom: 50px;
 }
 .lin h1 {
@@ -1597,6 +1597,7 @@ html, body, .wrapper{
 
 
 }
+
 @media (min-width: 992px) {
     .container {
         width: 970px;
@@ -1666,6 +1667,11 @@ html, body, .wrapper{
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+    }
+
+    .myrating {
+        margin-bottom: 20px;
+        float: left;
     }
     /* ==== HEADER SECTION ==== */
     .navbar-brand{
@@ -1759,8 +1765,10 @@ html, body, .wrapper{
 
     }
 
-
-
+    .myrating {
+        margin-top: 10px;
+        margin-bottom: 30px
+    }
     #input{
         border: #eeac39;
         font-size:20px;
@@ -1811,7 +1819,7 @@ html, body, .wrapper{
         height: 5px;
     }
     #searchForm{
-        width: 90%;
+        width: 91%;
         height: 10%;
         padding:20px 0px 20px 10px;
         margin:50px  10px;
@@ -1822,7 +1830,10 @@ html, body, .wrapper{
 
     }
 
-
+    .myrating {
+        float: left;
+        width: 370px;
+    }
 
     #input{
         border: #eeac39;
@@ -1831,7 +1842,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 260px;
+        width: 250px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1859,6 +1870,11 @@ html, body, .wrapper{
     .work-item{
         width: 300px;
         padding: 5px
+    }
+
+    .myrating {
+        margin-top: 10px;
+        margin-bottom: 20px
     }
     .carousel-caption {
         top: 0;
@@ -1896,7 +1912,7 @@ html, body, .wrapper{
     #button{
         height: 43px;
         width: 40px;
-        margin-left: 20px;
+        margin-left: 10px;
         font-size: 16px;
         text-align: center;
         background: white;
