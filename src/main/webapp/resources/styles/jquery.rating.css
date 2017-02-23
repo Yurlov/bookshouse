@@ -27,7 +27,7 @@ div.vote-result {
     color: #000000;
     font-size: 14px;
     margin-top: 12px;
-
+    padding-left: 41%;
 }
 
 div.vote-success {

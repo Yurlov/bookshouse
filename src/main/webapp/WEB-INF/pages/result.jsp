@@ -203,8 +203,8 @@
                                 <c:when test="${viewBook != null}">
 
                                     <div>
-                                        <img class="col-xs-9  col-sm-6 col-md-4 col-lg-4" width="260" height="380"
-                                             style=" float: left;  border-radius: 10px"
+                                        <img class="col-xs-8 col-sm-5 col-md-4 col-lg-4 " width="300" height="420"
+                                             style=" float: left; border-radius: 15px; padding: 0px 0px 0px 0px; margin-left: 20px; margin-bottom: 20px"
                                              src="/image/${viewBook.id}" alt="${viewBook.name}"/>
                                         <div class="viewBook col-lg-4 col-md-4 col-xs-9 col-sm-6 ">
                                             <p id="view"><spring:message code="nameview"/> <a
@@ -232,12 +232,11 @@
                                                     code="pagesview"/> ${viewBook.pageCount}</p>
                                         </div>
                                     </div>
-
+                                    <div class="myrating col-sm-6 col-xs-12 col-lg-9 ">
+                                        <jsp:include page="raiting.jsp"/>
+                                    </div>
                                     <div class="col-lg-8 col-md-6 col-xs-9 col-sm-6">
-                                        <div class="myrating col-sm-12 col-xs-12 col-lg-12">
-                                <jsp:include page="raiting.jsp"/>
-                            </div>
-                                        <div style=" float: left; margin-top: 5px">
+                                        <div style=" margin-left: 10px; float: left; margin-top: 5px">
                             <security:authorize access="!isAuthenticated()">
                                 <p><spring:message code="acsessview"/> <a href="/login"><spring:message
                                         code="enter"/></a> / <a href="/register"><spring:message code="registr"/></a>
@@ -248,8 +247,8 @@
                             <a href="/download/${viewBook.id}/false"><button  class="btnview btn btn-success btn-lg" > <spring:message code="readBook"/> </button></a>
                             </security:authorize>
                             <h3><spring:message code="discrview"/> </h3> <p class="viewBook">${viewBook.descr}</p>
-                            </div>
-                        </div>
+                                        </div>
+                                    </div>
 
                                 </c:when>
                                 <c:otherwise>

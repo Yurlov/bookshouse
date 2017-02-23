@@ -108,7 +108,7 @@
 }
 .lin h1 {
     margin-top: 20px;
-    text-align: center;
+    margin-left: 30px;
     font-size: 17px;
     margin-bottom: 50px;
 
@@ -116,13 +116,13 @@
 }
 .lin h1 a{
     color: black;
+    text-decoration: none;
+
 }
 .lin h1 a:hover{
     color: #ffd916;
 }
-.lin h1 a{
-    text-decoration: none;
-}
+
 .gen{
     float: left;
     padding-bottom: 30px;
@@ -676,8 +676,7 @@ html, body, .wrapper{
         z-index: 999
     }
 
-
-    .viewBook{
+.viewBook img {
         font-size: 15px;
         color: black;
         text-shadow: #1d1d1d;
@@ -1767,7 +1766,8 @@ html, body, .wrapper{
 
     .myrating {
         margin-top: 10px;
-        margin-bottom: 30px
+        margin-bottom: 30px;
+
     }
     #input{
         border: #eeac39;
@@ -1819,7 +1819,7 @@ html, body, .wrapper{
         height: 5px;
     }
     #searchForm{
-        width: 91%;
+        width: 95%;
         height: 10%;
         padding:20px 0px 20px 10px;
         margin:50px  10px;
@@ -1831,8 +1831,7 @@ html, body, .wrapper{
     }
 
     .myrating {
-        float: left;
-        width: 370px;
+        width: 355px;
     }
 
     #input{
@@ -1842,7 +1841,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 250px;
+        width: 230px;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
