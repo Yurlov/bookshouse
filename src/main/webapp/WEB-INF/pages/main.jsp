@@ -194,8 +194,10 @@
                             <div class="row">
                                 <div class="listbook">
                                     <c:forEach items="${books.content}" var="b">
-                                        <div class="lin col-md-3 col-xs-10 col-sm-3 col-lg-2 ">
-                                            <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
+                                        <div class="lin col-md-3 col-xs-8 col-sm-3 col-lg-2 ">
+                                            <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="165" height="215"
+                                                                                               src="/image/${b.id}"
+                                                                                               alt="${b.name}"/></a>
                                             <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>
                                         </div>
                                     </c:forEach>
