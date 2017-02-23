@@ -86,7 +86,7 @@
     -ms-transition: all 1s ease;
     transition: all 1s ease;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 
@@ -101,11 +101,7 @@
    text-align: center;
     font-size: 25px;
 }
-.paginself{
 
-    left: 40%;
-    margin-bottom: 50px;
-}
 .lin h1 {
     margin-top: 20px;
     margin-left: 30px;
@@ -1563,7 +1559,10 @@ html, body, .wrapper{
 
     }
 
-
+    .paginself {
+        margin-bottom: 50px;
+        left: 40%;
+    }
 
     #input{
         border: #eeac39;
@@ -1607,7 +1606,7 @@ html, body, .wrapper{
     }
     .navbar-right > li > a {
         padding: 23px 10px;
-        font-size: 14px
+        font-size: 12px
     }
     .fixed .navbar-right > li > a{
         padding: 20px 15px;
@@ -1668,6 +1667,10 @@ html, body, .wrapper{
         width: 1170px;
     }
 
+    .paginself {
+        margin-bottom: 50px;
+        left: 40%;
+    }
     .myrating {
         margin-bottom: 20px;
         float: left;
@@ -1769,6 +1772,11 @@ html, body, .wrapper{
         margin-bottom: 30px;
 
     }
+
+    .lin {
+        margin-left: 30%;
+
+    }
     #input{
         border: #eeac39;
         font-size:20px;
@@ -1784,6 +1792,10 @@ html, body, .wrapper{
         display: inline;
     }
 
+    .paginself {
+        margin-bottom: 50px;
+        left: 30%;
+    }
     #button{
         height: 45px;
         width: 25%;
@@ -1819,7 +1831,7 @@ html, body, .wrapper{
         height: 5px;
     }
     #searchForm{
-        width: 95%;
+        width: 97%;
         height: 10%;
         padding:20px 0px 20px 10px;
         margin:50px  10px;
@@ -1830,10 +1842,17 @@ html, body, .wrapper{
 
     }
 
+    .lin {
+        margin-left: 10%;
+    }
     .myrating {
         width: 355px;
     }
 
+    .paginself {
+        margin-bottom: 50px;
+        left: 10%;
+    }
     #input{
         border: #eeac39;
         font-size:20px;
@@ -1841,7 +1860,7 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 230px;
+        width: 50%;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
@@ -1850,7 +1869,7 @@ html, body, .wrapper{
 
     #button{
         height: 43px;
-        width: 35%;
+        width: 40%;
         font-size: 16px;
         text-align: center;
         background: white;
@@ -1871,6 +1890,9 @@ html, body, .wrapper{
         padding: 5px
     }
 
+    .lin {
+        margin-left: 10%;
+    }
     .myrating {
         margin-top: 10px;
         margin-bottom: 20px
@@ -1885,7 +1907,7 @@ html, body, .wrapper{
         font-size: 14px;
     }
     #searchForm{
-        width: 280px;
+        width: 93%;
         height: 10%;
         background-color: #ffd916;
         -moz-border-radius:5px;
@@ -1901,16 +1923,20 @@ html, body, .wrapper{
         color: #000011;
         height:43px;
         line-height:36px;
-        width: 220px;
+        width: 50%;
         -moz-border-radius:5px;
         -webkit-border-radius:5px;
         border-radius:5px;
         display: inline;
     }
 
+    .paginself {
+        margin-bottom: 50px;
+        left: 0%;
+    }
     #button{
         height: 43px;
-        width: 40px;
+        width: 44%;
         margin-left: 10px;
         font-size: 16px;
         text-align: center;

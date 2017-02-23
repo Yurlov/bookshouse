@@ -198,32 +198,33 @@
                         </div>
                             <c:choose>
                                 <c:when test="${notFound==0}">
-                        <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound">Книг не найдено!</p>
+                                    <p class="col-lg-6 col-md-4 col-sm-6 col-xs-12 notfound"><spring:message
+                                            code="nofound"/></p>
                                 </c:when>
                                 <c:when test="${viewBook != null}">
 
                                     <div>
-                                        <img class="col-xs-8 col-sm-5 col-md-4 col-lg-4 " width="300" height="420"
-                                             style=" float: left; border-radius: 15px; padding: 0px 0px 0px 0px; margin-left: 20px; margin-bottom: 20px"
+                                        <img class="col-xs-10 col-sm-5 col-md-4 col-lg-3 " width="300" height="350"
+                                             style=" float: left; border-radius: 15px; padding: 0px 0px 0px 0px; margin-top: 15px; margin-left: 20px; margin-bottom: 20px"
                                              src="/image/${viewBook.id}" alt="${viewBook.name}"/>
                                         <div class="viewBook col-lg-4 col-md-4 col-xs-9 col-sm-6 ">
                                             <p id="view"><spring:message code="nameview"/> <a
                                                     href="/viewBook/${viewBook.id}">${viewBook.name}</a></p>
-                                            <p id="view"><spring:message code="authorview"/> <a
-                                                    href="/searchByNameOrAuthor/${viewBook.author.fio}/pages/1"> ${viewBook.author.fio}</a>
+                                            <p id="view"><spring:message code="authorview"/>
+                                                <a href="/searchByNameOrAuthor/${viewBook.author.fio}/pages/1"> ${viewBook.author.fio}</a>
                                             </p>
                                             <p id="view"><spring:message code="yearview"/> ${viewBook.publishYear}</p>
                                             <p id="view"><spring:message
                                                     code="publishview"/> ${viewBook.publisher.name}</p>
                                             <c:choose>
                                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
-                                                    <p id="view"><spring:message code="genreview"/> <a
-                                                            href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_en}</a>
+                                                    <p id="view"><spring:message code="genreview"/>
+                                                        <a href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_en}</a>
                                                     </p>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <p id="view"><spring:message code="genreview"/> <a
-                                                            href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_ru}</a>
+                                                    <p id="view"><spring:message code="genreview"/>
+                                                        <a href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_ru}</a>
                                                     </p>
                                                 </c:otherwise>
                                             </c:choose>
@@ -235,7 +236,7 @@
                                     <div class="myrating col-sm-6 col-xs-12 col-lg-9 ">
                                         <jsp:include page="raiting.jsp"/>
                                     </div>
-                                    <div class="col-lg-8 col-md-6 col-xs-9 col-sm-6">
+                                    <div class="col-lg-8 col-md-6 col-xs-12 col-sm-6">
                                         <div style=" margin-left: 10px; float: left; margin-top: 5px">
                             <security:authorize access="!isAuthenticated()">
                                 <p><spring:message code="acsessview"/> <a href="/login"><spring:message
@@ -257,8 +258,11 @@
                                 <div class="row">
                                     <div class="listbook">
                                         <c:forEach items="${books.content}" var="b">
-                                            <div class="lin col-md-3 col-xs-6 col-sm-3 col-lg-2 ">
-                                                <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
+                                            <div class="lin col-xs-10 col-md-3  col-sm-3 col-lg-2 ">
+                                                <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="165"
+                                                                                                   height="215"
+                                                                                                   src="/image/${b.id}"
+                                                                                                   alt="${b.name}"/></a>
                                                 <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>
                                             </div>
                                         </c:forEach>
@@ -274,7 +278,7 @@
                             <c:url var="prevUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex - 1}" />
                             <c:url var="nextUrl" value="/searchByGenre/${primeGen}/pages/${currentIndex + 1}" />
 
-                                            <div class="pagination paginself col-lg-9 col-xs-8 col-sm-12">
+                                            <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12">
                                 <ul class="pagination pagination-lg" >
                                     <c:choose>
                                         <c:when test="${books.totalPages==1}">
