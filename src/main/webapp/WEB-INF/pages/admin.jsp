@@ -82,7 +82,7 @@
                 <!-- /.row -->
                 <div class="row">
 
-                    <div class="col-lg-12" style="overflow: auto; height: 400px " >
+                    <div class="col-lg-12 col-xs-12" style="overflow: auto; height: 400px ">
                         <h2>Users</h2>
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
@@ -155,7 +155,7 @@
                 </div>
                 <hr/>
                 <div class="row" style="margin-left: 70px">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-xs-12">
                         <h2>Genre Table</h2>
 
                         <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px;" >
@@ -205,7 +205,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-3" style="margin-left: 70px;">
+                    <div class="col-lg-3 col-xs-12" style="margin-left: 70px;">
                         <h2>Author Table</h2>
                         <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px; ">
                             <table class="table table-bordered table-hover table-striped" >
@@ -248,7 +248,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-3" style="margin-left: 70px; ">
+                    <div class="col-lg-3 col-xs-12" style="margin-left: 70px; ">
                         <h2>Publisher Table</h2>
 
                         <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px;" >
@@ -356,44 +356,45 @@
                     </div>
 
                 </div>
-                <form class="form-group-lg" enctype="multipart/form-data" method="post" action="/addBook" >
-                    <h1>New Book</h1>
-                    <h4>Name <input type="text" name="bookName"/> </h4>
-                    <h4>ISBN <input type="text" name="isbn"></h4>
-                    <h4>Genre <select  name="genre">
-                        <option>Choose:</option>
-                        <c:forEach items="${genres}" var="g">
-                        <option value="${g.name_ru}">${g.name_ru}</option>
-                        </c:forEach>
-                    </select>
-                    </h4>
-                    <h4>Image:  <input type="file" name="image" multiple accept="image/*,image/jpeg"></h4>
-                    <h4>Description <input type="text" name="descript"></h4>
-                    <h4>Page Count <input type="text" name="pageCount"></h4>
-                    <h4>Publisher Year <input type="text" name="year"></h4>
-                    <h4>Author:
-                        <select name="author">
+                <div style="background: #a8b6bf;">
+                    <form class="form-group-lg" enctype="multipart/form-data" method="post" action="/addBook" >
+                        <h1>New Book</h1>
+                        <h4>Name <input type="text" name="bookName"/> </h4>
+                        <h4>ISBN <input type="text" name="isbn"></h4>
+                        <h4>Genre <select name="genre">
                             <option>Choose:</option>
-                        <c:forEach items="${auth}" var="a">
-                        <option value="${a.id}">${a.fio}</option>
-                        </c:forEach>
-                    </select>
-                    </h4>
-                    <h4>Publisher
-                    <select name="publisher">
-                        <option>Choose:</option>
-                        <c:forEach items="${publishers}" var="p">
-                            <option  value="${p.id}">${p.name}</option>
-                        </c:forEach>
-                    </select>
-                    </h4>
-                    <h4>Rating <input type="text" name="rating"></h4>
-                    <h4>Content:  <input type="file" name="content" multiple></h4>
-                    <h4>Vote <input type="text" name="voteCount"></h4>
-                <input class="btn btn-lg btn-success" type="submit" value="Добавить">
+                            <c:forEach items="${genres}" var="g">
+                                <option value="${g.name_ru}">${g.name_ru}</option>
+                            </c:forEach>
+                        </select>
+                        </h4>
+                        <h4>Image:  <input type="file" name="image" multiple accept="image/*,image/jpeg"></h4>
+                        <h4>Description <input type="text" name="descript"></h4>
+                        <h4>Page Count <input type="text" name="pageCount"></h4>
+                        <h4>Publisher Year <input type="text" name="year"></h4>
+                        <h4>Author:
+                            <select name="author">
+                                <option>Choose:</option>
+                                <c:forEach items="${auth}" var="a">
+                                    <option value="${a.id}">${a.fio}</option>
+                                </c:forEach>
+                            </select>
+                        </h4>
+                        <h4>Publisher
+                            <select name="publisher">
+                                <option>Choose:</option>
+                                <c:forEach items="${publishers}" var="p">
+                                    <option value="${p.id}">${p.name}</option>
+                                </c:forEach>
+                            </select>
+                        </h4>
+                        <h4>Rating <input type="text" name="rating"></h4>
+                        <h4>Content:  <input type="file" name="content" multiple></h4>
+                        <h4>Vote <input type="text" name="voteCount"></h4>
+                        <input class="btn btn-lg btn-success" type="submit" value="Добавить">
 
-                </form>
-
+                    </form>
+                </div>
             </div>
 
 
