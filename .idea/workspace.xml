@@ -56,12 +56,22 @@
       <file leaf-file-name="result.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1377">
-              <caret line="260" column="68" lean-forward="true" selection-start-line="260" selection-start-column="68" selection-end-line="260" selection-end-column="68" />
+            <state relative-caret-position="2312">
+              <caret line="381" column="79" lean-forward="false" selection-start-line="381" selection-start-column="79" selection-end-line="381" selection-end-column="79" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="215" column="68" lean-forward="true" selection-start-line="215" selection-start-column="68" selection-end-line="215" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,20 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="200" column="48" lean-forward="true" selection-start-line="200" selection-start-column="48" selection-end-line="200" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="-998">
               <caret line="1771" column="28" lean-forward="false" selection-start-line="1771" selection-start-column="28" selection-end-line="1771" selection-end-column="28" />
               <folding />
             </state>
@@ -173,8 +173,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/styles/jquery.rating.css" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/messages.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp" />
       </list>
     </option>
   </component>
@@ -992,14 +992,7 @@
       <workItem from="1487775305703" duration="18378000" />
       <workItem from="1487854726563" duration="819000" />
       <workItem from="1487856163040" duration="6409000" />
-      <workItem from="1487883721833" duration="4104000" />
-    </task>
-    <task id="LOCAL-00016" summary="eight commit">
-      <created>1487372781368</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1487372781368</updated>
+      <workItem from="1487883721833" duration="4907000" />
     </task>
     <task id="LOCAL-00017" summary="eight commit">
       <created>1487372936588</created>
@@ -1337,11 +1330,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487887026517</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="last commit">
+      <created>1487888010179</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1487888010179</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325398000" />
+    <option name="totallyTimeSpent" value="326201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1822,7 +1822,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="-998">
           <caret line="1771" column="28" lean-forward="false" selection-start-line="1771" selection-start-column="28" selection-end-line="1771" selection-end-column="28" />
           <folding />
         </state>
@@ -1830,8 +1830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/result.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1377">
-          <caret line="260" column="68" lean-forward="true" selection-start-line="260" selection-start-column="68" selection-end-line="260" selection-end-column="68" />
+        <state relative-caret-position="2312">
+          <caret line="381" column="79" lean-forward="false" selection-start-line="381" selection-start-column="79" selection-end-line="381" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1841,8 +1841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="200" column="48" lean-forward="true" selection-start-line="200" selection-start-column="48" selection-end-line="200" selection-end-column="48" />
+        <state relative-caret-position="395">
+          <caret line="215" column="68" lean-forward="true" selection-start-line="215" selection-start-column="68" selection-end-line="215" selection-end-column="68" />
           <folding />
         </state>
       </provider>

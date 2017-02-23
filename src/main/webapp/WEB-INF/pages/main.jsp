@@ -210,7 +210,7 @@
                     <c:url var="prevUrl" value="/pages/${currentIndex - 1}" />
                     <c:url var="nextUrl" value="/pages/${currentIndex + 1}" />
 
-                    <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12" >
+                        <div class="pagination paginself col-lg-9 col-xs-10 col-sm-12">
                         <ul class="pagination pagination-lg" >
                             <c:choose>
                                 <c:when test="${currentIndex == 1}">
