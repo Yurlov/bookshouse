@@ -1662,11 +1662,11 @@ html, body, .wrapper{
 
 
 }
+
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
-
     .paginself {
         margin-bottom: 50px;
         left: 40%;
@@ -1698,6 +1698,50 @@ html, body, .wrapper{
     }
     #searchForm{
 
+        width: 1080px;
+        height: 20%;
+        background-color: #ffd916;
+        padding: 20px 0px 20px 10px;
+        margin: 50px 10%;
+        position: relative;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+
+    }
+
+    #input {
+        border: #eeac39;
+        float: left;
+        font-size: 20px;
+        color: #000011;
+        height: 43px;
+        line-height: 36px;
+        margin-right: 10px;
+        padding: 0 0 0 10px;
+        width: 850px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #button {
+        height: 45px;
+        width: 150px;
+        font-size: 17px;
+        text-align: center;
+        background: white;
+        color: black;
+    }
+
+    #button:hover {
+        background: #000000;
+        color: yellow;
+    }
+}
+
+@media (min-width: 1500px) {
+    #searchForm {
         width: 1080px;
         height: 20%;
         background-color: #ffd916;
@@ -1740,7 +1784,6 @@ html, body, .wrapper{
         color: yellow;
     }
 }
-
 @media (max-width: 768px){
     .qoute-caption {
         margin: 80px 0 0;
