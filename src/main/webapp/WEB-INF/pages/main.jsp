@@ -260,7 +260,7 @@
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ГАРРИ ПОТТЕР</h3>
+                                        <h3><spring:message code="booktest1"/></h3>
                                         <p>J.K ROWLING</p>
                                     </div>
                                 </div>
@@ -268,32 +268,32 @@
                                 <div class="item">
                                     <img src="/resources/images/my/dom.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3>
-                                        <p>РЕНСОМ РИГГЗ</p>
+                                        <h3><spring:message code="booktest2"/></h3>
+                                        <p>RENSOM RIGGS</p>
                                     </div>
                                 </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/do.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3>
-                                        <p>ДЖОДЖО МОЙЕС</p>
+                                        <h3><spring:message code="booktest3"/></h3>
+                                        <p>JOJO MOYES</p>
                                     </div>
                                 </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/50.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ПЯТДЕСЯТ ОТТЕНКОВ СЕРОГО</h3>
-                                        <p>ЭЛ ДЖАЙМС</p>
+                                        <h3><spring:message code="booktest4"/></h3>
+                                        <p>E.L. JAMES</p>
                                     </div>
                                 </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/girl.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДЕВУШКА В ПОЕЗДЕ</h3>
-                                        <p>ПОЛА ХОКИНС</p>
+                                        <h3><spring:message code="booktest5"/></h3>
+                                        <p>POLA HOKINS</p>
                                     </div>
                                 </div>
                             </div>
