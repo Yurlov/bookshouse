@@ -27,9 +27,9 @@ public class EmailController {
 
 
         SimpleMailMessage mail = new SimpleMailMessage();
-        mail.setFrom("bookshouselibrary@gmail.com");
+        mail.setFrom(email);
         mail.setTo("bookshouselibrary@gmail.com");
-        mail.setSubject(name+" ("+email+")");
+        mail.setSubject(name);
         mail.setText(message);
         try {
             javaMailSender.send(mail);
