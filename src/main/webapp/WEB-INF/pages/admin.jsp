@@ -154,16 +154,17 @@
 
                 </div>
                 <hr/>
-                <div class="row" style="margin-left: 70px">
-                    <div class="col-lg-3 col-xs-12">
+                <div
+                ">
+                <div class="col-lg-12 col-xs-12 col-md-3">
                         <h2>Genre Table</h2>
 
-                        <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px;" >
+                    <div class="table-responsive" style="overflow: auto; height: 400px;">
 
                             <table class="table table-bordered table-hover">
                                 <thead class="fixed" >
                                 <tr>
-                                    <th colspan="3">
+                                    <th colspan="4">
                                         <form action="/addGenre" method="post">
                                      <div class="form-group">
                                         <input class="form-control" placeholder="Жанр: " type="text" name="name_ru">
@@ -205,9 +206,9 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-xs-12" style="margin-left: 70px;">
+                <div class="col-lg-12 col-xs-12 col-md-12">
                         <h2>Author Table</h2>
-                        <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px; ">
+                    <div class="table-responsive" style="overflow: auto; height: 400px; ">
                             <table class="table table-bordered table-hover table-striped" >
                                 <thead>
                                 <tr>
@@ -248,10 +249,11 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-xs-12" style="margin-left: 70px; ">
+                <div class="col-lg-12 col-xs-12 col-md-3 "
+                ">
                         <h2>Publisher Table</h2>
 
-                        <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px;" >
+                <div class="table-responsive" style="overflow: auto; height: 400px;">
 
                             <table class="table table-bordered table-hover" >
                                 <thead class="fixed" >
@@ -295,7 +297,7 @@
                 </div>
                 <hr/>
                 <div class="row">
-                    <div class="col-lg-12" style="height: 500px; width: 100%; overflow: auto">
+                    <div class="col-lg-12 col-md-12" style="height: 500px; width: 100%; overflow: auto">
                         <h2>Books</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">

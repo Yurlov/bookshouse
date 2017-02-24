@@ -1537,7 +1537,7 @@ html, body, .wrapper{
     }
     /* ==== SLIDER SECTION ==== */
     .carousel-caption > h1 {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 1;
     }
     .carousel-caption > h2 {
@@ -1613,7 +1613,7 @@ html, body, .wrapper{
     }
     /* ==== SLIDER SECTION ==== */
     .carousel-caption > h1 {
-        font-size: 75px;
+        font-size: 55px;
     }
     .carousel-caption > h2 {
         font-size: 30px;
@@ -1677,18 +1677,18 @@ html, body, .wrapper{
     }
     /* ==== HEADER SECTION ==== */
     .navbar-brand{
-        margin-top: 20px
+        margin-top: 5px
     }
     .navbar-right > li > a {
-        padding: 33px 25px;
-        font-size: 14px
+        padding: 20px 25px;
+        font-size: 12px
     }
     .fixed .navbar-right > li > a{
         padding: 20px 25px;
     }
     /* ==== SLIDER SECTION ==== */
     .carousel-caption > h1 {
-        font-size: 90px;
+        font-size: 60px;
     }
     .carousel-caption > h2 {
         font-size: 40px;
@@ -1702,7 +1702,7 @@ html, body, .wrapper{
         height: 20%;
         background-color: #ffd916;
         padding: 20px 0px 20px 10px;
-        margin: 50px 6%;
+        margin: 50px 8%;
         position: relative;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -1867,6 +1867,20 @@ html, body, .wrapper{
         display: block;
         position: relative;
         background: #ffd600;
+    }
+
+    /* ==== SLIDER SECTION ==== */
+    .carousel-caption > h1 {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .carousel-caption > h2 {
+        font-size: 25px;
+    }
+
+    .carousel-caption > p {
+        padding: 0 20%;
     }
     .section-title > h1{
         font-size: 45px
