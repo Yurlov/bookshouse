@@ -17,16 +17,16 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-
-    @Bean
-    public CommandLineRunner demo(final UserService userService) {
-        return new CommandLineRunner() {
-            @Override
-            public void run(String... strings) throws Exception {
-                userService.addUser(new User("admin", "bcb049247ce6fab013d6f085b165e7c081ab93bd", UserRole.ADMIN));
-                userService.addUser(new User("user", "bcb049247ce6fab013d6f085b165e7c081ab93bd", UserRole.USER));
-            }
-        };
-    }
+//
+//    @Bean
+//    public CommandLineRunner demo(final UserService userService) {
+//        return new CommandLineRunner() {
+//            @Override
+//            public void run(String... strings) throws Exception {
+//                userService.addUser(new User("admin", "bcb049247ce6fab013d6f085b165e7c081ab93bd", UserRole.ADMIN));
+//                userService.addUser(new User("user", "bcb049247ce6fab013d6f085b165e7c081ab93bd", UserRole.USER));
+//            }
+//        };
+//    }
 }
 

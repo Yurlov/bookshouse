@@ -9,7 +9,7 @@ public class MyUtils {
 
     public static void writeFiles(MultipartFile content, String path){
         try {
-            OutputStream fos = new FileOutputStream(new File(path));
+            OutputStream fos = new BufferedOutputStream(new FileOutputStream(new File(path)));
             fos.write(content.getBytes());
             fos.flush();
             fos.close();
