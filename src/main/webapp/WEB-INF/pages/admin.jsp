@@ -234,7 +234,9 @@
                                         <td >
                                             <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="id" value="a.id"/> <input class="btn btn-success" style="float: left" type="submit" value="Delete">
+                                                <input type="checkbox" name="id" value="${a.id}"/> <input
+                                                    class="btn btn-success" style="float: left" type="submit"
+                                                    value="Delete">
                                             </label>
                                         </div>
                                         </td>
@@ -249,8 +251,7 @@
                             </table>
                         </div>
                     </div>
-                <div class="col-lg-12 col-xs-12 col-md-3 "
-                ">
+                <div class="col-lg-12 col-xs-12 col-md-3 ">
                         <h2>Publisher Table</h2>
 
                 <div class="table-responsive" style="overflow: auto; height: 400px;">
