@@ -29,6 +29,7 @@ public class Book {
     private Publisher publisher;
     @Column
     private String image;
+    @Column(length = 3000)
     private String descr;
     private Integer rating;
     private Long voteCount;
