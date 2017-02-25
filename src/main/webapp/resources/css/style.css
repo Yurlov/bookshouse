@@ -1754,7 +1754,13 @@ html, body, .wrapper{
 
     }
 
+    .carousel-caption > h1 {
+        font-size: 70px;
+    }
 
+    .carousel-caption > h2 {
+        font-size: 40px;
+    }
 
     #input{
         border: #eeac39;
