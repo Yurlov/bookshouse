@@ -10,7 +10,7 @@ public class Book {
     private Long id;
     @Column
     private String name;
-    @Column
+    @Column(length = 500)
     private String content;
     @Column
     private Integer pageCount;
