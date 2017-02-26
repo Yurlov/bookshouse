@@ -110,18 +110,14 @@ public class AdminController {
         MyUtils.writeFiles(content,contentPath);
         MyUtils.writeFiles(image,imagePath);
 
-
         Book newBook = new Book(bookName,contentPath,pageCount,
                 isbn,genreService.getGenreByName(genre),
                 authorService.getAuthorById(author),
                 year,publisherService.getPublisherById(publisher),
                 imagePath, descript, rating, voteCount);
-
         bookService.addBook(newBook);
-
         return "redirect:/admin";
     }
-
 
     @RequestMapping(value = "/deleteGenre", method = RequestMethod.POST)
     public String deleteGenre(@RequestParam("genre") Long id){
