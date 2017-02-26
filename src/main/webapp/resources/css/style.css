@@ -537,7 +537,7 @@ html, body, .wrapper{
         font-size: 15px;
         position: relative;
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 40px;
         transition: all 0.3s;
         border: 1px solid #ffd600;
         text-decoration: none;
@@ -554,7 +554,7 @@ html, body, .wrapper{
         background: transparent;
         position: absolute;
         border: none !important;
-        bottom:55px;
+        bottom: 20px;
         margin: 0;
         padding: 60px;
         background: url(../images/bottom-arrow.png) no-repeat;
@@ -1669,6 +1669,7 @@ html, body, .wrapper{
     }
     .paginself {
         margin-bottom: 50px;
+        margin-top: 30px;
         left: 40%;
     }
     .myrating {
@@ -1677,14 +1678,22 @@ html, body, .wrapper{
     }
     /* ==== HEADER SECTION ==== */
     .navbar-brand{
-        margin-top: 5px
+        margin-top: 5px;
+        font-size: 29px;
+    }
+
+    .fixed .navbar-brand {
+        font-size: 27px;
+        padding-top: 5px;
+        padding-bottom: 10px;
     }
     .navbar-right > li > a {
         padding: 20px 25px;
-        font-size: 12px
+        font-size: 11px
     }
     .fixed .navbar-right > li > a{
-        padding: 20px 25px;
+        padding: 15px 25px;
+        font-size: 11px;
     }
     /* ==== SLIDER SECTION ==== */
     .carousel-caption > h1 {
@@ -1697,12 +1706,11 @@ html, body, .wrapper{
         padding: 0 25%;
     }
     #searchForm{
-
-        width: 1080px;
-        height: 20%;
+        width: 980px;
+        height: 10%;
         background-color: #ffd916;
-        padding: 20px 0px 20px 10px;
-        margin: 50px 8%;
+        padding: 10px 0px 10px 15px;
+        margin: 50px 11%;
         position: relative;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -1713,22 +1721,22 @@ html, body, .wrapper{
     #input {
         border: #eeac39;
         float: left;
-        font-size: 20px;
+        font-size: 17px;
         color: #000011;
-        height: 43px;
+        height: 33px;
         line-height: 36px;
-        margin-right: 10px;
-        padding: 0 0 0 10px;
-        width: 850px;
+        margin-right: 0px;
+        padding: 0px 0px 0px 10px;
+        width: 800px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         border-radius: 5px;
     }
 
     #button {
-        height: 45px;
-        width: 150px;
-        font-size: 17px;
+        height: 33px;
+        width: 130px;
+        font-size: 16px;
         text-align: center;
         background: white;
         color: black;
@@ -1737,6 +1745,113 @@ html, body, .wrapper{
     #button:hover {
         background: #000000;
         color: yellow;
+    }
+
+    .listbook {
+        margin-top: 0px;
+        margin-left: 40px;
+    }
+
+    .lin h1 {
+        margin-top: 10px;
+        margin-left: 40px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .lin a img {
+        overflow: hidden;
+        margin-top: 0px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    .lin a img:hover {
+        overflow: hidden;
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -o-transform: scale(1.15);
+
+    }
+
+    .border {
+        list-style: none;
+        padding: 0;
+        background: #ffd916;
+        width: 80%;
+        margin-left: 50px;
+    }
+
+    .border li {
+        font-family: "Trebuchet MS", "Lucida Sans";
+        padding: 7px 20px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        border-left: 10px solid #000000;
+        box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, .1),
+        -2px -2px 5px 0 rgba(0, 0, 0, .1),
+        2px 2px 5px 0 rgba(0, 0, 0, .1),
+        -2px 2px 5px 0 rgba(0, 0, 0, .1);
+        font-size: 15px;
+        letter-spacing: 2px;
+        transition: 0.3s all linear;
+    }
+
+    .border li:nth-child(2) {
+        border-color: #8bc63e;
+    }
+
+    .border li:nth-child(3) {
+        border-color: #fcba30;
+    }
+
+    .border li:nth-child(4) {
+        border-color: #1ccfc9;
+    }
+
+    .border li:nth-child(5) {
+        border-color: #493224;
+    }
+
+    .border li:hover {
+        border-left: 10px solid transparent;
+    }
+
+    .border li:nth-child(1):hover {
+        border-right: 10px solid #000000;
+    }
+
+    .border li:nth-child(2):hover {
+        border-right: 10px solid #8bc63e;
+    }
+
+    .border li:nth-child(3):hover {
+        border-right: 10px solid #fcba30;
+    }
+
+    .border li:nth-child(4):hover {
+        border-right: 10px solid #1ccfc9;
+    }
+
+    .border li:nth-child(5):hover {
+        border-right: 10px solid #493224;
+    }
+
+    .border a {
+        color: #000000;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    .border a:hover, a:focus {
+        text-decoration: none;
+        color: #f2f2f2;
     }
 }
 
@@ -1762,6 +1877,58 @@ html, body, .wrapper{
         font-size: 40px;
     }
 
+    .listbook {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+
+    .lin a img {
+        overflow: hidden;
+        margin-top: 10px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+        border-radius: 10px;
+
+    }
+
+    .lin a img:hover {
+        overflow: hidden;
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -o-transform: scale(1.15);
+
+    }
+
+    .lin h1 {
+        margin-top: 10px;
+        margin-left: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand {
+        margin-top: 5px;
+        font-size: 30px;
+    }
+
+    .fixed .navbar-brand {
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-right > li > a {
+        padding: 20px 25px;
+        font-size: 14px
+    }
+
+    .fixed .navbar-right > li > a {
+        padding: 20px 25px;
+        font-size: 14px;
+    }
     #input{
         border: #eeac39;
         float:left;
@@ -1788,6 +1955,81 @@ html, body, .wrapper{
     #button:hover{
         background: #000000;
         color: yellow;
+    }
+
+    .border {
+        list-style: none;
+        padding: 0;
+        background: #ffd916;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .border li {
+        font-family: "Trebuchet MS", "Lucida Sans";
+        padding: 7px 20px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        border-left: 10px solid #000000;
+        box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, .1),
+        -2px -2px 5px 0 rgba(0, 0, 0, .1),
+        2px 2px 5px 0 rgba(0, 0, 0, .1),
+        -2px 2px 5px 0 rgba(0, 0, 0, .1);
+        font-size: 19px;
+        letter-spacing: 2px;
+        transition: 0.3s all linear;
+    }
+
+    .border li:nth-child(2) {
+        border-color: #8bc63e;
+    }
+
+    .border li:nth-child(3) {
+        border-color: #fcba30;
+    }
+
+    .border li:nth-child(4) {
+        border-color: #1ccfc9;
+    }
+
+    .border li:nth-child(5) {
+        border-color: #493224;
+    }
+
+    .border li:hover {
+        border-left: 10px solid transparent;
+    }
+
+    .border li:nth-child(1):hover {
+        border-right: 10px solid #000000;
+    }
+
+    .border li:nth-child(2):hover {
+        border-right: 10px solid #8bc63e;
+    }
+
+    .border li:nth-child(3):hover {
+        border-right: 10px solid #fcba30;
+    }
+
+    .border li:nth-child(4):hover {
+        border-right: 10px solid #1ccfc9;
+    }
+
+    .border li:nth-child(5):hover {
+        border-right: 10px solid #493224;
+    }
+
+    .border a {
+        color: #000000;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    .border a:hover, a:focus {
+        text-decoration: none;
+        color: #f2f2f2;
     }
 }
 @media (max-width: 768px){
