@@ -149,7 +149,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public JavaMailSender javaMailSender(){
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
         javaMailSender.setUsername("bookshouselibrary@gmail.com");
-        javaMailSender.setPassword("qms437dvskd");
+        javaMailSender.setPassword("xxxxxxxxx");
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
