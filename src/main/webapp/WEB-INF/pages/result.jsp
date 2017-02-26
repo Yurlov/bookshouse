@@ -219,12 +219,12 @@
                                             <c:choose>
                                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
                                                     <p id="view"><spring:message code="genreview"/>
-                                                        <a href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_en}</a>
+                                                        <a href="/searchByGenre/${viewBook.genre.name_en}/pages/1"> ${viewBook.genre.name_en}</a>
                                                     </p>
                                                 </c:when>
                                                 <c:otherwise>
                                                     <p id="view"><spring:message code="genreview"/>
-                                                        <a href="/searchByGenre/${viewBook.genre}/pages/1"> ${viewBook.genre.name_ru}</a>
+                                                        <a href="/searchByGenre/${viewBook.genre.name_ru}/pages/1"> ${viewBook.genre.name_ru}</a>
                                                     </p>
                                                 </c:otherwise>
                                             </c:choose>
@@ -259,8 +259,8 @@
                                     <div class="listbook">
                                         <c:forEach items="${books.content}" var="b">
                                             <div class="lin col-xs-8 col-md-3  col-sm-3 col-lg-2 ">
-                                                <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="165"
-                                                                                                   height="215"
+                                                <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="160"
+                                                                                                   height="210"
                                                                                                    src="/image/${b.id}"
                                                                                                    alt="${b.name}"/></a>
                                                 <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>

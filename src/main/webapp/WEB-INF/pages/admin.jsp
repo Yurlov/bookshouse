@@ -33,7 +33,7 @@
 
 <body>
 
-    <div id="wrapper">
+<div>
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -67,7 +67,7 @@
 
         </nav>
 
-        <div id="page-wrapper">
+    <div>
 
             <div class="container-fluid">
 
