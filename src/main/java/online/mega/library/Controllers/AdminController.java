@@ -5,6 +5,7 @@ import online.mega.library.Entities.*;
 import online.mega.library.Services.*;
 import online.mega.library.Utils.MyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.support.EncodedResource;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;

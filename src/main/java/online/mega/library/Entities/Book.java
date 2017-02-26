@@ -16,7 +16,6 @@ public class Book {
     private Integer pageCount;
     @Column
     private String isbn;
-
     @OneToOne
     @JoinColumn(name = "genre_id")
     private Genre genre;
