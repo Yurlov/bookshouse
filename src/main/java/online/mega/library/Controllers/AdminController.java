@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 @Controller
 public class AdminController {
     @Autowired
@@ -99,13 +102,13 @@ public class AdminController {
                           @RequestParam Integer rating,
                           @RequestParam MultipartFile content,
                           @RequestParam MultipartFile image
-    )  {
+    ) throws UnsupportedEncodingException {
 
-
-        String contentPath = "src/main/resources/bookFiles/"+bookName.toLowerCase()+".pdf";
-        String imagePath = "src/main/resources/bookImages/"+bookName.toLowerCase()+".jpg";
+        String contentPath = "src/main/resources/bookFiles/" + URLEncoder.encode(bookName.toLowerCase(), "UTF-8") + ".pdf";
+        String imagePath = "src/main/resources/bookImages/" + URLEncoder.encode(bookName.toLowerCase(), "UTF-8") + ".jpg";
         MyUtils.writeFiles(content,contentPath);
         MyUtils.writeFiles(image,imagePath);
+
 
         Book newBook = new Book(bookName,contentPath,pageCount,
                 isbn,genreService.getGenreByName(genre),
