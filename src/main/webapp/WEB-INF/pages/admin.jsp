@@ -317,7 +317,8 @@
                                         <td><c:out value="${b.genre.name_ru}"/></td>
                                         <td><c:out value="${b.image}"/></td>
                                         <td>
-                                            <div style="overflow: auto; height: 100px"><c:out value="${b.descr}"/></div>
+                                            <div style="overflow: auto; height: 100px; "><c:out
+                                                    value="${b.descr}"/></div>
                                         </td>
                                         <td><c:out value="${b.pageCount}"/></td>
                                         <td><c:out value="${b.publishYear}"/></td>
