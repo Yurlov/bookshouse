@@ -103,7 +103,7 @@ public class AdminController {
                           @RequestParam Integer rating,
                           @RequestParam MultipartFile content,
                           @RequestParam MultipartFile image
-    ) throws UnsupportedEncodingException {
+    ) {
 
         String contentPath = "src/main/resources/bookFiles/" + isbn + ".pdf";
         String imagePath = "src/main/resources/bookImages/" + isbn + ".jpg";
