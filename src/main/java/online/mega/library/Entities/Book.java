@@ -10,7 +10,7 @@ public class Book {
     private Long id;
     @Column
     private String name;
-    @Column(length = 500)
+    @Column(length = 700)
     private String content;
     @Column
     private Integer pageCount;
@@ -26,7 +26,7 @@ public class Book {
     @OneToOne
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
-    @Column
+    @Column(length = 700)
     private String image;
     @Column(length = 3000)
     private String descr;

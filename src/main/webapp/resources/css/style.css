@@ -1660,6 +1660,44 @@ html, body, .wrapper{
         color: yellow;
     }
 
+    .listbook {
+        margin-top: 0px;
+        margin-left: 30px;
+
+    }
+
+    .lin h1 {
+        margin-top: 20px;
+        font-size: 13px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    .lin a img {
+        width: 65%;
+        height: 60%;
+        overflow: hidden;
+        margin-top: 0px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+        border-radius: 10px;
+        margin-left: 45px;
+    }
+
+    .lin a img:hover {
+        overflow: hidden;
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        -o-transform: scale(1.15);
+
+    }
+
+    .lin {
+        height: 300px;
+    }
 
 }
 
@@ -1749,17 +1787,19 @@ html, body, .wrapper{
 
     .listbook {
         margin-top: 0px;
-        margin-left: 40px;
+        margin-left: 30px;
     }
 
     .lin h1 {
-        margin-top: 15px;
-        text-align: center;
+        margin-top: 20px;
         font-size: 13px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
+        text-align: center;
     }
 
     .lin a img {
+        width: 85%;
+        height: 60%;
         overflow: hidden;
         margin-top: 0px;
         -webkit-transition: all 1s ease;
@@ -1768,7 +1808,7 @@ html, body, .wrapper{
         -ms-transition: all 1s ease;
         transition: all 1s ease;
         border-radius: 10px;
-        margin-left: 10px;
+        margin-left: 25px;
     }
 
     .lin a img:hover {
@@ -1779,6 +1819,9 @@ html, body, .wrapper{
 
     }
 
+    .lin {
+        height: 300px;
+    }
     .border {
         list-style: none;
         padding: 0;
@@ -1878,12 +1921,14 @@ html, body, .wrapper{
     }
 
     .listbook {
-        margin-top: 0px;
+        margin-top: 0;
         margin-left: 20px;
+
     }
 
     .lin a img {
         overflow: hidden;
+        width: 100%;
         margin-top: 10px;
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;
@@ -1903,12 +1948,15 @@ html, body, .wrapper{
     }
 
     .lin h1 {
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 30px;
-        font-size: 16px;
-        margin-bottom: 10px;
+        font-size: 15px;
+        text-align: center;
     }
 
+    .lin {
+        height: 350px;
+    }
     .navbar-brand {
         margin-top: 5px;
         font-size: 30px;
@@ -2031,6 +2079,7 @@ html, body, .wrapper{
         text-decoration: none;
         color: #f2f2f2;
     }
+
 }
 @media (max-width: 768px){
     .qoute-caption {
@@ -2064,10 +2113,15 @@ html, body, .wrapper{
 
     }
 
-    .lin {
-        margin-left: 30%;
+    .lin a img {
+        margin-left: 50%;
 
+    }
 
+    .lin h1 {
+        text-align: center;
+        width: 140px;
+        margin-left: 50%;
     }
     #input{
         border: #eeac39;
@@ -2102,6 +2156,9 @@ html, body, .wrapper{
         color: yellow;
     }
 
+    .imgView img {
+        width: 50%;
+    }
 }
 
 @media (max-width: 600px){
@@ -2152,6 +2209,17 @@ html, body, .wrapper{
         margin-left: 20%;
 
     }
+
+    .lin a img {
+        margin-left: 60px;
+    }
+
+    .lin h1 {
+        font-size: 13px;
+        text-align: center;
+        margin-left: 23%;
+        padding-left: 0px;
+    }
     .myrating {
         width: 355px;
     }
@@ -2187,6 +2255,10 @@ html, body, .wrapper{
     #button:hover{
         background: #000000;
         color: yellow;
+    }
+
+    .imgView img {
+        width: 70%;
     }
 
 }

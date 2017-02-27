@@ -105,8 +105,8 @@ public class AdminController {
                           @RequestParam MultipartFile image
     ) throws UnsupportedEncodingException {
 
-        String contentPath = "src/main/resources/bookFiles/" + URLEncoder.encode(bookName.toLowerCase(), "UTF-8") + ".pdf";
-        String imagePath = "src/main/resources/bookImages/" + URLEncoder.encode(bookName.toLowerCase(), "UTF-8") + ".jpg";
+        String contentPath = "src/main/resources/bookFiles/" + isbn + ".pdf";
+        String imagePath = "src/main/resources/bookImages/" + isbn + ".jpg";
         MyUtils.writeFiles(content,contentPath);
         MyUtils.writeFiles(image,imagePath);
 

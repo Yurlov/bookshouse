@@ -203,7 +203,7 @@
                                 </c:when>
                                 <c:when test="${viewBook != null}">
 
-                                    <div>
+                                    <div class="imgView">
                                         <img class="col-xs-10 col-sm-5 col-md-4 col-lg-3 " width="300" height="350"
                                              style=" float: left; border-radius: 15px; padding: 0px 0px 0px 0px; margin-top: 15px; margin-left: 20px; margin-bottom: 20px"
                                              src="/image/${viewBook.id}" alt="${viewBook.name}"/>
