@@ -2119,8 +2119,8 @@ html, body, .wrapper{
 
     .lin {
         margin-left: 10px;
-        width: 200px;
-        display: inline;
+        width: 30%;
+        display: inline-block;
     }
     .lin a img {
         padding-bottom: 20px;
@@ -2148,7 +2148,7 @@ html, body, .wrapper{
 
     .paginself {
         margin-bottom: 50px;
-        left: 25%;
+        left: 10%;
     }
     #button{
         height: 45px;
