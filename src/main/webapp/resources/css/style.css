@@ -1592,6 +1592,10 @@ html, body, .wrapper{
         color: yellow;
     }
 
+    .lin {
+        height: 360px;
+    }
+
 
 
 }
@@ -1662,7 +1666,7 @@ html, body, .wrapper{
 
     .listbook {
         margin-top: 0px;
-        margin-left: 30px;
+        margin-left: 15px;
 
     }
 
@@ -1674,7 +1678,7 @@ html, body, .wrapper{
     }
 
     .lin a img {
-        width: 65%;
+        width: 70%;
         height: 60%;
         overflow: hidden;
         margin-top: 0px;
@@ -2113,15 +2117,19 @@ html, body, .wrapper{
 
     }
 
+    .lin {
+        margin-left: 10px;
+        width: 200px;
+        display: inline;
+    }
     .lin a img {
-        margin-left: 50%;
-
+        padding-bottom: 20px;
     }
 
     .lin h1 {
         text-align: center;
-        width: 140px;
-        margin-left: 50%;
+        margin: 0px 0px 0px 0px;
+
     }
     #input{
         border: #eeac39;
@@ -2140,7 +2148,7 @@ html, body, .wrapper{
 
     .paginself {
         margin-bottom: 50px;
-        left: 10%;
+        left: 25%;
     }
     #button{
         height: 45px;
@@ -2206,12 +2214,12 @@ html, body, .wrapper{
     }
 
     .lin {
-        margin-left: 20%;
+        margin-left: 10%;
 
     }
 
     .lin a img {
-        margin-left: 60px;
+        margin-left: 40px;
     }
 
     .lin h1 {
@@ -2226,7 +2234,7 @@ html, body, .wrapper{
 
     .paginself {
         margin-bottom: 50px;
-        left: 10%;
+        left: 13%;
     }
     #input{
         border: #eeac39;
