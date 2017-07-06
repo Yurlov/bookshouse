@@ -49,9 +49,7 @@ public class MyUtils {
        genreService.addGenre(new Genre("Детектив","Detective"));
        genreService.addGenre(new Genre("Роман","Novel"));
 
-       publisherService.addPublisher(new Publisher("Таклер Инк."));
        publisherService.addPublisher(new Publisher("Артек"));
-       publisherService.addPublisher(new Publisher("Olga Romanuik"));
        publisherService.addPublisher(new Publisher("Азбука"));
 
        authorService.addAuthor(new Author("Viktor Yurlov"));
