@@ -14,11 +14,13 @@ public class Application {
 
 
 @Bean
-public CommandLineRunner demo() {
+public CommandLineRunner demo(final UserService userService) {
     return new CommandLineRunner() {
         @Override
         public void run(String... strings) throws Exception {
-            MyUtils.fillApp();
+            userService.addUser(new User("admin", "bcb049247ce6fab013d6f085b165e7c081ab93bd", UserRole.ADMIN));
+            userService.addUser(new User("user", "bcb049247ce6fab013d6f085b165e7c081ab93bd", UserRole.USER));
+            
         }
     };
 }
