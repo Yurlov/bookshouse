@@ -28,11 +28,15 @@ public class PublisherServiceImpl implements PublisherService {
     public void deletePublisher(long id) {
     publisherRepository.delete(id);
     }
-
     @Transactional
     @Override
     public Publisher getPublisherById(Long id) {
         return publisherRepository.getOne(id);
+    }
+    @Transactional
+    @Override
+    public Publisher getPublisherByName(String name) {
+        return publisherRepository.getPublisherByName(name);
     }
 
 }
