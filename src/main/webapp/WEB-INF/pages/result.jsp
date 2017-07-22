@@ -667,7 +667,7 @@
                             <div class="footer-infomation">
                                 <h1>Book'<span>S House</span></h1>
                                 <p><i class="fa fa-map-marker"></i> &nbsp;Kiev City<br> UA 04215 Ukraine</p>
-                                <p><i class="fa fa-envelope"></i> &nbsp;Benedictum1@mail.ru</p>
+                                <p><i class="fa fa-envelope"></i> &nbsp;viktoryurlovkiev@gmail.com</p>
                                 <p><i class="fa fa-phone"></i> &nbsp;+38 063 973 15 71</p>
                                 <p><i class="fa fa-globe"></i> &nbsp;www.bookshouse.herokuapp.com</p>
                                 <div class="social-follow">

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bookshouse.iml" filepath="$PROJECT_DIR$/bookshouse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diplom-project.iml" filepath="$PROJECT_DIR$/diplom-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
     </modules>
   </component>
 </project>

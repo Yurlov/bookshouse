@@ -1,6 +1,6 @@
 package online.mega.library.Entities;
 
-import online.mega.library.Enams.UserRole;
+import online.mega.library.Enums.UserRole;
 
 import javax.persistence.*;
 

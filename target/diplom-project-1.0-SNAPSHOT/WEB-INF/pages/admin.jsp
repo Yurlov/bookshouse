@@ -3,14 +3,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Online Library">
+    <meta name="author" content="Viktor Yurlov">
 
     <title>Admin</title>
 
@@ -32,9 +31,9 @@
 
 </head>
 
-<body>
+<body style="background: #ffffff">
 
-    <div id="wrapper">
+<div>
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -66,16 +65,9 @@
                 </li>
             </ul>
 
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="/admin"><i class="fa fa-fw fa-table"></i>Tables</a>
-                    </li>
-                </ul>
-            </div>
         </nav>
 
-        <div id="page-wrapper">
+    <div>
 
             <div class="container-fluid">
 
@@ -87,143 +79,63 @@
                         </h1>
                     </div>
                 </div>
-                <!-- /.row -->
-                <div class="row">
-
-                    <div class="col-lg-12" style="overflow: auto; height: 400px " >
-                        <h2>Users</h2>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-striped">
-                                <thead>
-                                <tr>
-                                    <th colspan="7">
-                                        <form action="/addUser" method="post">
-                                            <div class="form-group">
-                                                <button style="float: right;;" class="btn btn-lg btn-warning" >Add</button>
-                                                <input class="form-control-static" placeholder="Enter login" type="text" name="login">
-                                                <input class="form-control-static" placeholder="Enter name" type="text" name="name">
-                                                <input class="form-control-static" placeholder="Enter email" type="email" name="email">
-                                                <input class="form-control-static" placeholder="Enter password" type="text" name="password">
-                                                <input class="form-control-static" placeholder="Enter role" type="text" name="role">
-                                            </div>
-                                        </form>
-                                    </th>
-
-                                </tr>
-                                <tr>
-                                    <th colspan="7">
-                                        <form action="/updateUser" method="post">
-                                            <div class="form-group">
-                                                <button style="float: right;" class="btn btn-lg btn-warning" >Update</button>
-                                                <input class="form-control-static" placeholder="Enter login" type="text" name="login">
-                                                <input class="form-control-static" placeholder="Enter name" type="text" name="name">
-                                                <input class="form-control-static" placeholder="Enter email" type="email" name="email">
-                                                <input class="form-control-static" placeholder="Enter password" type="text" name="password">
-                                                <input class="form-control-static" placeholder="Enter role" type="text" name="role">
-                                            </div>
-                                        </form>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>Chose:</th>
-                                    <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Login</th>
-                                    <th>Email</th>
-                                    <th>Password</th>
-                                    <th>Role</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <form action="/deleteUser" method="post">
-                                <c:forEach items="${users}" var="u">
-                                <tr>
-                                    <td><div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="id" value="${u.id}"/><input class="btn btn-success" style="float: right" type="submit" value="Delete">
-                                        </label>
-                                    </div>
-                                    </td>
-                                    <td><c:out value="${u.id}"/></td>
-                                    <td><c:out value="${u.name}"/></td>
-                                    <td><c:out value="${u.login}"/></td>
-                                    <td><c:out value="${u.email}"/></td>
-                                    <td><c:out value="${u.password}"/></td>
-                                    <td><c:out value="${u.role}"/></td>
-
-                                </tr>
+                <div style=" float: left;width: 20%; margin-right: 200px">
+                    <form class="form-group-lg" enctype="multipart/form-data" method="post" action="/addBook">
+                        <h1>New Book</h1>
+                        <h4>Name <input type="text" name="bookName"/></h4>
+                        <h4>ISBN <input type="text" name="isbn"></h4>
+                        <h4>Genre <select name="genre">
+                            <option>Choose:</option>
+                            <c:forEach items="${genres}" var="g">
+                                <option value="${g.name_ru}">${g.name_ru}</option>
+                            </c:forEach>
+                        </select>
+                        </h4>
+                        <h4>Image: <input type="file" name="image" multiple accept="image/*,image/jpeg"></h4>
+                        <h4>Description <input type="text" name="descript"></h4>
+                        <h4>Page Count <input type="text" name="pageCount"></h4>
+                        <h4>Publisher Year <input type="text" name="year"></h4>
+                        <h4>Author:
+                            <select name="author">
+                                <option>Choose:</option>
+                                <c:forEach items="${auth}" var="a">
+                                    <option value="${a.id}">${a.fio}</option>
                                 </c:forEach>
+                            </select>
+                        </h4>
+                        <h4>Publisher
+                            <select name="publisher">
+                                <option>Choose:</option>
+                                <c:forEach items="${publishers}" var="p">
+                                    <option value="${p.id}">${p.name}</option>
+                                </c:forEach>
+                            </select>
+                        </h4>
+                        <h4>Rating <input type="text" name="rating"></h4>
+                        <h4>Content: <input type="file" name="content" multiple></h4>
+                        <h4>Vote <input type="text" name="voteCount"></h4>
+                        <input class="btn btn-lg btn-success" type="submit" value="Добавить">
 
-                                </form>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    </form>
+                </div>
+
+                <div>
+
 
                 </div>
-                <hr/>
-                <div class="row" style="margin-left: 70px">
-                    <div class="col-lg-3">
-                        <h2>Genre Table</h2>
 
-                        <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px;" >
-
-                            <table class="table table-bordered table-hover">
-                                <thead class="fixed" >
-                                <tr>
-                                    <th colspan="3">
-                                        <form action="/addGenre">
-                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Жанр: " type="text" name="name_ru">
-                                        <input class="form-control" placeholder="Genre: " type="text" name="name_en">
-                                         <button style="float: right" class="btn btn-primary" >Add</button>
-
-                                    </div>
-                                    </form>
-                                    </th>
-                                </tr>
-                                    <tr>
-                                        <th>Chose:</th>
-                                        <th>Id</th>
-                                        <th>Name_ru</th>
-                                        <th>Name_en</th>
-                                    </tr>
-                                </thead>
-                                <tbody >
-                                <c:forEach items="${genres}" var="g">
-                                <form action="/deleteGenre" method="post">
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="genre" value="${g.id}"/><input class="btn btn-success" style="float: left" type="submit" value="Delete">
-                                            </label>
-                                        </div>
-
-                                        </td>
-                                        <td><c:out value="${g.id}"/> </td>
-                                        <td><c:out value="${g.name_ru}"/></td>
-                                        <td><c:out value="${g.name_en}"/> </td>
-                                    </tr>
-                                </c:forEach>
-
-                                </form>
-                                </tbody>
-
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-lg-3" style="margin-left: 70px;">
-                        <h2>Author Table</h2>
-                        <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px; ">
-                            <table class="table table-bordered table-hover table-striped" >
-                                <thead>
+                <div style="float: left">
+                    <h2>Author Table</h2>
+                    <div class="table-responsive" style="overflow: auto; height: 400px; width: 300px; ">
+                        <table class="table table-bordered table-hover ">
+                            <thead>
                                 <tr>
                                     <th colspan="4">
-                                        <form action="/addAuthor">
+                                        <form action="/addAuthor" method="post">
                                             <div class="form-group">
-                                                <input class="form-control" placeholder="Enter name" type="text" name="auth">
-                                                <button style="float: right" class="btn btn-primary" >Add</button>
+                                                <input class="form-control" placeholder="Enter name" type="text"
+                                                       name="auth">
+                                                <button style="float: right" class="btn btn-primary">Add</button>
                                             </div>
                                         </form>
                                     </th>
@@ -234,18 +146,20 @@
                                         <th>Name</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                <form action="/deleteAuthor" method="post">
+                            <tbody>
+                            <form action="/deleteAuthor" method="post">
                                 <c:forEach items="${auth}" var="a">
                                     <tr>
-                                        <td >
+                                        <td>
                                             <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="id" value="a.id"/> <input class="btn btn-success" style="float: left" type="submit" value="Delete">
+                                                <input type="checkbox" name="id" value="${a.id}"/> <input
+                                                    class="btn btn-success" style="float: left" type="submit"
+                                                    value="Delete">
                                             </label>
                                         </div>
                                         </td>
-                                        <td><c:out value="${a.id}"/> </td>
+                                        <td><c:out value="${a.id}"/></td>
                                         <td><c:out value="${a.fio}"/></td>
 
                                     </tr>
@@ -256,18 +170,20 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-3" style="margin-left: 70px; ">
-                        <h2>Publisher Table</h2>
 
-                        <div class="table-responsive" style="overflow: auto;width: 420px; height: 400px;" >
+                <div style="float: right">
+                    <h2>Publisher Table</h2>
 
-                            <table class="table table-bordered table-hover" >
-                                <thead class="fixed" >
+                    <div class="table-responsive" style="overflow: auto; height: 400px; width: 300px">
+
+                        <table class="table table-bordered table-hover">
+                            <thead class="fixed">
                                 <tr>
                                     <th colspan="3">
-                                        <form action="/addPublisher">
+                                        <form action="/addPublisher" method="post">
                                             <div class="form-group">
-                                                <input class="form-control" placeholder="Enter name" type="text" name="name">
+                                                <input class="form-control" placeholder="Enter name" type="text"
+                                                       name="name">
                                                 <button style="float: right" class="btn btn-primary" >Add</button>
                                             </div>
                                         </form>
@@ -280,17 +196,20 @@
 
                                 </tr>
                                 </thead>
-                                <tbody >
-                                <form action="/deletePublisher" method="post">
+                            <tbody>
+                            <form action="/deletePublisher" method="post">
                                 <c:forEach items="${publishers}" var="p">
                                     <tr>
-                                        <td> <div class="checkbox">
+                                        <td>
+                                            <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="id" value="${p.id}"/><input class="btn btn-success" style="float: left" type="submit" value="Delete">
+                                                <input type="checkbox" name="id" value="${p.id}"/><input
+                                                    class="btn btn-success" style="float: left" type="submit"
+                                                    value="Delete">
                                             </label>
                                         </div>
                                         </td>
-                                        <td><c:out value="${p.id}"/> </td>
+                                        <td><c:out value="${p.id}"/></td>
                                         <td><c:out value="${p.name}"/></td>
                                     </tr>
                                 </c:forEach>
@@ -299,14 +218,67 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
                 </div>
-                <hr/>
-                <div class="row">
-                    <div class="col-lg-12" style="height: 500px; width: 100%; overflow: auto">
+            </div>
+        <div>
+            <div>
+                <h2>Genre Table</h2>
+
+                <div class="table-responsive" style="overflow: auto; height: 300px;">
+
+                    <table class="table table-bordered table-hover">
+                        <thead class="fixed">
+                        <tr>
+                            <th colspan="4">
+                                <form action="/addGenre" method="post">
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Жанр: " type="text" name="name_ru">
+                                        <input class="form-control" placeholder="Genre: " type="text" name="name_en">
+                                        <button style="float: right" class="btn btn-primary">Add</button>
+
+                                    </div>
+                                </form>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Chose:</th>
+                            <th>Id</th>
+                            <th>Name_ru</th>
+                            <th>Name_en</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${genres}" var="g">
+                        <form action="/deleteGenre" method="post">
+                            <tr>
+                                <td>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="genre" value="${g.id}"/><input
+                                                class="btn btn-success" style="float: left" type="submit"
+                                                value="Delete">
+                                        </label>
+                                    </div>
+
+                                </td>
+                                <td><c:out value="${g.id}"/></td>
+                                <td><c:out value="${g.name_ru}"/></td>
+                                <td><c:out value="${g.name_en}"/></td>
+                            </tr>
+                            </c:forEach>
+
+                        </form>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <hr/>
+            <div>
+                <div style="height: 400px; width: 100%; overflow: auto">
                         <h2>Books</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover ">
                                 <thead>
                                     <tr>
                                         <th>Chose:</th>
@@ -344,7 +316,10 @@
                                         <td><c:out value="${b.isbn}"/></td>
                                         <td><c:out value="${b.genre.name_ru}"/></td>
                                         <td><c:out value="${b.image}"/></td>
-                                        <td><c:out value="${b.descr}"/></td>
+                                        <td>
+                                            <div style="overflow: auto; height: 100px; "><c:out
+                                                    value="${b.descr}"/></div>
+                                        </td>
                                         <td><c:out value="${b.pageCount}"/></td>
                                         <td><c:out value="${b.publishYear}"/></td>
                                         <td><c:out value="${b.author.fio}"/></td>
@@ -362,46 +337,91 @@
 
                         </div>
                     </div>
+                <div class="col-lg-12 col-xs-12" style="overflow: auto; height: 400px; margin-top: 50px ">
+                    <h2>Users</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th colspan="7">
+                                    <form action="/addUser" method="post">
+                                        <div class="form-group">
+                                            <button style="float: right;;" class="btn btn-lg btn-warning">Add</button>
+                                            <input class="form-control-static" placeholder="Enter login" type="text"
+                                                   name="login">
+                                            <input class="form-control-static" placeholder="Enter name" type="text"
+                                                   name="name">
+                                            <input class="form-control-static" placeholder="Enter email" type="email"
+                                                   name="email">
+                                            <input class="form-control-static" placeholder="Enter password" type="text"
+                                                   name="password">
+                                            <input class="form-control-static" placeholder="Enter role" type="text"
+                                                   name="role">
+                                        </div>
+                                    </form>
+                                </th>
 
+                            </tr>
+                            <tr>
+                                <th colspan="7">
+                                    <form action="/updateUser" method="post">
+                                        <div class="form-group">
+                                            <button style="float: right;" class="btn btn-lg btn-warning">Update</button>
+                                            <input class="form-control-static" placeholder="Enter login" type="text"
+                                                   name="login">
+                                            <input class="form-control-static" placeholder="Enter name" type="text"
+                                                   name="name">
+                                            <input class="form-control-static" placeholder="Enter email" type="email"
+                                                   name="email">
+                                            <input class="form-control-static" placeholder="Enter password" type="text"
+                                                   name="password">
+                                            <input class="form-control-static" placeholder="Enter role" type="text"
+                                                   name="role">
+                                        </div>
+                                    </form>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Chose:</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Login</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Role</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <form action="/deleteUser" method="post">
+                                <c:forEach items="${users}" var="u">
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="id" value="${u.id}"/><input
+                                                        class="btn btn-success" style="float: right" type="submit"
+                                                        value="Delete">
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td><c:out value="${u.id}"/></td>
+                                        <td><c:out value="${u.name}"/></td>
+                                        <td><c:out value="${u.login}"/></td>
+                                        <td><c:out value="${u.email}"/></td>
+                                        <td><c:out value="${u.password}"/></td>
+                                        <td><c:out value="${u.role}"/></td>
+
+                                    </tr>
+                                </c:forEach>
+
+                            </form>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <form class="form-group-lg" enctype="multipart/form-data" method="post" action="/addBook" >
-                    <h1>New Book</h1>
-                    <h4>Name <input type="text" name="bookName"/> </h4>
-                    <h4>ISBN <input type="text" name="isbn"></h4>
-                    <h4>Genre <select  name="genre">
-                        <option>Choose:</option>
-                        <c:forEach items="${genres}" var="g">
-                        <option value="${g.name_ru}">${g.name_ru}</option>
-                        </c:forEach>
-                    </select>
-                    </h4>
-                    <h4>Image:  <input type="file" name="image" multiple accept="image/*,image/jpeg"></h4>
-                    <h4>Description <input type="text" name="descript"></h4>
-                    <h4>Page Count <input type="text" name="pageCount"></h4>
-                    <h4>Publisher Year <input type="text" name="year"></h4>
-                    <h4>Author:
-                        <select name="author">
-                            <option>Choose:</option>
-                        <c:forEach items="${auth}" var="a">
-                        <option value="${a.id}">${a.fio}</option>
-                        </c:forEach>
-                    </select>
-                    </h4>
-                    <h4>Publisher
-                    <select name="publisher">
-                        <option>Choose:</option>
-                        <c:forEach items="${publishers}" var="p">
-                            <option  value="${p.id}">${p.name}</option>
-                        </c:forEach>
-                    </select>
-                    </h4>
-                    <h4>Rating <input type="text" name="rating"></h4>
-                    <h4>Content:  <input type="file" name="content" multiple></h4>
-                <input class="btn btn-lg btn-success" type="submit" value="Добавить">
+                </div>
 
-                </form>
-
-            </div>
+        </div>
 
 
         </div>

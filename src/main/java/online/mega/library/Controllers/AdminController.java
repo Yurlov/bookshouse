@@ -1,11 +1,10 @@
 package online.mega.library.Controllers;
 
-import online.mega.library.Enams.UserRole;
+import online.mega.library.Enums.UserRole;
 import online.mega.library.Entities.*;
 import online.mega.library.Services.*;
 import online.mega.library.Utils.MyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.support.EncodedResource;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -15,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 @Controller
 public class AdminController {

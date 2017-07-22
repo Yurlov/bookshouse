@@ -2,17 +2,10 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: scroll;
-}
 
 body {
-  background: #c1bdba;
   font-family: "Titillium Web", sans-serif;
-  background-image: url(../images/my/7.jpg);
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background: url(../images/my/7.jpg) 110% 110% no-repeat fixed;
   background-size: 100% 100%;
 }
 
@@ -178,93 +171,14 @@ textarea {
   width: 100%;
 }
 
-.forgot {
-  margin-top: -20px;
-  text-align: right;
-}
 
-footer {
-  background-color: #222222;
-  color: lightgrey;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 10px;
-  font-family: "Titillium Web", sans-serif;
-}
-
-/* MANGA STUFF */
-#otherPages {
-  margin: 5% 2%;
-}
-
-#manga-area {
-  margin: 15px 10px;
-}
-
-/* TABLE STYLE */
-.manga-panel {
-  background-color: Gray;
-  opacity: 0.9;
-  margin: 5%;
-}
-
-.thumbnail {
-  width: 150px;
-}
-
-.tg {
-  border-collapse: collapse;
-  border-spacing: 0;
-  border-color: #ccc;
-  border: none;
-}
-
-.tg td {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  padding: 10px 5px;
-  border-style: solid;
-  border-width: 0px;
-  overflow: hidden;
-  word-break: normal;
-  border-color: #ccc;
-  color: #333;
-  background-color: #fff;
-}
-
-.tg th {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 10px 5px;
-  border-style: solid;
-  border-width: 0px;
-  overflow: hidden;
-  word-break: normal;
-  border-color: #ccc;
-  color: #333;
-  background-color: #f0f0f0;
-}
-
-.tg .tg-yw4l {
-  vertical-align: top;
-}
 
 @media screen and (max-width: 767px) {
-  .tg {
-    width: auto !important;
+
+  body {
+    font-family: "Titillium Web", sans-serif;
+    background: url(../images/my/7.jpg) 100% 100% fixed;
+    background-size: 100% 100%;
   }
 
-  .tg col {
-    width: auto !important;
-  }
-
-  .tg-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
 }

@@ -1,6 +1,6 @@
 package online.mega.library.Controllers;
 
-import online.mega.library.Enams.UserRole;
+import online.mega.library.Enums.UserRole;
 import online.mega.library.Entities.User;
 import online.mega.library.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

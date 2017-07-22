@@ -1,6 +1,4 @@
 <%@ page import="java.util.Locale" %>
-<%@ page import="online.mega.library.Controllers.InterceptorController" %>
-<%@ page import="org.springframework.cglib.core.Local" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -10,7 +8,7 @@
 <html lang="ru">
     <head>
         <!-- META -->
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="author" content="Viktor Yurlov" />
         <meta name="description" content="Online Library">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,23 +23,19 @@
 		<link rel="icon" href="/resources/images/favicon.png" sizes="72x72">
 		<link rel="icon" href="/resources/images/favicon.png" sizes="114x114">
 		<link rel="icon" href="/resources/images/favicon.png" sizes="144x144">
-        <%--<script>--%>
-            <%--window.onload = function () {--%>
-                <%--location += "#search"}--%>
-        <%--</script>--%>
 
         <!-- STYLE -->
         <link rel="stylesheet" href="/resources/css/style.css">
 
         <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="/resources/js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
     <body >
 
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- PRELOADER-->
         <div id="preloader">
@@ -114,9 +108,9 @@
                                 <span class="glyphicon " aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div><!-- end of /.carousel -->
-                    </div><!-- end of /.row -->
-                </div><!-- end of /.container-fluid -->
+                        </div>
+                    </div>
+                </div>
 
                 <!-- START HEADER SECTION -->
                 <header class="header-section">
@@ -134,6 +128,7 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
+
                                     <security:authorize access="!isAuthenticated()"> <li><a href="/login"><spring:message code="loginM"/></a> </li></security:authorize>
                                     <security:authorize access="!isAuthenticated()"> <li><a href="/register"><spring:message code="signin"/></a> </li></security:authorize>
                                     <security:authorize access="hasRole('ADMIN')"><li><a href="/admin">Room</a> </li></security:authorize>
@@ -157,14 +152,20 @@
             </section>
 
 
-            <!-- START ABOUT SECTION -->
+            <!-- START SEARCH SECTION WITHOUT AJAX -->
             <section class="about-section" id="search" >
                 <div class="round">
-                <jsp:include page="search.jsp"/>
+                    <form style="display:inline;" action="/searchByName" method="get">
+                        <div class="form-group" >
+                            <div class="input-group" id="searchForm">
+                                <input class="form-control" id="input" name="book" placeholder="<spring:message code="search"/> " type="text" />
+                                <button type="submit" id="button" class=" col-xs-4 btn control-btn"><spring:message code="search2"/></button>
+                            </div>
+                        </div>
+                    </form>
                 <div class="container">
                     <div class="row">
-
-                        <div style="float: left; padding-bottom: 30px" class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                        <div class="gen col-xs-12 col-sm-5 col-md-3 col-lg-3">
                             <c:choose>
                                 <c:when test="<%= response.getLocale().getLanguage().equals(Locale.ENGLISH.toString()) %>">
                                     <c:forEach items="${genres}" var="g">
@@ -175,7 +176,6 @@
                                             </a>
                                         </ul>
                                     </c:forEach>
-
                                 </c:when>
                                 <c:otherwise>
                                 <c:forEach items="${genres}" var="g">
@@ -192,10 +192,12 @@
 
                         <div class="container">
                             <div class="row">
-                                <div style="margin-top: 20px;" >
+                                <div class="listbook">
                                     <c:forEach items="${books.content}" var="b">
-                                        <div class="lin col-md-4 col-xs-5 col-sm-3 col-lg-2 ">
-                                            <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="168" height="218" src="/image/${b.id}" alt="${b.name}"/></a>
+                                        <div class="lin col-md-3 col-xs-6 col-sm-3 col-lg-2 ">
+                                            <a href="/viewBook/<c:out value="${b.id}"/>"> <img width="160" height="210"
+                                                                                               src="/image/${b.id}"
+                                                                                               alt="${b.name}"/></a>
                                             <h1><a href="/viewBook/<c:out value="${b.id}"/>"><c:out value="${b.name}"/></a></h1>
                                         </div>
                                     </c:forEach>
@@ -208,7 +210,7 @@
                     <c:url var="prevUrl" value="/pages/${currentIndex - 1}" />
                     <c:url var="nextUrl" value="/pages/${currentIndex + 1}" />
 
-                    <div class="pagination paginself col-lg-9 col-xs-12 col-sm-12" >
+                        <div class="pagination paginself col-lg-9 col-xs-10 col-sm-12">
                         <ul class="pagination pagination-lg" >
                             <c:choose>
                                 <c:when test="${currentIndex == 1}">
@@ -248,52 +250,50 @@
                 </div>
             </section>
 
-
-
-            <!-- START TESTIMONIAL SECTION -->
+            <!-- START TOPBOOK SECTION -->
             <section class="testimonial-section" id="top-books">
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-3 col-lg-offset-1">
+                        <div class="col-lg-4 col-lg-offset-1">
                             <div id="testimonial" class="testimanial-area">
                                 <div class="item">
                                     <img src="/resources/images/my/harry.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ГАРРИ ПОТТЕР</h3><!--  title -->
-                                        <p>J.K ROWLING</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 1 -->
+                                        <h3><spring:message code="booktest1"/></h3>
+                                        <p>J.K ROWLING</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/dom.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДОМ СТРАННЫХ ДЕТЕЙ МИСС ПЕРЕГРИН </h3><!--  title -->
-                                        <p>РЕНСОМ РИГГЗ</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 2 -->
+                                        <h3><spring:message code="booktest2"/></h3>
+                                        <p>RENSOM RIGGS</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/do.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДО ВСТРЕЧИ С ТОБОЙ</h3><!--  title -->
-                                        <p>ДЖОДЖО МОЙЕС</p><!-- description -->
-                                    </div><!--end of /.testimonial details -->
-                                </div><!-- end of /.testimonial item 3 -->
+                                        <h3><spring:message code="booktest3"/></h3>
+                                        <p>JOJO MOYES</p>
+                                    </div>
+                                </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/50.jpg"  alt="">
                                     <div class="testimonial-details">
-                                        <h3>ПЯТДЕСЯТ ОТТЕНКОВ СЕРОГО</h3>
-                                        <p>ЭЛ ДЖАЙМС</p>
+                                        <h3><spring:message code="booktest4"/></h3>
+                                        <p>E.L. JAMES</p>
                                     </div>
                                 </div>
 
                                 <div class="item">
                                     <img src="/resources/images/my/girl.jpg" alt="">
                                     <div class="testimonial-details">
-                                        <h3>ДЕВУШКА В ПОЕЗДЕ</h3>
-                                        <p>ПОЛА ХОКИНС</p>
+                                        <h3><spring:message code="booktest5"/></h3>
+                                        <p>POLA HOKINS</p>
                                     </div>
                                 </div>
                             </div>
@@ -460,15 +460,16 @@
                         <div class="col-lg-4 col-lg-offset-3">
                             <div class="social-follow">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest-square"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-youtube"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i> </a></li>
-                                    <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
+                                    <li><a href="https://vk.com/benedictumm"><i class="fa fa-vk"></i> </a></li>
+                                    <li><a href="https://www.facebook.com/viktor.yurlov.5"><i
+                                            class="fa fa-facebook"></i> </a></li>
+                                    <li><a href="https://twitter.com/Benediictum"><i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                    <li><a href="https://ru.pinterest.com/benedictum1"><i
+                                            class="fa fa-pinterest-square"></i> </a></li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80-%D1%8E%D1%80%D0%BB%D0%BE%D0%B2-607a51139/"><i
+                                                class="fa fa-linkedin"></i> </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -493,16 +494,19 @@
                                 <p><i class="fa fa-map-marker"></i> &nbsp;Kiev City<br> UA 04215 Ukraine</p>
                                 <p><i class="fa fa-envelope"></i> &nbsp;Benedictum1@mail.ru</p>
                                 <p><i class="fa fa-phone"></i> &nbsp;+38 063 973 15 71</p>
-                                <p><i class="fa fa-globe"></i> &nbsp;www.domain.com</p>
+                                <p><i class="fa fa-globe"></i> &nbsp;www.bookshouse.herokuapp.com</p>
                                 <div class="social-follow">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i> </a></li>
-                                        <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
+                                        <li><a href="https://vk.com/benedictumm"><i class="fa fa-vk"></i> </a></li>
+                                        <li><a href="https://www.facebook.com/viktor.yurlov.5"><i
+                                                class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="https://twitter.com/Benediictum"><i class="fa fa-twitter"></i> </a>
+                                        </li>
+                                        <li><a href="https://ru.pinterest.com/benedictum1"><i
+                                                class="fa fa-pinterest-square"></i> </a></li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D0%BA%D1%82%D0%BE%D1%80-%D1%8E%D1%80%D0%BB%D0%BE%D0%B2-607a51139/"><i
+                                                    class="fa fa-linkedin"></i> </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -511,10 +515,10 @@
                             <div class="contact-area">
                                 <form action="/emailsend" method="post">
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="text" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="<spring:message code="namesend"/>">
                                     </div>
                                     <div class="form-group col-lg-4 wow fadeInDown animated" data-wow-delay="0.2s">
-                                        <input type="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="<spring:message code="emailsend"/>">
                                     </div>
 
                                     <div class="form-group col-lg-12 wow fadeInDown animated" data-wow-delay="0.2s">

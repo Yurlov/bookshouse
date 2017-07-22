@@ -11,5 +11,4 @@ public interface PublisherService {
     void addPublisher(Publisher publisher);
     void deletePublisher(long id);
     Publisher getPublisherById(Long id);
-
 }
