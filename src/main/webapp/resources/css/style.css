@@ -1093,7 +1093,7 @@ html, body, .wrapper{
          bottom:0;
          background: #ffd600;
         padding: 20px 15px;
-        bottom: -90px;
+        bottom: -100px;
          transition: all 0.3s;
          width: 100%;
      }
